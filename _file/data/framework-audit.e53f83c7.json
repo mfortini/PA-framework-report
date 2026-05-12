@@ -1,0 +1,1477 @@
+{
+  "generated_at": "2026-05-12T15:02:30+00:00",
+  "workspace_root": "/data/DTD/work/crawler/frameworks",
+  "counts": {
+    "raw_entities": 23686,
+    "valid_entities": 22839,
+    "unique_homepages": 22557,
+    "homepage_records": 22557,
+    "homepage_ok": 20057,
+    "homepage_error": 2500,
+    "detection_records": 22839,
+    "detections_with_primary": 19298,
+    "detections_with_secondary_frameworks": 16937,
+    "detections_with_cms": 10690,
+    "detections_with_content": 16168,
+    "detections_html_only": 602,
+    "downloads_records": 270550
+  },
+  "status_counts": {
+    "homepage": {
+      "ok": 20057,
+      "error": 2500
+    },
+    "js": {
+      "ok": 284658,
+      "skipped": 2500,
+      "empty": 440,
+      "error": 10
+    },
+    "css": {
+      "ok": 188544,
+      "skipped": 2500,
+      "empty": 716,
+      "error": 10
+    },
+    "confidence": {
+      "low": 3541,
+      "high": 16404,
+      "medium": 2894
+    }
+  },
+  "coverage": {
+    "homepage_ok_pct": 88.92,
+    "js_capture_pct_of_ok_homepages": 97.76,
+    "css_capture_pct_of_ok_homepages": 96.38,
+    "detection_rate_pct_of_entities": 84.5,
+    "content_evidence_pct_of_detections": 83.78
+  },
+  "integrity": {
+    "detection_matches_valid_entities": true,
+    "homepages_match_unique_homepages": true,
+    "js_records_match_homepages": false,
+    "css_records_match_homepages": false,
+    "downloads_file_exists": true
+  },
+  "assets": {
+    "homepages_with_js_ok": 19607,
+    "homepages_with_css_ok": 19331,
+    "homepages_with_js_empty": 440,
+    "homepages_with_css_empty": 716,
+    "homepages_with_js_error": 10,
+    "homepages_with_css_error": 10
+  },
+  "all_frameworks": [
+    {
+      "name": "WordPress",
+      "count": 9047
+    },
+    {
+      "name": "React",
+      "count": 5356
+    },
+    {
+      "name": "Bootstrap Italia",
+      "count": 3196
+    },
+    {
+      "name": "jQuery",
+      "count": 1042
+    },
+    {
+      "name": "Drupal",
+      "count": 183
+    },
+    {
+      "name": "Bootstrap",
+      "count": 172
+    },
+    {
+      "name": "Joomla",
+      "count": 156
+    },
+    {
+      "name": "Liferay",
+      "count": 93
+    },
+    {
+      "name": "Vue",
+      "count": 26
+    },
+    {
+      "name": "Next.js",
+      "count": 22
+    },
+    {
+      "name": "Angular",
+      "count": 2
+    },
+    {
+      "name": "Nuxt",
+      "count": 2
+    },
+    {
+      "name": "Alpine.js",
+      "count": 1
+    }
+  ],
+  "all_secondary_frameworks": [
+    {
+      "name": "jQuery",
+      "count": 13321
+    },
+    {
+      "name": "React",
+      "count": 10777
+    },
+    {
+      "name": "Bootstrap Italia",
+      "count": 10464
+    },
+    {
+      "name": "Bootstrap",
+      "count": 2283
+    },
+    {
+      "name": "Joomla",
+      "count": 1610
+    },
+    {
+      "name": "Vue",
+      "count": 1148
+    },
+    {
+      "name": "WordPress",
+      "count": 352
+    },
+    {
+      "name": "Drupal",
+      "count": 308
+    },
+    {
+      "name": "Angular",
+      "count": 275
+    },
+    {
+      "name": "Alpine.js",
+      "count": 107
+    },
+    {
+      "name": "Liferay",
+      "count": 11
+    },
+    {
+      "name": "Stimulus",
+      "count": 7
+    },
+    {
+      "name": "Nuxt",
+      "count": 6
+    },
+    {
+      "name": "Blazor",
+      "count": 5
+    },
+    {
+      "name": "Next.js",
+      "count": 1
+    }
+  ],
+  "all_cms": [
+    {
+      "name": "WordPress",
+      "count": 9185
+    },
+    {
+      "name": "Joomla",
+      "count": 813
+    },
+    {
+      "name": "Drupal",
+      "count": 539
+    },
+    {
+      "name": "Liferay",
+      "count": 153
+    }
+  ],
+  "framework_cooccurrence_heatmap": {
+    "labels": [
+      "React",
+      "jQuery",
+      "Bootstrap Italia",
+      "WordPress",
+      "Bootstrap",
+      "Joomla",
+      "Vue",
+      "Drupal",
+      "Angular",
+      "Alpine.js",
+      "Liferay",
+      "Next.js",
+      "Nuxt",
+      "Stimulus",
+      "Blazor"
+    ],
+    "cells": [
+      {
+        "row": "Bootstrap Italia",
+        "col": "Bootstrap Italia",
+        "count": 13660
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "React",
+        "count": 11459
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "jQuery",
+        "count": 10193
+      },
+      {
+        "row": "React",
+        "col": "Bootstrap Italia",
+        "count": 11459
+      },
+      {
+        "row": "React",
+        "col": "React",
+        "count": 16133
+      },
+      {
+        "row": "React",
+        "col": "jQuery",
+        "count": 14328
+      },
+      {
+        "row": "jQuery",
+        "col": "Bootstrap Italia",
+        "count": 10193
+      },
+      {
+        "row": "jQuery",
+        "col": "React",
+        "count": 14328
+      },
+      {
+        "row": "jQuery",
+        "col": "jQuery",
+        "count": 14363
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Bootstrap",
+        "count": 2455
+      },
+      {
+        "row": "Bootstrap",
+        "col": "React",
+        "count": 2454
+      },
+      {
+        "row": "Bootstrap",
+        "col": "WordPress",
+        "count": 849
+      },
+      {
+        "row": "Bootstrap",
+        "col": "jQuery",
+        "count": 2373
+      },
+      {
+        "row": "React",
+        "col": "Bootstrap",
+        "count": 2454
+      },
+      {
+        "row": "React",
+        "col": "WordPress",
+        "count": 7786
+      },
+      {
+        "row": "WordPress",
+        "col": "Bootstrap",
+        "count": 849
+      },
+      {
+        "row": "WordPress",
+        "col": "React",
+        "count": 7786
+      },
+      {
+        "row": "WordPress",
+        "col": "WordPress",
+        "count": 9399
+      },
+      {
+        "row": "WordPress",
+        "col": "jQuery",
+        "count": 7497
+      },
+      {
+        "row": "jQuery",
+        "col": "Bootstrap",
+        "count": 2373
+      },
+      {
+        "row": "jQuery",
+        "col": "WordPress",
+        "count": 7497
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "WordPress",
+        "count": 6495
+      },
+      {
+        "row": "WordPress",
+        "col": "Bootstrap Italia",
+        "count": 6495
+      },
+      {
+        "row": "Vue",
+        "col": "Vue",
+        "count": 1174
+      },
+      {
+        "row": "Drupal",
+        "col": "Drupal",
+        "count": 491
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Alpine.js",
+        "count": 108
+      },
+      {
+        "row": "Alpine.js",
+        "col": "React",
+        "count": 108
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Vue",
+        "count": 73
+      },
+      {
+        "row": "Alpine.js",
+        "col": "jQuery",
+        "count": 105
+      },
+      {
+        "row": "React",
+        "col": "Alpine.js",
+        "count": 108
+      },
+      {
+        "row": "React",
+        "col": "Vue",
+        "count": 1142
+      },
+      {
+        "row": "Vue",
+        "col": "Alpine.js",
+        "count": 73
+      },
+      {
+        "row": "Vue",
+        "col": "React",
+        "count": 1142
+      },
+      {
+        "row": "Vue",
+        "col": "jQuery",
+        "count": 936
+      },
+      {
+        "row": "jQuery",
+        "col": "Alpine.js",
+        "count": 105
+      },
+      {
+        "row": "jQuery",
+        "col": "Vue",
+        "count": 936
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Joomla",
+        "count": 505
+      },
+      {
+        "row": "Joomla",
+        "col": "Bootstrap",
+        "count": 505
+      },
+      {
+        "row": "Joomla",
+        "col": "Joomla",
+        "count": 1766
+      },
+      {
+        "row": "Joomla",
+        "col": "React",
+        "count": 1509
+      },
+      {
+        "row": "Joomla",
+        "col": "jQuery",
+        "count": 1393
+      },
+      {
+        "row": "React",
+        "col": "Joomla",
+        "count": 1509
+      },
+      {
+        "row": "jQuery",
+        "col": "Joomla",
+        "count": 1393
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "Joomla",
+        "count": 1031
+      },
+      {
+        "row": "Joomla",
+        "col": "Bootstrap Italia",
+        "count": 1031
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Drupal",
+        "count": 147
+      },
+      {
+        "row": "Drupal",
+        "col": "Bootstrap",
+        "count": 147
+      },
+      {
+        "row": "Drupal",
+        "col": "React",
+        "count": 384
+      },
+      {
+        "row": "Drupal",
+        "col": "jQuery",
+        "count": 356
+      },
+      {
+        "row": "React",
+        "col": "Drupal",
+        "count": 384
+      },
+      {
+        "row": "jQuery",
+        "col": "Drupal",
+        "count": 356
+      },
+      {
+        "row": "Joomla",
+        "col": "WordPress",
+        "count": 1064
+      },
+      {
+        "row": "WordPress",
+        "col": "Joomla",
+        "count": 1064
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "Vue",
+        "count": 792
+      },
+      {
+        "row": "Vue",
+        "col": "Bootstrap Italia",
+        "count": 792
+      },
+      {
+        "row": "Angular",
+        "col": "Angular",
+        "count": 277
+      },
+      {
+        "row": "Angular",
+        "col": "Bootstrap",
+        "count": 53
+      },
+      {
+        "row": "Angular",
+        "col": "React",
+        "count": 275
+      },
+      {
+        "row": "Angular",
+        "col": "Vue",
+        "count": 22
+      },
+      {
+        "row": "Angular",
+        "col": "jQuery",
+        "count": 245
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Angular",
+        "count": 53
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Vue",
+        "count": 194
+      },
+      {
+        "row": "React",
+        "col": "Angular",
+        "count": 275
+      },
+      {
+        "row": "Vue",
+        "col": "Angular",
+        "count": 22
+      },
+      {
+        "row": "Vue",
+        "col": "Bootstrap",
+        "count": 194
+      },
+      {
+        "row": "jQuery",
+        "col": "Angular",
+        "count": 245
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "Liferay",
+        "count": 25
+      },
+      {
+        "row": "Liferay",
+        "col": "Bootstrap Italia",
+        "count": 25
+      },
+      {
+        "row": "Liferay",
+        "col": "Liferay",
+        "count": 104
+      },
+      {
+        "row": "Liferay",
+        "col": "React",
+        "count": 61
+      },
+      {
+        "row": "Liferay",
+        "col": "jQuery",
+        "count": 57
+      },
+      {
+        "row": "React",
+        "col": "Liferay",
+        "count": 61
+      },
+      {
+        "row": "jQuery",
+        "col": "Liferay",
+        "count": 57
+      },
+      {
+        "row": "Angular",
+        "col": "Bootstrap Italia",
+        "count": 217
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "Angular",
+        "count": 217
+      },
+      {
+        "row": "Vue",
+        "col": "WordPress",
+        "count": 239
+      },
+      {
+        "row": "WordPress",
+        "col": "Vue",
+        "count": 239
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "Drupal",
+        "count": 199
+      },
+      {
+        "row": "Drupal",
+        "col": "Bootstrap Italia",
+        "count": 199
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Liferay",
+        "count": 38
+      },
+      {
+        "row": "Liferay",
+        "col": "Bootstrap",
+        "count": 38
+      },
+      {
+        "row": "Angular",
+        "col": "Liferay",
+        "count": 5
+      },
+      {
+        "row": "Liferay",
+        "col": "Angular",
+        "count": 5
+      },
+      {
+        "row": "Liferay",
+        "col": "Vue",
+        "count": 7
+      },
+      {
+        "row": "Vue",
+        "col": "Liferay",
+        "count": 7
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Next.js",
+        "count": 12
+      },
+      {
+        "row": "Next.js",
+        "col": "Bootstrap",
+        "count": 12
+      },
+      {
+        "row": "Next.js",
+        "col": "Next.js",
+        "count": 23
+      },
+      {
+        "row": "Next.js",
+        "col": "React",
+        "count": 12
+      },
+      {
+        "row": "React",
+        "col": "Next.js",
+        "count": 12
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Bootstrap Italia",
+        "count": 58
+      },
+      {
+        "row": "Alpine.js",
+        "col": "WordPress",
+        "count": 49
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "Alpine.js",
+        "count": 58
+      },
+      {
+        "row": "WordPress",
+        "col": "Alpine.js",
+        "count": 49
+      },
+      {
+        "row": "Angular",
+        "col": "WordPress",
+        "count": 14
+      },
+      {
+        "row": "WordPress",
+        "col": "Angular",
+        "count": 14
+      },
+      {
+        "row": "Nuxt",
+        "col": "Nuxt",
+        "count": 8
+      },
+      {
+        "row": "Nuxt",
+        "col": "Vue",
+        "count": 7
+      },
+      {
+        "row": "Vue",
+        "col": "Nuxt",
+        "count": 7
+      },
+      {
+        "row": "Drupal",
+        "col": "Vue",
+        "count": 29
+      },
+      {
+        "row": "Vue",
+        "col": "Drupal",
+        "count": 29
+      },
+      {
+        "row": "Blazor",
+        "col": "Blazor",
+        "count": 5
+      },
+      {
+        "row": "Blazor",
+        "col": "Bootstrap Italia",
+        "count": 3
+      },
+      {
+        "row": "Blazor",
+        "col": "React",
+        "count": 5
+      },
+      {
+        "row": "Blazor",
+        "col": "Vue",
+        "count": 3
+      },
+      {
+        "row": "Blazor",
+        "col": "jQuery",
+        "count": 3
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "Blazor",
+        "count": 3
+      },
+      {
+        "row": "React",
+        "col": "Blazor",
+        "count": 5
+      },
+      {
+        "row": "Vue",
+        "col": "Blazor",
+        "count": 3
+      },
+      {
+        "row": "jQuery",
+        "col": "Blazor",
+        "count": 3
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Bootstrap",
+        "count": 21
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Alpine.js",
+        "count": 21
+      },
+      {
+        "row": "Liferay",
+        "col": "WordPress",
+        "count": 6
+      },
+      {
+        "row": "WordPress",
+        "col": "Liferay",
+        "count": 6
+      },
+      {
+        "row": "Angular",
+        "col": "Drupal",
+        "count": 10
+      },
+      {
+        "row": "Drupal",
+        "col": "Angular",
+        "count": 10
+      },
+      {
+        "row": "Drupal",
+        "col": "Liferay",
+        "count": 1
+      },
+      {
+        "row": "Liferay",
+        "col": "Drupal",
+        "count": 1
+      },
+      {
+        "row": "Drupal",
+        "col": "WordPress",
+        "count": 7
+      },
+      {
+        "row": "WordPress",
+        "col": "Drupal",
+        "count": 7
+      },
+      {
+        "row": "Bootstrap Italia",
+        "col": "Nuxt",
+        "count": 2
+      },
+      {
+        "row": "Nuxt",
+        "col": "Bootstrap Italia",
+        "count": 2
+      },
+      {
+        "row": "Nuxt",
+        "col": "React",
+        "count": 6
+      },
+      {
+        "row": "React",
+        "col": "Nuxt",
+        "count": 6
+      },
+      {
+        "row": "Joomla",
+        "col": "Vue",
+        "count": 9
+      },
+      {
+        "row": "Vue",
+        "col": "Joomla",
+        "count": 9
+      },
+      {
+        "row": "React",
+        "col": "Stimulus",
+        "count": 7
+      },
+      {
+        "row": "Stimulus",
+        "col": "React",
+        "count": 7
+      },
+      {
+        "row": "Stimulus",
+        "col": "Stimulus",
+        "count": 7
+      },
+      {
+        "row": "Stimulus",
+        "col": "WordPress",
+        "count": 5
+      },
+      {
+        "row": "Stimulus",
+        "col": "jQuery",
+        "count": 5
+      },
+      {
+        "row": "WordPress",
+        "col": "Stimulus",
+        "count": 5
+      },
+      {
+        "row": "jQuery",
+        "col": "Stimulus",
+        "count": 5
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Stimulus",
+        "count": 5
+      },
+      {
+        "row": "Stimulus",
+        "col": "Bootstrap",
+        "count": 5
+      },
+      {
+        "row": "Next.js",
+        "col": "WordPress",
+        "count": 1
+      },
+      {
+        "row": "Next.js",
+        "col": "jQuery",
+        "count": 3
+      },
+      {
+        "row": "WordPress",
+        "col": "Next.js",
+        "count": 1
+      },
+      {
+        "row": "jQuery",
+        "col": "Next.js",
+        "count": 3
+      },
+      {
+        "row": "Stimulus",
+        "col": "Vue",
+        "count": 1
+      },
+      {
+        "row": "Vue",
+        "col": "Stimulus",
+        "count": 1
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Joomla",
+        "count": 1
+      },
+      {
+        "row": "Joomla",
+        "col": "Alpine.js",
+        "count": 1
+      },
+      {
+        "row": "Angular",
+        "col": "Stimulus",
+        "count": 2
+      },
+      {
+        "row": "Stimulus",
+        "col": "Angular",
+        "count": 2
+      },
+      {
+        "row": "Bootstrap",
+        "col": "Nuxt",
+        "count": 1
+      },
+      {
+        "row": "Nuxt",
+        "col": "Bootstrap",
+        "count": 1
+      },
+      {
+        "row": "Nuxt",
+        "col": "jQuery",
+        "count": 1
+      },
+      {
+        "row": "jQuery",
+        "col": "Nuxt",
+        "count": 1
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Next.js",
+        "count": 1
+      },
+      {
+        "row": "Next.js",
+        "col": "Alpine.js",
+        "count": 1
+      }
+    ],
+    "max_count": 16133
+  },
+  "evidence_sources": {
+    "content": 259512,
+    "html": 53014,
+    "url": 198717,
+    "css-url": 5
+  },
+  "verdicts": [
+    {
+      "area": "Input coverage",
+      "status": "ok",
+      "detail": "22839 enti validi su 23686 righe raw; 22557 homepage uniche dopo deduplica."
+    },
+    {
+      "area": "Homepage probing",
+      "status": "warning",
+      "detail": "20057 homepage OK su 22557 (88.92%)."
+    },
+    {
+      "area": "JS/CSS inventory",
+      "status": "warning",
+      "detail": "JS catturati su 19607/20057 homepage OK; CSS catturati su 19331/20057."
+    },
+    {
+      "area": "Downloaded scripts",
+      "status": "warning",
+      "detail": "270550 record di download disponibili."
+    },
+    {
+      "area": "Detection evidence",
+      "status": "warning",
+      "detail": "16168 detection con evidenza da contenuto JS su 19298 detection primarie."
+    }
+  ],
+  "top_homepage_errors": [
+    {
+      "message": "Error: Timed out navigating to http://comune.sangiorgioacremano.na.it after 20s",
+      "count": 1,
+      "example_url": "http://comune.sangiorgioacremano.na.it"
+    },
+    {
+      "message": "Error: Failed to navigate to http://direzionedidatticagiovannililliu.edu.it: Network error: Network error: http://direzionedidatticagiovann…",
+      "count": 1,
+      "example_url": "http://direzionedidatticagiovannililliu.edu.it"
+    },
+    {
+      "message": "Error: Failed to navigate to http://gorizia.aterfvg.it/index.php?id=36841&no_cache=1: Network error: Network error: https://gorizia.aterfvg…",
+      "count": 1,
+      "example_url": "http://gorizia.aterfvg.it/index.php?id=36841&no_cache=1"
+    },
+    {
+      "message": "Error: Failed to navigate to http://iccasalbore.edu.it: Network error: Network error: http://iccasalbore.edu.it/: error sending request for…",
+      "count": 1,
+      "example_url": "http://iccasalbore.edu.it"
+    },
+    {
+      "message": "Error: Failed to navigate to http://trasparenza.unioneterradeigonzaga.it: Network error: Network error: http://trasparenza.unioneterradeigo…",
+      "count": 1,
+      "example_url": "http://trasparenza.unioneterradeigonzaga.it"
+    },
+    {
+      "message": "Error: Failed to navigate to http://wp.cogeaps.it: Network error: Network error: http://wp.cogeaps.it/: error sending request for url (http…",
+      "count": 1,
+      "example_url": "http://wp.cogeaps.it"
+    },
+    {
+      "message": "Error: Failed to navigate to http://www.agrotecnicimantova.jimdo.com: Network error: Network error: https://www.agrotecnicimantova.jimdo.co…",
+      "count": 1,
+      "example_url": "http://www.agrotecnicimantova.jimdo.com"
+    },
+    {
+      "message": "Error: Timed out navigating to http://www.asifrosinone.com after 20s",
+      "count": 1,
+      "example_url": "http://www.asifrosinone.com"
+    },
+    {
+      "message": "Error: Failed to navigate to http://www.atome3.it: Network error: Network error: http://www.atome3.it/: error sending request for url (http…",
+      "count": 1,
+      "example_url": "http://www.atome3.it"
+    },
+    {
+      "message": "Error: Timed out navigating to http://www.ats-montagna.it after 20s",
+      "count": 1,
+      "example_url": "http://www.ats-montagna.it"
+    }
+  ],
+  "top_js_errors": [
+    {
+      "message": "Error: Failed to navigate to https://comune.cerroalvolturno.is.it/i: Network error: Network error: https://comune.cerroalvolturno.is.it/i: …",
+      "count": 1,
+      "example_url": "https://comune.cerroalvolturno.is.it/i"
+    },
+    {
+      "message": "Error: Timed out navigating to http://pti.regione.sicilia.it/portal/page/portal/pir_portale/pir after 30s",
+      "count": 1,
+      "example_url": "http://pti.regione.sicilia.it/portal/page/portal/pir_portale/pir"
+    },
+    {
+      "message": "Error: Timed out navigating to https://pti.regione.sicilia.it/ after 30s",
+      "count": 1,
+      "example_url": "https://pti.regione.sicilia.it"
+    },
+    {
+      "message": "subprocess timeout after 42s",
+      "count": 1,
+      "example_url": "https://www.asp1chieti.it"
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.comune.salento.sa.it/: Network error: Network error: https://www.comune.salento.sa.it/: error send…",
+      "count": 1,
+      "example_url": "https://www.comune.salento.sa.it"
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.isissteodosiorossi.it/: Network error: Network error: https://reasonable-source.com/bj3EVB0.Pr3Vp-…",
+      "count": 1,
+      "example_url": "https://www.isissteodosiorossi.it"
+    },
+    {
+      "message": "Error: Failed to navigate to https://itisgalvani.it/: Network error: Network error: http://www.itsgalvani.it/: error sending request for ur…",
+      "count": 1,
+      "example_url": "https://www.itisgalvani.it"
+    },
+    {
+      "message": "Error: Failed to navigate to http://ww1.scuolapirotta.it/: Network error: Network error: Access to localhost domain 'localhost' is not allo…",
+      "count": 1,
+      "example_url": "https://www.scuolapirotta.it"
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.veterinari.udine.it/: Network error: Network error: https://www.veterinari.udine.it/: error sendin…",
+      "count": 1,
+      "example_url": "https://www.veterinari.udine.it"
+    },
+    {
+      "message": "Error: Timed out navigating to https://www.perindbo.org/ after 30s",
+      "count": 1,
+      "example_url": "https://www.perindbo.org"
+    }
+  ],
+  "top_css_errors": [
+    {
+      "message": "Error: Failed to navigate to https://comune.cerroalvolturno.is.it/i: Network error: Network error: https://comune.cerroalvolturno.is.it/i: …",
+      "count": 1,
+      "example_url": "https://comune.cerroalvolturno.is.it/i"
+    },
+    {
+      "message": "Error: Timed out navigating to http://pti.regione.sicilia.it/portal/page/portal/pir_portale/pir after 30s",
+      "count": 1,
+      "example_url": "http://pti.regione.sicilia.it/portal/page/portal/pir_portale/pir"
+    },
+    {
+      "message": "Error: Timed out navigating to https://pti.regione.sicilia.it/ after 30s",
+      "count": 1,
+      "example_url": "https://pti.regione.sicilia.it"
+    },
+    {
+      "message": "subprocess timeout after 42s",
+      "count": 1,
+      "example_url": "https://www.asp1chieti.it"
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.comune.salento.sa.it/: Network error: Network error: https://www.comune.salento.sa.it/: error send…",
+      "count": 1,
+      "example_url": "https://www.comune.salento.sa.it"
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.isissteodosiorossi.it/: Network error: Network error: https://reasonable-source.com/bj3EVB0.Pr3Vp-…",
+      "count": 1,
+      "example_url": "https://www.isissteodosiorossi.it"
+    },
+    {
+      "message": "Error: Failed to navigate to https://itisgalvani.it/: Network error: Network error: http://www.itsgalvani.it/: error sending request for ur…",
+      "count": 1,
+      "example_url": "https://www.itisgalvani.it"
+    },
+    {
+      "message": "Error: Failed to navigate to http://ww1.scuolapirotta.it/: Network error: Network error: Access to localhost domain 'localhost' is not allo…",
+      "count": 1,
+      "example_url": "https://www.scuolapirotta.it"
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.veterinari.udine.it/: Network error: Network error: https://www.veterinari.udine.it/: error sendin…",
+      "count": 1,
+      "example_url": "https://www.veterinari.udine.it"
+    },
+    {
+      "message": "Error: Timed out navigating to https://www.perindbo.org/ after 30s",
+      "count": 1,
+      "example_url": "https://www.perindbo.org"
+    }
+  ],
+  "suspicious_detections": [
+    {
+      "ente": "I.C. VICO II FONTANELLE - GIOVANNI PAOLO II",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.istitutocomprensivodeliceto.edu.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-istitutocomprensivodeliceto-edu-it-42b4bb5645d8.html:wp-content, html:www-istitutocomprensivodeliceto-edu-it-42b4bb5645d8.html:wp-includes, html:www-istitutocomprensivodeliceto-edu-it-42b4bb5645d8.html:wp-json"
+    },
+    {
+      "ente": "Comune di Capurso",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.comune.capurso.bari.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-comune-capurso-bari-it-9ab5f32ad909.html:wp-content, html:www-comune-capurso-bari-it-9ab5f32ad909.html:wp-includes, html:www-comune-capurso-bari-it-9ab5f32ad909.html:wp-json"
+    },
+    {
+      "ente": "Comune di Carinola",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.municipiodicarinola.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-municipiodicarinola-it-a2f0acfde97b.html:wp-content, html:www-municipiodicarinola-it-a2f0acfde97b.html:wp-includes, html:www-municipiodicarinola-it-a2f0acfde97b.html:wp-json"
+    },
+    {
+      "ente": "Comune di Graffignano",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.comune.graffignano.vt.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-comune-graffignano-vt-it-dea4805d95bd.html:wp-content, html:www-comune-graffignano-vt-it-dea4805d95bd.html:wp-includes, html:www-comune-graffignano-vt-it-dea4805d95bd.html:wp-json"
+    },
+    {
+      "ente": "Comune di Massafra",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.comune.massafra.ta.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-comune-massafra-ta-it-c072bdc7590f.html:wp-content, html:www-comune-massafra-ta-it-c072bdc7590f.html:wp-json, html:www-comune-massafra-ta-it-c072bdc7590f.html:wordpress"
+    },
+    {
+      "ente": "Comune di San Giovanni Incarico",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.comunesangiovanniincarico.fr.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 3,
+      "evidence_preview": "html:www-comunesangiovanniincarico-fr-it-7ed21e0dae08.html:wp-content, html:www-comunesangiovanniincarico-fr-it-7ed21e0dae08.html:wp-json, html:www-comunesangiovanniincarico-fr-it-7ed21e0dae08.html:wordpress"
+    },
+    {
+      "ente": "Comune di Triggiano",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.comune.triggiano.ba.it",
+      "framework": "WordPress",
+      "confidence": "medium",
+      "evidence_count": 2,
+      "evidence_preview": "html:www-comune-triggiano-ba-it-b4c7f2b51cac.html:wp-content, html:www-comune-triggiano-ba-it-b4c7f2b51cac.html:wordpress"
+    },
+    {
+      "ente": "Comune di Ziano Piacentino",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.comune.ziano.pc.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 5,
+      "evidence_preview": "html:www-comune-ziano-pc-it-a90f367e657c.html:wp-content, html:www-comune-ziano-pc-it-a90f367e657c.html:wp-includes, html:www-comune-ziano-pc-it-a90f367e657c.html:wp-json"
+    },
+    {
+      "ente": "Comune di Loiri Porto San Paolo",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.comune.loiriportosanpaolo.ss.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 3,
+      "evidence_preview": "html:www-comune-loiriportosanpaolo-ss-it-b32a27ac3bdc.html:wp-content, html:www-comune-loiriportosanpaolo-ss-it-b32a27ac3bdc.html:wp-json, html:www-comune-loiriportosanpaolo-ss-it-b32a27ac3bdc.html:wordpress"
+    },
+    {
+      "ente": "Consorzio Ato per La Gestione Dei Rifiuti Bacino Ta1 iin Liquidazione",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.comunedimassafra.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-comunedimassafra-it-d6ac455be83b.html:wp-content, html:www-comunedimassafra-it-d6ac455be83b.html:wp-json, html:www-comunedimassafra-it-d6ac455be83b.html:wordpress"
+    },
+    {
+      "ente": "Consorzio Interuniversitario Nazionale per L'Ingegneria Delle Georisorse",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.cinigeo.it",
+      "framework": "Joomla",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "evidence_preview": "html:www-cinigeo-it-6aa00edd18ba.html:joomla"
+    },
+    {
+      "ente": "Consiglio Notarile di Pavia",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.consiglionotarilepavia.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-consiglionotarilepavia-it-be08d3545b03.html:wp-content, html:www-consiglionotarilepavia-it-be08d3545b03.html:wp-includes, html:www-consiglionotarilepavia-it-be08d3545b03.html:wp-json"
+    },
+    {
+      "ente": "ORDINE DEGLI AVVOCATI DELLA PROVINCIA DI LIVORNO",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.ordineavvocatilivorno.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-ordineavvocatilivorno-it-0405275cc663.html:wp-content, html:www-ordineavvocatilivorno-it-0405275cc663.html:wp-includes, html:www-ordineavvocatilivorno-it-0405275cc663.html:wp-json"
+    },
+    {
+      "ente": "ORDINE DEI PERITI INDUSTRIALI E DEI PERITI INDUSTRIALI LAUREATI DELLA PROVINCIA DI FIRENZE",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.periti-industriali.firenze.it",
+      "framework": "Joomla",
+      "confidence": "medium",
+      "evidence_count": 2,
+      "evidence_preview": "html:www-periti-industriali-firenze-it-5da69a770edd.html:joomla, html:www-periti-industriali-firenze-it-5da69a770edd.html:wordpress"
+    },
+    {
+      "ente": "Centro Provinciale Istruzione Adulti di Lucca",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.cpialucca.edu.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 5,
+      "evidence_preview": "html:www-cpialucca-edu-it-34c9e20c9b33.html:wp-content, html:www-cpialucca-edu-it-34c9e20c9b33.html:wp-includes, html:www-cpialucca-edu-it-34c9e20c9b33.html:wp-json"
+    },
+    {
+      "ente": "Consorzio Universitario Archimede",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.consorziouniversitarioarchimede.it",
+      "framework": "Joomla",
+      "confidence": "medium",
+      "evidence_count": 2,
+      "evidence_preview": "html:www-consorziouniversitarioarchimede-it-ee1af5f2504f.html:joomla, html:www-consorziouniversitarioarchimede-it-ee1af5f2504f.html:wordpress"
+    },
+    {
+      "ente": "Federazione Dottori Agronomi e Dottori Forestali del Trentino Alto Adige",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.agronomiforestalitn.it",
+      "framework": "WordPress",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "evidence_preview": "html:www-agronomiforestalitn-it-119a2fddc83c.html:wordpress"
+    },
+    {
+      "ente": "Federazione Regionale Degli Ordini Dei Dottori Agronomi e Dei Dottori Forestali dell'Emilia-romagna",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.agronomiforestali-rer.it",
+      "framework": "WordPress",
+      "confidence": "medium",
+      "evidence_count": 2,
+      "evidence_preview": "html:www-agronomiforestali-rer-it-66ae75e27bc3.html:wp-content, html:www-agronomiforestali-rer-it-66ae75e27bc3.html:wp-includes"
+    },
+    {
+      "ente": "Comunicare- Anci comunicazione ed eventi srlu ",
+      "tipologia": "Stazioni Appaltanti",
+      "homepage_url": "https://www.ancicomunicare.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-ancicomunicare-it-fe613e5fb058.html:wp-content, html:www-ancicomunicare-it-fe613e5fb058.html:wp-includes, html:www-ancicomunicare-it-fe613e5fb058.html:wp-json"
+    },
+    {
+      "ente": "ISTITUTO COMPRENSIVO \"G. PASCOLI - A. DE STEFANO\"",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.icpascolidestefano.edu.it",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "evidence_preview": "html:www-icpascolidestefano-edu-it-a81571f6c9ac.html:wp-content, html:www-icpascolidestefano-edu-it-a81571f6c9ac.html:wp-includes, html:www-icpascolidestefano-edu-it-a81571f6c9ac.html:wp-json"
+    }
+  ],
+  "undetected_ok_homepages": [
+    {
+      "ente": "ARNAS G. Brotzu",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.aobrotzu.it",
+      "status": "ok"
+    },
+    {
+      "ente": "CFI - COOPERAZIONE FINANZA IMPRESA",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.cfi.it",
+      "status": "ok"
+    },
+    {
+      "ente": "I.L.V.C. (IMPIANTI ELETTRICI) S.R.L.",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.ilvc.it",
+      "status": "ok"
+    },
+    {
+      "ente": "Azienda Sanitaria Provinciale di Vibo Valentia",
+      "tipologia": "Pubbliche Amministrazioni",
+      "homepage_url": "https://www.aspvv.it",
+      "status": "ok"
+    },
+    {
+      "ente": "SOCIETA' ACQUEDOTTO VALLE DEL LAMONE SRL",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.savlmarradi.it",
+      "status": "ok"
+    },
+    {
+      "ente": "ISONTINA AMBIENTE SRL",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.isontinambiente.it",
+      "status": "ok"
+    },
+    {
+      "ente": "Azienda Trasporti Milanesi",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.atm.it",
+      "status": "ok"
+    },
+    {
+      "ente": "Azienda Casa Emilia - Romagna della Provincia di Rimini",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.acerimini.it",
+      "status": "ok"
+    },
+    {
+      "ente": "CATANIA MULTISERVIZI SPA",
+      "tipologia": "Stazioni Appaltanti",
+      "homepage_url": "https://www.cataniamultiservizi.it",
+      "status": "ok"
+    },
+    {
+      "ente": "CEM AMBIENTE SPA",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.cemambiente.it",
+      "status": "ok"
+    },
+    {
+      "ente": "ITS Apulia Digital Maker",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.apuliadigitalmaker.it",
+      "status": "ok"
+    },
+    {
+      "ente": "Artemedia Srl",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.artemedia.srl",
+      "status": "ok"
+    },
+    {
+      "ente": "Azienda Speciale Multiservizi del Comune di Fossano",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.asmfossano.it",
+      "status": "ok"
+    },
+    {
+      "ente": "Bologna Servizi Cimiteriali srl",
+      "tipologia": "Stazioni Appaltanti",
+      "homepage_url": "https://www.bolognaservizicimiteriali.it",
+      "status": "ok"
+    },
+    {
+      "ente": "Fondazione Casa di Riposo Quaglia Onuls",
+      "tipologia": "Stazioni Appaltanti",
+      "homepage_url": "https://www.casariposoquaglia.it",
+      "status": "ok"
+    },
+    {
+      "ente": "PagoPA S.p.A.",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.pagopa.it",
+      "status": "ok"
+    },
+    {
+      "ente": "ASSOSERVIZI SOCIETA' A SUPPORTO DELLA PUBBLICA AMMINISTRAZIONE SRL",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.assoservizi.net",
+      "status": "ok"
+    },
+    {
+      "ente": "CAMERA ARBITRALE DI MILANO S.R.L. SOCIETA' BENEFIT",
+      "tipologia": "Stazioni Appaltanti",
+      "homepage_url": "https://www.camera-arbitrale.it",
+      "status": "ok"
+    },
+    {
+      "ente": "3-i ",
+      "tipologia": "Societa' in Conto Economico Consolidato",
+      "homepage_url": "https://www.3-i.gov.it",
+      "status": "ok"
+    },
+    {
+      "ente": "CONSORZIO DI BONIFICA VENETO ORIENTALE",
+      "tipologia": "Gestori di Pubblici Servizi",
+      "homepage_url": "https://www.bonificavenetorientale.it",
+      "status": "ok"
+    }
+  ],
+  "exhaustiveness": {
+    "detector_type": "rule-based",
+    "supported_framework_catalog_size": 16,
+    "supported_ui_catalog_size": 8,
+    "detected_framework_types": 13,
+    "detected_cms_types": 4,
+    "detected_supported_framework_share_pct": 81.25,
+    "statement": "Il detector copre in modo strutturato solo il catalogo di firme note definite nel codice; non e` esaustivo rispetto a tutte le tecnologie web possibili."
+  }
+}

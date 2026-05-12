@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Metodologia | Report Framework Detection</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-slate.55e203da.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-slate.55e203da.css">
+<link rel="modulepreload" href="./_observablehq/client.86d48a53.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import "./_observablehq/client.86d48a53.js";
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Report Framework Detection</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./">Risultati</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./methodology">Metodologia</a></li>
+  </ol>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#criteri-di-detection">Criteri Di Detection</a></li>
+<li class="observablehq-secondary-link"><a href="#come-viene-assegnato-il-risultato">Come Viene Assegnato Il Risultato</a></li>
+</ol>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<h1 id="metodologia" tabindex="-1"><a class="observablehq-header-anchor" href="#metodologia">Metodologia</a></h1>
+<p>La detection è rule-based e combina più livelli di evidenza raccolti durante la pipeline. L'obiettivo non è indovinare
+la tecnologia da un solo indizio, ma accumulare marker coerenti per assegnare un framework primario, eventuali framework
+secondari, un CMS e un livello di confidenza.</p>
+<h2 id="criteri-di-detection" tabindex="-1"><a class="observablehq-header-anchor" href="#criteri-di-detection">Criteri Di Detection</a></h2>
+<ol>
+<li>
+<p><strong>Marker nell'HTML</strong>
+La homepage salvata viene ispezionata per cercare firme note nel markup o nello stato iniziale della pagina.
+Esempi:</p>
+<ul>
+<li><code>__NEXT_DATA__</code> o <code>id="__next"</code> per Next.js</li>
+<li><code>__NUXT__</code> o <code>id="__nuxt"</code> per Nuxt</li>
+<li><code>drupalSettings</code> per Drupal</li>
+<li><code>wp-content</code>, <code>wp-json</code> o <code>wordpress</code> per WordPress</li>
+<li><code>themeDisplay</code>, <code>Liferay.ThemeDisplay</code> o <code>Liferay.Loader</code> per Liferay</li>
+</ul>
+</li>
+<li>
+<p><strong>Marker negli URL degli asset</strong>
+Gli URL di script e fogli di stile vengono letti come segnali strutturali. Questo aiuta soprattutto per CMS e framework
+con percorsi standardizzati. Esempi:</p>
+<ul>
+<li><code>wp-content</code>, <code>wp-includes</code>, <code>elementor</code>, <code>woocommerce</code> per WordPress</li>
+<li><code>/_next/</code> per Next.js</li>
+<li><code>/_nuxt/</code> per Nuxt</li>
+<li><code>/o/</code>, <code>__liferay__</code> o <code>Liferay.Loader</code> per Liferay</li>
+</ul>
+</li>
+<li>
+<p><strong>Marker nel contenuto dei bundle JS</strong>
+Quando i bundle vengono scaricati, il detector cerca simboli e stringhe tipiche delle librerie realmente eseguite:</p>
+<ul>
+<li><code>React</code>, <code>react.production</code>, <code>createElement</code></li>
+<li><code>Vue</code>, <code>__VUE__</code>, <code>createApp(</code></li>
+<li><code>@angular</code>, <code>zone.js</code></li>
+<li><code>jQuery</code>, <code>$.fn.jquery</code></li>
+<li><code>bootstrap</code>, <code>data-bs-toggle</code></li>
+<li><code>bootstrap-italia</code>, <code>--bootstrap-italia-version</code></li>
+<li><code>Liferay.Loader</code>, <code>Liferay.ThemeDisplay</code>, <code>Liferay.Portlet</code>, <code>@liferay/</code></li>
+</ul>
+</li>
+<li>
+<p><strong>UI framework da CSS</strong>
+I CSS vengono usati soprattutto per intercettare framework di presentazione o builder:</p>
+<ul>
+<li>Bootstrap</li>
+<li>Bootstrap Italia</li>
+<li>Tailwind CSS</li>
+<li>Foundation</li>
+<li>UIkit</li>
+<li>Elementor</li>
+</ul>
+</li>
+</ol>
+<h2 id="come-viene-assegnato-il-risultato" tabindex="-1"><a class="observablehq-header-anchor" href="#come-viene-assegnato-il-risultato">Come Viene Assegnato Il Risultato</a></h2>
+<ol>
+<li>
+<p><strong>Framework primario</strong>
+Viene scelto il framework con più evidenze aggregate tra HTML, URL e contenuto dei bundle.</p>
+</li>
+<li>
+<p><strong>Framework secondari</strong>
+Gli altri framework con marker presenti rimangono come secondari. Questo è utile nei siti ibridi, per esempio
+WordPress con widget React o pagine che caricano jQuery e Bootstrap.</p>
+<p>Quando compaiono marker specifici di <code>Bootstrap Italia</code>, il detector privilegia questa etichetta e non la fa
+ricadere automaticamente nel bucket generico <code>Bootstrap</code>.</p>
+</li>
+<li>
+<p><strong>CMS primario</strong>
+Viene assegnato separatamente quando esistono marker forti di piattaforma editoriale.</p>
+</li>
+<li>
+<p><strong>Confidenza</strong></p>
+<ul>
+<li><code>high</code> quando il framework principale ha almeno tre evidenze</li>
+<li><code>medium</code> quando ha almeno una evidenza</li>
+<li><code>low</code> quando non ci sono segnali robusti o il risultato è debole</li>
+</ul>
+</li>
+</ol>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./"><span>Report Framework Detection</span></a></nav>
+<div>Report Framework Detection generato dagli output della pipeline.</div>
+</footer>
+</div>
+</body>
+</html>

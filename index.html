@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Risultati | Report Framework Detection</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-slate.55e203da.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-slate.55e203da.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="modulepreload" href="./_observablehq/client.86d48a53.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.31cd1366.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/87adea64.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.1.0/d4ec0aa1.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/42820bfa.js">
+<link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.86d48a53.js";
+import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
+
+registerFile("./data/framework-audit.json", {"name":"./data/framework-audit.json","mimeType":"application/json","path":"./_file/data/framework-audit.e53f83c7.json","lastModified":1778598151033,"size":38627});
+registerFile("./data/technology-summary.csv", {"name":"./data/technology-summary.csv","mimeType":"text/csv","path":"./_file/data/technology-summary.724f2b5f.csv","lastModified":1778598151229,"size":1132});
+
+define({id: "7633fdea", inputs: ["FileAttachment","html"], outputs: ["audit","technologySummary","frameworkRows","secondaryFrameworkRows","cmsRows","frameworkCsvUrl","downloadLink","confidenceBars","heatmap","heatmapMatrix","heatmapAlpha","heatmapTextColor","funnel","overallStatus","overallStatusClass","leadingFramework","secondFramework","detectionGap","jsGap","confidenceHigh","evidenceTone","exhaustivenessTone","summaryRows","resultBullets"], body: async (FileAttachment,html) => {
+const audit = await FileAttachment("./data/framework-audit.json").json();
+const technologySummary = await FileAttachment("./data/technology-summary.csv").csv({typed: true});
+const frameworkRows = technologySummary.filter((row) => row.kind === "framework");
+const secondaryFrameworkRows = technologySummary.filter((row) => row.kind === "secondary_framework");
+const cmsRows = technologySummary.filter((row) => row.kind === "cms");
+const frameworkCsvUrl = await FileAttachment("./data/technology-summary.csv").url();
+const downloadLink = html`<a href="${frameworkCsvUrl}" download="technology-summary.csv">Scarica la tabella completa</a>`;
+const confidenceBars = Object.entries(audit.status_counts.confidence).map(([name, count]) => ({name, count}));
+const heatmap = audit.framework_cooccurrence_heatmap;
+const heatmapMatrix = new Map(
+  heatmap.cells.map((cell) => [`${cell.row}|||${cell.col}`, cell.count])
+);
+const heatmapAlpha = (count) => {
+  if (!count || !heatmap.max_count) return 0.06;
+  return 0.14 + (count / heatmap.max_count) * 0.76;
+};
+const heatmapTextColor = (count) => {
+  if (!count || !heatmap.max_count) return "#94a3b8";
+  return count / heatmap.max_count >= 0.45 ? "#08111c" : "#e5edf8";
+};
+const funnel = [
+  {stage: "Enti validi", count: audit.counts.valid_entities},
+  {stage: "Homepage uniche", count: audit.counts.unique_homepages},
+  {stage: "Homepage OK", count: audit.counts.homepage_ok},
+  {stage: "Homepage con JS", count: audit.assets.homepages_with_js_ok},
+  {stage: "Detection primarie", count: audit.counts.detections_with_primary},
+  {stage: "Evidenze da contenuto", count: audit.counts.detections_with_content}
+];
+const overallStatus = audit.verdicts.some((d) => d.status === "critical")
+  ? "Critico"
+  : audit.verdicts.some((d) => d.status === "warning")
+  ? "Parziale"
+  : "Affidabile";
+const overallStatusClass = overallStatus.toLowerCase();
+const leadingFramework = frameworkRows[0];
+const secondFramework = frameworkRows[1];
+const detectionGap = audit.counts.detection_records - audit.counts.detections_with_primary;
+const jsGap = audit.counts.homepage_ok - audit.assets.homepages_with_js_ok;
+const confidenceHigh = audit.status_counts.confidence.high ?? 0;
+const evidenceTone = audit.coverage.content_evidence_pct_of_detections >= 85 ? "good" : "warn";
+const exhaustivenessTone = audit.exhaustiveness.detected_supported_framework_share_pct >= 75 ? "warn" : "bad";
+const summaryRows = [
+  {
+    label: "Stato del run",
+    value: overallStatus,
+    tone: overallStatus === "Affidabile" ? "good" : overallStatus === "Parziale" ? "warn" : "bad",
+    note: `${audit.counts.detections_with_primary} detection primarie su ${audit.counts.valid_entities} enti validi`
+  },
+  {
+    label: "Homepage raggiungibili",
+    value: `${audit.counts.homepage_ok} / ${audit.counts.unique_homepages}`,
+    tone: audit.coverage.homepage_ok_pct >= 90 ? "good" : "warn",
+    note: `${audit.coverage.homepage_ok_pct}% di homepage uniche risponde al probing`
+  },
+  {
+    label: "Cattura JS",
+    value: `${audit.assets.homepages_with_js_ok} / ${audit.counts.homepage_ok}`,
+    tone: audit.coverage.js_capture_pct_of_ok_homepages >= 95 ? "good" : audit.coverage.js_capture_pct_of_ok_homepages >= 75 ? "warn" : "bad",
+    note: `${audit.coverage.js_capture_pct_of_ok_homepages}% delle homepage OK ha almeno un asset JS`
+  },
+  {
+    label: "Evidenza forte",
+    value: `${audit.counts.detections_with_content} / ${audit.counts.detections_with_primary}`,
+    tone: evidenceTone,
+    note: `${audit.coverage.content_evidence_pct_of_detections}% delle detection arriva dal contenuto dei bundle`
+  },
+  {
+    label: "Framework secondari",
+    value: audit.counts.detections_with_secondary_frameworks,
+    tone: audit.counts.detections_with_secondary_frameworks > 0 ? "good" : "warn",
+    note: "Enti in cui è stato rilevato almeno un framework secondario oltre al primario"
+  },
+  {
+    label: "Download bundle",
+    value: audit.integrity.downloads_file_exists ? audit.counts.downloads_records : "assente",
+    tone: audit.integrity.downloads_file_exists ? "good" : "bad",
+    note: audit.integrity.downloads_file_exists
+      ? "Il file dei download è presente e alimenta le evidenze `content:`"
+      : "Manca il file `results/js_downloads.jsonl`"
+  }
+];
+const resultBullets = [
+  `${leadingFramework.name} è il framework/cms più rilevato con ${leadingFramework.count.toLocaleString("it-IT")} casi, seguito da ${secondFramework.name} con ${secondFramework.count.toLocaleString("it-IT")}.`,
+  `${confidenceHigh.toLocaleString("it-IT")} detection hanno confidenza alta e ${audit.counts.detections_with_content.toLocaleString("it-IT")} sono supportate da contenuto scaricato.`,
+  `${jsGap.toLocaleString("it-IT")} homepage OK non hanno ancora una cattura JS e ${detectionGap.toLocaleString("it-IT")} enti restano senza framework primario.`
+];
+return {audit,technologySummary,frameworkRows,secondaryFrameworkRows,cmsRows,frameworkCsvUrl,downloadLink,confidenceBars,heatmap,heatmapMatrix,heatmapAlpha,heatmapTextColor,funnel,overallStatus,overallStatusClass,leadingFramework,secondFramework,detectionGap,jsGap,confidenceHigh,evidenceTone,exhaustivenessTone,summaryRows,resultBullets};
+}});
+
+define({id: "df55e2d3", mode: "inline", inputs: ["overallStatus","display"], body: async (overallStatus,display) => {
+display(await(
+overallStatus
+))
+}});
+
+define({id: "bf4f606e", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.generated_at
+))
+}});
+
+define({id: "7603f9d3", mode: "inline", inputs: ["summaryRows","html","display"], body: async (summaryRows,html,display) => {
+display(await(
+summaryRows.map((row) => html.fragment`
+    <div class="summary-card tone-${row.tone}">
+      <div>
+        <div class="summary-label">${row.label}</div>
+        <div class="summary-note">${row.note}</div>
+      </div>
+      <div class="summary-value">${row.value}</div>
+    </div>
+  `)
+))
+}});
+
+define({id: "7d99a970", mode: "inline", inputs: ["resultBullets","html","display"], body: async (resultBullets,html,display) => {
+display(await(
+resultBullets.map((bullet) => html.fragment`<li>${bullet}</li>`)
+))
+}});
+
+define({id: "eb7e6349", mode: "inline", inputs: ["resize","Plot","frameworkRows","display"], body: async (resize,Plot,frameworkRows,display) => {
+display(await(
+resize((width) => Plot.plot({
+    width,
+    height: Math.max(420, frameworkRows.length * 34),
+    marginLeft: 140,
+    marginRight: 110,
+    x: {grid: true, label: "Enti"},
+    y: {label: null},
+    marks: [
+      Plot.barX(frameworkRows, {
+        x: "count",
+        y: "name",
+        fill: "#85c1ff",
+        tip: true,
+        sort: {y: "x", reverse: true}
+      }),
+      Plot.text(frameworkRows, {
+        x: "count",
+        y: "name",
+        text: (d) => d.count.toLocaleString("it-IT"),
+        dx: 10,
+        textAnchor: "start",
+        fill: "#e5edf8",
+        sort: {y: "x", reverse: true}
+      })
+    ]
+  }))
+))
+}});
+
+define({id: "d74a91dc", mode: "inline", inputs: ["downloadLink","display"], body: async (downloadLink,display) => {
+display(await(
+downloadLink
+))
+}});
+
+define({id: "031ef786", mode: "inline", inputs: ["Inputs","frameworkRows","display"], body: async (Inputs,frameworkRows,display) => {
+display(await(
+Inputs.table(frameworkRows, {
+      rows: 12,
+      columns: ["rank", "name", "count", "share_pct"],
+      header: {
+        rank: "Rank",
+        name: "Framework",
+        count: "Count",
+        share_pct: "Share %"
+      },
+      format: {
+        count: (value) => value.toLocaleString("it-IT"),
+        share_pct: (value) => `${value.toLocaleString("it-IT")}%`
+      }
+    })
+))
+}});
+
+define({id: "cef3e7eb", mode: "inline", inputs: ["resize","Plot","cmsRows","display"], body: async (resize,Plot,cmsRows,display) => {
+display(await(
+resize((width) => Plot.plot({
+    width,
+    height: Math.max(300, cmsRows.length * 34),
+    marginLeft: 140,
+    marginRight: 110,
+    x: {grid: true, label: "Enti"},
+    y: {label: null},
+    marks: [
+      Plot.barX(cmsRows, {
+        x: "count",
+        y: "name",
+        fill: "#3ecf8e",
+        tip: true,
+        sort: {y: "x", reverse: true}
+      }),
+      Plot.text(cmsRows, {
+        x: "count",
+        y: "name",
+        text: (d) => d.count.toLocaleString("it-IT"),
+        dx: 10,
+        textAnchor: "start",
+        fill: "#e5edf8",
+        sort: {y: "x", reverse: true}
+      })
+    ]
+  }))
+))
+}});
+
+define({id: "d74a91dc-1", mode: "inline", inputs: ["downloadLink","display"], body: async (downloadLink,display) => {
+display(await(
+downloadLink
+))
+}});
+
+define({id: "c8968d23", mode: "inline", inputs: ["Inputs","cmsRows","display"], body: async (Inputs,cmsRows,display) => {
+display(await(
+Inputs.table(cmsRows, {
+      rows: 12,
+      columns: ["rank", "name", "count", "share_pct"],
+      header: {
+        rank: "Rank",
+        name: "CMS",
+        count: "Count",
+        share_pct: "Share %"
+      },
+      format: {
+        count: (value) => value.toLocaleString("it-IT"),
+        share_pct: (value) => `${value.toLocaleString("it-IT")}%`
+      }
+    })
+))
+}});
+
+define({id: "c793886e", mode: "inline", inputs: ["resize","Plot","secondaryFrameworkRows","display"], body: async (resize,Plot,secondaryFrameworkRows,display) => {
+display(await(
+resize((width) => Plot.plot({
+    width,
+    height: Math.max(300, secondaryFrameworkRows.length * 34),
+    marginLeft: 140,
+    marginRight: 110,
+    x: {grid: true, label: "Occorrenze"},
+    y: {label: null},
+    marks: [
+      Plot.barX(secondaryFrameworkRows, {
+        x: "count",
+        y: "name",
+        fill: "#ffb86b",
+        tip: true,
+        sort: {y: "x", reverse: true}
+      }),
+      Plot.text(secondaryFrameworkRows, {
+        x: "count",
+        y: "name",
+        text: (d) => d.count.toLocaleString("it-IT"),
+        dx: 10,
+        textAnchor: "start",
+        fill: "#e5edf8",
+        sort: {y: "x", reverse: true}
+      })
+    ]
+  }))
+))
+}});
+
+define({id: "d74a91dc-2", mode: "inline", inputs: ["downloadLink","display"], body: async (downloadLink,display) => {
+display(await(
+downloadLink
+))
+}});
+
+define({id: "12972cf1", mode: "inline", inputs: ["Inputs","secondaryFrameworkRows","display"], body: async (Inputs,secondaryFrameworkRows,display) => {
+display(await(
+Inputs.table(secondaryFrameworkRows, {
+      rows: 12,
+      columns: ["rank", "name", "count", "share_pct"],
+      header: {
+        rank: "Rank",
+        name: "Framework secondario",
+        count: "Count",
+        share_pct: "Share %"
+      },
+      format: {
+        count: (value) => value.toLocaleString("it-IT"),
+        share_pct: (value) => `${value.toLocaleString("it-IT")}%`
+      }
+    })
+))
+}});
+
+define({id: "1aaa5dc5", mode: "inline", inputs: ["heatmap","html","display"], body: async (heatmap,html,display) => {
+display(await(
+heatmap.labels.map((label) => html.fragment`<th>${label}</th>`)
+))
+}});
+
+define({id: "8600f017", mode: "inline", inputs: ["heatmap","html","heatmapMatrix","heatmapAlpha","heatmapTextColor","display"], body: async (heatmap,html,heatmapMatrix,heatmapAlpha,heatmapTextColor,display) => {
+display(await(
+heatmap.labels.map((rowLabel) => html.fragment`
+          <tr>
+            <th>${rowLabel}</th>
+            ${heatmap.labels.map((colLabel) => {
+              const count = heatmapMatrix.get(`${rowLabel}|||${colLabel}`) ?? 0;
+              return html.fragment`
+                <td
+                  title="${rowLabel} + ${colLabel}: ${count}"
+                  style="background: rgba(133, 193, 255, ${heatmapAlpha(count)}); color: ${heatmapTextColor(count)};"
+                >${count ? count.toLocaleString("it-IT") : "·"}</td>
+              `;
+            })}
+          </tr>
+        `)
+))
+}});
+
+define({id: "bc6ccc31", mode: "inline", inputs: ["resize","Plot","confidenceBars","display"], body: async (resize,Plot,confidenceBars,display) => {
+display(await(
+resize((width) => Plot.plot({
+    width,
+    height: 260,
+    x: {label: null},
+    y: {grid: true, label: "Record"},
+    color: {domain: ["low", "medium", "high"], range: ["#94a3b8", "#f5a524", "#3ecf8e"]},
+    marks: [
+      Plot.barY(confidenceBars, {x: "name", y: "count", fill: "name", tip: true}),
+      Plot.text(confidenceBars, {x: "name", y: "count", text: (d) => d.count.toLocaleString("it-IT"), dy: -8, fill: "#e5edf8"})
+    ]
+  }))
+))
+}});
+
+define({id: "0fb50a69", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.coverage.content_evidence_pct_of_detections
+))
+}});
+
+define({id: "3bb5f6c7", mode: "inline", inputs: ["resize","Plot","funnel","display"], body: async (resize,Plot,funnel,display) => {
+display(await(
+resize((width) => Plot.plot({
+    width,
+    height: 320,
+    x: {label: null},
+    y: {grid: true, label: "Conteggio"},
+    color: {range: ["#3ecf8e", "#85c1ff", "#ffb86b", "#ff8e72", "#8a7dff", "#d96cff"]},
+    marks: [
+      Plot.barY(funnel, {x: "stage", y: "count", fill: "stage", tip: true}),
+      Plot.ruleY([0])
+    ]
+  }))
+))
+}});
+
+define({id: "d677c8e8", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.counts.homepage_error.toLocaleString("it-IT")
+))
+}});
+
+define({id: "58f48220", mode: "inline", inputs: ["jsGap","display"], body: async (jsGap,display) => {
+display(await(
+jsGap.toLocaleString("it-IT")
+))
+}});
+
+define({id: "8052c1a0", mode: "inline", inputs: ["detectionGap","display"], body: async (detectionGap,display) => {
+display(await(
+detectionGap.toLocaleString("it-IT")
+))
+}});
+
+define({id: "ccafdbcd", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.exhaustiveness.statement
+))
+}});
+
+define({id: "b636350b", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.exhaustiveness.detector_type
+))
+}});
+
+define({id: "965515a5", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.exhaustiveness.supported_framework_catalog_size
+))
+}});
+
+define({id: "72c601a7", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.exhaustiveness.detected_framework_types
+))
+}});
+
+define({id: "b60689cf", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.exhaustiveness.detected_supported_framework_share_pct
+))
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link observablehq-link-active"><a href="./">Report Framework Detection</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link observablehq-link-active"><a href="./">Risultati</a></li>
+    <li class="observablehq-link"><a href="./methodology">Metodologia</a></li>
+  </ol>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#sintesi-esecutiva">Sintesi Esecutiva</a></li>
+<li class="observablehq-secondary-link"><a href="#cosa-dicono-i-risultati">Cosa Dicono I Risultati</a></li>
+<li class="observablehq-secondary-link"><a href="#framework-rilevati">Framework Rilevati</a></li>
+<li class="observablehq-secondary-link"><a href="#cms-rilevati">CMS Rilevati</a></li>
+<li class="observablehq-secondary-link"><a href="#framework-secondari-rilevati">Framework Secondari Rilevati</a></li>
+<li class="observablehq-secondary-link"><a href="#heatmap-delle-co-occorrenze">Heatmap Delle Co-occorrenze</a></li>
+<li class="observablehq-secondary-link"><a href="#qualita-delle-detection">Qualità Delle Detection</a></li>
+<li class="observablehq-secondary-link"><a href="#copertura-della-pipeline">Copertura Della Pipeline</a></li>
+<li class="observablehq-secondary-link"><a href="#verifica-di-esaustivita">Verifica Di Esaustività</a></li>
+</ol>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:7633fdea:--></div>
+<div class="hero">
+  <div class="eyebrow">Censimento tecnologie frontend</div>
+  <h1>Framework per i siti della PA</h1>
+  <p>Analisi dei framework dei siti della PA a partire da JS e CSS.
+  </p>
+  <div class="hero-meta">
+    <span class="status-pill status-${overallStatusClass}"><observablehq-loading></observablehq-loading><!--:df55e2d3:--></span>
+    <span class="hero-note">Generato il <observablehq-loading></observablehq-loading><!--:bf4f606e:--></span>
+  </div>
+</div>
+<h2 id="sintesi-esecutiva" tabindex="-1"><a class="observablehq-header-anchor" href="#sintesi-esecutiva">Sintesi Esecutiva</a></h2>
+<div class="stack">
+  <observablehq-loading></observablehq-loading><!--:7603f9d3:-->
+</div>
+<h2 id="cosa-dicono-i-risultati" tabindex="-1"><a class="observablehq-header-anchor" href="#cosa-dicono-i-risultati">Cosa Dicono I Risultati</a></h2>
+<div class="card prose">
+  <ul>
+    <observablehq-loading></observablehq-loading><!--:7d99a970:-->
+  </ul>
+</div>
+<h2 id="framework-rilevati" tabindex="-1"><a class="observablehq-header-anchor" href="#framework-rilevati">Framework Rilevati</a></h2>
+<div class="card">
+  <p class="section-intro">
+    Tutti i framework primari rilevati, ordinati dal più frequente al meno frequente.
+  </p>
+  <observablehq-loading></observablehq-loading><!--:eb7e6349:-->
+  <div class="table-actions">
+    <observablehq-loading></observablehq-loading><!--:d74a91dc:-->
+  </div>
+  <div class="table-wrap">
+    <observablehq-loading></observablehq-loading><!--:031ef786:-->
+  </div>
+</div>
+<h2 id="cms-rilevati" tabindex="-1"><a class="observablehq-header-anchor" href="#cms-rilevati">CMS Rilevati</a></h2>
+<div class="card">
+  <p class="section-intro">
+    Tutti i CMS primari rilevati, ordinati dal più frequente al meno frequente.
+  </p>
+  <observablehq-loading></observablehq-loading><!--:cef3e7eb:-->
+  <div class="table-actions">
+    <observablehq-loading></observablehq-loading><!--:d74a91dc-1:-->
+  </div>
+  <div class="table-wrap">
+    <observablehq-loading></observablehq-loading><!--:c8968d23:-->
+  </div>
+</div>
+<h2 id="framework-secondari-rilevati" tabindex="-1"><a class="observablehq-header-anchor" href="#framework-secondari-rilevati">Framework Secondari Rilevati</a></h2>
+<div class="card">
+  <p class="section-intro">
+    Quando su uno stesso ente emergono più tecnologie, qui vedi tutti i framework secondari conteggiati separatamente dal primario.
+  </p>
+  <observablehq-loading></observablehq-loading><!--:c793886e:-->
+  <div class="table-actions">
+    <observablehq-loading></observablehq-loading><!--:d74a91dc-2:-->
+  </div>
+  <div class="table-wrap">
+    <observablehq-loading></observablehq-loading><!--:12972cf1:-->
+  </div>
+</div>
+<h2 id="heatmap-delle-co-occorrenze" tabindex="-1"><a class="observablehq-header-anchor" href="#heatmap-delle-co-occorrenze">Heatmap Delle Co-occorrenze</a></h2>
+<div class="card">
+  <p class="section-intro">
+    Questa matrice mostra quante volte due framework compaiono insieme nello stesso ente, indipendentemente da quale sia primario o secondario.
+  </p>
+  <div class="heatmap-wrap">
+    <table class="heatmap-table">
+      <thead>
+        <tr>
+          <th>Framework</th>
+          <!--:1aaa5dc5:-->
+        </tr>
+      </thead>
+      <tbody>
+        <!--:8600f017:-->
+      </tbody>
+    </table>
+  </div>
+</div>
+<h2 id="qualita-delle-detection" tabindex="-1"><a class="observablehq-header-anchor" href="#qualita-delle-detection">Qualità Delle Detection</a></h2>
+<div class="card">
+  <p class="section-intro">
+    Distribuzione della confidenza assegnata alle detection finali.
+  </p>
+  <observablehq-loading></observablehq-loading><!--:bc6ccc31:-->
+  <p class="callout tone-${evidenceTone}">
+    <observablehq-loading></observablehq-loading><!--:0fb50a69:-->% delle detection primarie è sostenuto da evidenze `content:`.
+    Questo è il segnale più forte che la classificazione arriva dai bundle scaricati e non solo da marker statici.
+  </p>
+</div>
+<h2 id="copertura-della-pipeline" tabindex="-1"><a class="observablehq-header-anchor" href="#copertura-della-pipeline">Copertura Della Pipeline</a></h2>
+<div class="card">
+  <p class="section-intro">
+    Funnel di copertura dal dataset validato fino alle detection supportate da contenuto.
+  </p>
+  <observablehq-loading></observablehq-loading><!--:3bb5f6c7:-->
+  <ul class="gap-list">
+    <li><strong>Homepage non raggiungibili:</strong> <observablehq-loading></observablehq-loading><!--:d677c8e8:--></li>
+    <li><strong>Homepage OK senza JS catturato:</strong> <observablehq-loading></observablehq-loading><!--:58f48220:--></li>
+    <li><strong>Enti senza framework primario:</strong> <observablehq-loading></observablehq-loading><!--:8052c1a0:--></li>
+  </ul>
+</div>
+<h2 id="verifica-di-esaustivita" tabindex="-1"><a class="observablehq-header-anchor" href="#verifica-di-esaustivita">Verifica Di Esaustività</a></h2>
+<div class="card">
+  <p class="section-intro">
+    Il detector lavora bene sul catalogo di firme che conosce, ma non va considerato esaustivo rispetto a tutte le tecnologie web possibili.
+  </p>
+  <p class="callout tone-${exhaustivenessTone}">
+    <observablehq-loading></observablehq-loading><!--:ccafdbcd:-->
+  </p>
+  <ul class="gap-list">
+    <li><strong>Tipo di detector:</strong> <observablehq-loading></observablehq-loading><!--:b636350b:--></li>
+    <li><strong>Framework con regole esplicite nel codice:</strong> <observablehq-loading></observablehq-loading><!--:965515a5:--></li>
+    <li><strong>Framework effettivamente emersi come primari:</strong> <observablehq-loading></observablehq-loading><!--:72c601a7:--></li>
+    <li><strong>Copertura del catalogo supportato:</strong> <observablehq-loading></observablehq-loading><!--:b60689cf:-->%</li>
+    <li><strong>Conclusione operativa:</strong> il report è ampio sul catalogo che supportiamo, ma non ancora esaustivo in senso assoluto.</li>
+  </ul>
+</div>
+<style>
+  :root {
+    --bg-panel: rgba(8, 17, 28, 0.74);
+    --line: rgba(148, 163, 184, 0.2);
+    --text-soft: #b8c4d4;
+    --good: #3ecf8e;
+    --warn: #f5a524;
+    --bad: #ff5d73;
+    --blue: #85c1ff;
+  }
+
+  .hero,
+  .card,
+  .summary-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .hero {
+    padding: 28px;
+    margin-bottom: 24px;
+    background:
+      radial-gradient(circle at top left, rgba(133, 193, 255, 0.16), transparent 34%),
+      radial-gradient(circle at bottom right, rgba(62, 207, 142, 0.16), transparent 28%),
+      linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(10, 17, 30, 0.95));
+  }
+
+  .eyebrow {
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    margin-bottom: 10px;
+  }
+
+  .hero h1 {
+    margin: 0 0 10px;
+    font-size: clamp(2.5rem, 7vw, 4.8rem);
+    line-height: 0.94;
+    letter-spacing: -0.04em;
+    max-width: 12ch;
+  }
+
+  .hero p,
+  .section-intro,
+  .summary-note,
+  .hero-note,
+  .prose,
+  .gap-list,
+  .callout {
+    color: var(--text-soft);
+  }
+
+  .hero a,
+  .prose a {
+    color: var(--blue);
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-top: 18px;
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 88px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.74rem;
+    font-weight: 700;
+  }
+
+  .status-affidabile {
+    color: #052e16;
+    background: rgba(62, 207, 142, 0.9);
+  }
+
+  .status-parziale {
+    color: #3d2600;
+    background: rgba(245, 165, 36, 0.95);
+  }
+
+  .status-critico {
+    color: white;
+    background: rgba(255, 93, 115, 0.9);
+  }
+
+  .stack {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .summary-card {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .summary-label {
+    color: #e5edf8;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .summary-value {
+    font-size: clamp(1.3rem, 4vw, 2.3rem);
+    font-weight: 800;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .tone-good .summary-value,
+  .tone-good.callout {
+    color: var(--good);
+  }
+
+  .tone-warn .summary-value,
+  .tone-warn.callout {
+    color: var(--warn);
+  }
+
+  .tone-bad .summary-value,
+  .tone-bad.callout {
+    color: var(--bad);
+  }
+
+  .card {
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+
+  .section-intro {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .prose ul,
+  .gap-list {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .prose li,
+  .gap-list li {
+    margin: 8px 0;
+  }
+
+  .callout {
+    margin: 18px 0 0;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .table-actions {
+    margin: 16px 0 12px;
+  }
+
+  .table-actions a {
+    color: var(--blue);
+  }
+
+  .table-wrap {
+    overflow: auto;
+  }
+
+  .heatmap-wrap {
+    overflow: auto;
+  }
+
+  .heatmap-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 4px;
+    min-width: 760px;
+  }
+
+  .heatmap-table th,
+  .heatmap-table td {
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  .heatmap-table thead th,
+  .heatmap-table tbody th {
+    background: rgba(255, 255, 255, 0.04);
+    color: #e5edf8;
+    position: sticky;
+  }
+
+  .heatmap-table thead th {
+    top: 0;
+    z-index: 1;
+  }
+
+  .heatmap-table tbody th {
+    left: 0;
+    z-index: 1;
+    text-align: left;
+    min-width: 150px;
+  }
+
+  @media (max-width: 720px) {
+    .summary-card {
+      display: block;
+    }
+
+    .summary-value {
+      text-align: left;
+      margin-top: 10px;
+      white-space: normal;
+    }
+  }
+</style>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="next" href="./methodology"><span>Metodologia</span></a></nav>
+<div>Report Framework Detection generato dagli output della pipeline.</div>
+</footer>
+</div>
+</body>
+</html>
