@@ -1,0 +1,8 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.pyc
+results/js_files/
+results/homepages_html/
+logs/*.tmp
+dist
