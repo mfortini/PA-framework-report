@@ -61,17 +61,16 @@
 import {define} from "./_observablehq/client.86d48a53.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
-registerFile("./data/framework-audit.json", {"name":"./data/framework-audit.json","mimeType":"application/json","path":"./_file/data/framework-audit.e53f83c7.json","lastModified":1778598151033,"size":38627});
-registerFile("./data/technology-summary.csv", {"name":"./data/technology-summary.csv","mimeType":"text/csv","path":"./_file/data/technology-summary.724f2b5f.csv","lastModified":1778598151229,"size":1132});
+registerFile("./data/framework-audit.json", {"name":"./data/framework-audit.json","mimeType":"application/json","path":"./_file/data/framework-audit.47e0ec02.json","lastModified":1778750406742,"size":45416});
+registerFile("./data/technology-summary.csv", {"name":"./data/technology-summary.csv","mimeType":"text/csv","path":"./_file/data/technology-summary.28a31bb5.csv","lastModified":1778750407170,"size":1350});
 
-define({id: "7633fdea", inputs: ["FileAttachment","html"], outputs: ["audit","technologySummary","frameworkRows","secondaryFrameworkRows","cmsRows","frameworkCsvUrl","downloadLink","confidenceBars","heatmap","heatmapMatrix","heatmapAlpha","heatmapTextColor","funnel","overallStatus","overallStatusClass","leadingFramework","secondFramework","detectionGap","jsGap","confidenceHigh","evidenceTone","exhaustivenessTone","summaryRows","resultBullets"], body: async (FileAttachment,html) => {
+define({id: "768b1101", inputs: ["FileAttachment"], outputs: ["audit","technologySummary","frameworkRows","secondaryFrameworkRows","cmsRows","uiRows","confidenceBars","heatmap","heatmapMatrix","heatmapAlpha","heatmapTextColor","funnel","overallStatus","overallStatusClass","leadingFramework","secondFramework","detectionGap","jsGap","confidenceHigh","hasScoringMetrics","hasHeaderMetrics","headerSupport","backendHintRows","backendHintLead","headerMarkers","evidenceTone","weakSignalTone","exhaustivenessTone","summaryRows","resultBullets"], body: async (FileAttachment) => {
 const audit = await FileAttachment("./data/framework-audit.json").json();
 const technologySummary = await FileAttachment("./data/technology-summary.csv").csv({typed: true});
 const frameworkRows = technologySummary.filter((row) => row.kind === "framework");
 const secondaryFrameworkRows = technologySummary.filter((row) => row.kind === "secondary_framework");
 const cmsRows = technologySummary.filter((row) => row.kind === "cms");
-const frameworkCsvUrl = await FileAttachment("./data/technology-summary.csv").url();
-const downloadLink = html`<a href="${frameworkCsvUrl}" download="technology-summary.csv">Scarica la tabella completa</a>`;
+const uiRows = technologySummary.filter((row) => row.kind === "ui_framework");
 const confidenceBars = Object.entries(audit.status_counts.confidence).map(([name, count]) => ({name, count}));
 const heatmap = audit.framework_cooccurrence_heatmap;
 const heatmapMatrix = new Map(
@@ -99,12 +98,19 @@ const overallStatus = audit.verdicts.some((d) => d.status === "critical")
   ? "Parziale"
   : "Affidabile";
 const overallStatusClass = overallStatus.toLowerCase();
-const leadingFramework = frameworkRows[0];
-const secondFramework = frameworkRows[1];
+const leadingFramework = frameworkRows[0] ?? {name: "Nessuno", count: 0};
+const secondFramework = frameworkRows[1] ?? {name: "nessun altro framework", count: 0};
 const detectionGap = audit.counts.detection_records - audit.counts.detections_with_primary;
 const jsGap = audit.counts.homepage_ok - audit.assets.homepages_with_js_ok;
 const confidenceHigh = audit.status_counts.confidence.high ?? 0;
+const hasScoringMetrics = audit.counts.detections_with_primary_and_scoring > 0;
+const hasHeaderMetrics = (audit.counts.detections_with_headers ?? 0) > 0;
+const headerSupport = audit.header_support ?? {};
+const backendHintRows = audit.backend_hint_counts ?? [];
+const backendHintLead = backendHintRows[0] ?? null;
+const headerMarkers = headerSupport.top_markers ?? [];
 const evidenceTone = audit.coverage.content_evidence_pct_of_detections >= 85 ? "good" : "warn";
+const weakSignalTone = audit.coverage.weak_primary_pct_of_detections <= 10 ? "good" : audit.coverage.weak_primary_pct_of_detections <= 25 ? "warn" : "bad";
 const exhaustivenessTone = audit.exhaustiveness.detected_supported_framework_share_pct >= 75 ? "warn" : "bad";
 const summaryRows = [
   {
@@ -132,10 +138,32 @@ const summaryRows = [
     note: `${audit.coverage.content_evidence_pct_of_detections}% delle detection arriva dal contenuto dei bundle`
   },
   {
+    label: "Header HTTP",
+    value: hasHeaderMetrics ? audit.counts.detections_with_headers : "n/d",
+    tone: hasHeaderMetrics ? "good" : "warn",
+    note: hasHeaderMetrics
+      ? `${audit.coverage.header_evidence_pct_of_detections}% delle detection primarie usa anche header o cookie come supporto`
+      : "Metriche header non ancora disponibili nel dataset corrente"
+  },
+  {
     label: "Framework secondari",
     value: audit.counts.detections_with_secondary_frameworks,
     tone: audit.counts.detections_with_secondary_frameworks > 0 ? "good" : "warn",
     note: "Enti in cui è stato rilevato almeno un framework secondario oltre al primario"
+  },
+  {
+    label: "Primari deboli",
+    value: hasScoringMetrics ? audit.counts.weak_primary_detections : "n/d",
+    tone: hasScoringMetrics ? weakSignalTone : "warn",
+    note: hasScoringMetrics
+      ? `${audit.coverage.weak_primary_pct_of_detections}% delle detection primarie con scoring ha score basso e nessuna evidenza forte`
+      : "Richiede un rerun completo del detector con il nuovo motore di scoring"
+  },
+  {
+    label: "UI senza primario",
+    value: audit.counts.ui_only_homepages,
+    tone: audit.counts.ui_only_homepages > 0 ? "warn" : "good",
+    note: "Homepage con UI framework rilevato ma senza framework applicativo affidabile"
   },
   {
     label: "Download bundle",
@@ -149,9 +177,15 @@ const summaryRows = [
 const resultBullets = [
   `${leadingFramework.name} è il framework/cms più rilevato con ${leadingFramework.count.toLocaleString("it-IT")} casi, seguito da ${secondFramework.name} con ${secondFramework.count.toLocaleString("it-IT")}.`,
   `${confidenceHigh.toLocaleString("it-IT")} detection hanno confidenza alta e ${audit.counts.detections_with_content.toLocaleString("it-IT")} sono supportate da contenuto scaricato.`,
+  hasHeaderMetrics
+    ? `${audit.counts.detections_with_headers.toLocaleString("it-IT")} detection primarie usano anche header o cookie HTTP${backendHintLead ? `; tra gli indizi backend emersi il più frequente è ${backendHintLead.name} (${backendHintLead.count.toLocaleString("it-IT")} casi)` : ""}.`
+    : "Il dataset corrente non include ancora evidenze da header HTTP o cookie.",
+  hasScoringMetrics
+    ? `${audit.counts.weak_primary_detections.toLocaleString("it-IT")} detection primarie restano deboli e ${audit.counts.ui_only_homepages.toLocaleString("it-IT")} homepage mostrano solo segnali UI senza un primario affidabile.`
+    : `${audit.counts.ui_only_homepages.toLocaleString("it-IT")} homepage mostrano solo segnali UI senza un primario affidabile; le metriche sui primari deboli saranno affidabili dopo il rerun del detector.`,
   `${jsGap.toLocaleString("it-IT")} homepage OK non hanno ancora una cattura JS e ${detectionGap.toLocaleString("it-IT")} enti restano senza framework primario.`
 ];
-return {audit,technologySummary,frameworkRows,secondaryFrameworkRows,cmsRows,frameworkCsvUrl,downloadLink,confidenceBars,heatmap,heatmapMatrix,heatmapAlpha,heatmapTextColor,funnel,overallStatus,overallStatusClass,leadingFramework,secondFramework,detectionGap,jsGap,confidenceHigh,evidenceTone,exhaustivenessTone,summaryRows,resultBullets};
+return {audit,technologySummary,frameworkRows,secondaryFrameworkRows,cmsRows,uiRows,confidenceBars,heatmap,heatmapMatrix,heatmapAlpha,heatmapTextColor,funnel,overallStatus,overallStatusClass,leadingFramework,secondFramework,detectionGap,jsGap,confidenceHigh,hasScoringMetrics,hasHeaderMetrics,headerSupport,backendHintRows,backendHintLead,headerMarkers,evidenceTone,weakSignalTone,exhaustivenessTone,summaryRows,resultBullets};
 }});
 
 define({id: "df55e2d3", mode: "inline", inputs: ["overallStatus","display"], body: async (overallStatus,display) => {
@@ -217,12 +251,6 @@ resize((width) => Plot.plot({
 ))
 }});
 
-define({id: "d74a91dc", mode: "inline", inputs: ["downloadLink","display"], body: async (downloadLink,display) => {
-display(await(
-downloadLink
-))
-}});
-
 define({id: "031ef786", mode: "inline", inputs: ["Inputs","frameworkRows","display"], body: async (Inputs,frameworkRows,display) => {
 display(await(
 Inputs.table(frameworkRows, {
@@ -270,12 +298,6 @@ resize((width) => Plot.plot({
       })
     ]
   }))
-))
-}});
-
-define({id: "d74a91dc-1", mode: "inline", inputs: ["downloadLink","display"], body: async (downloadLink,display) => {
-display(await(
-downloadLink
 ))
 }});
 
@@ -329,12 +351,6 @@ resize((width) => Plot.plot({
 ))
 }});
 
-define({id: "d74a91dc-2", mode: "inline", inputs: ["downloadLink","display"], body: async (downloadLink,display) => {
-display(await(
-downloadLink
-))
-}});
-
 define({id: "12972cf1", mode: "inline", inputs: ["Inputs","secondaryFrameworkRows","display"], body: async (Inputs,secondaryFrameworkRows,display) => {
 display(await(
 Inputs.table(secondaryFrameworkRows, {
@@ -349,6 +365,120 @@ Inputs.table(secondaryFrameworkRows, {
       format: {
         count: (value) => value.toLocaleString("it-IT"),
         share_pct: (value) => `${value.toLocaleString("it-IT")}%`
+      }
+    })
+))
+}});
+
+define({id: "04dc8ee0", mode: "inline", inputs: ["resize","Plot","uiRows","display"], body: async (resize,Plot,uiRows,display) => {
+display(await(
+resize((width) => Plot.plot({
+    width,
+    height: Math.max(260, uiRows.length * 34),
+    marginLeft: 140,
+    marginRight: 110,
+    x: {grid: true, label: "Occorrenze"},
+    y: {label: null},
+    marks: [
+      Plot.barX(uiRows, {
+        x: "count",
+        y: "name",
+        fill: "#d96cff",
+        tip: true,
+        sort: {y: "x", reverse: true}
+      }),
+      Plot.text(uiRows, {
+        x: "count",
+        y: "name",
+        text: (d) => d.count.toLocaleString("it-IT"),
+        dx: 10,
+        textAnchor: "start",
+        fill: "#e5edf8",
+        sort: {y: "x", reverse: true}
+      })
+    ]
+  }))
+))
+}});
+
+define({id: "760f013c", mode: "inline", inputs: ["Inputs","uiRows","display"], body: async (Inputs,uiRows,display) => {
+display(await(
+Inputs.table(uiRows, {
+      rows: 12,
+      columns: ["rank", "name", "count", "share_pct"],
+      header: {
+        rank: "Rank",
+        name: "UI framework",
+        count: "Count",
+        share_pct: "Share %"
+      },
+      format: {
+        count: (value) => value.toLocaleString("it-IT"),
+        share_pct: (value) => `${value.toLocaleString("it-IT")}%`
+      }
+    })
+))
+}});
+
+define({id: "8c309bca", mode: "inline", inputs: ["hasHeaderMetrics","audit","display"], body: async (hasHeaderMetrics,audit,display) => {
+display(await(
+hasHeaderMetrics ? audit.counts.detections_with_headers : "n/d"
+))
+}});
+
+define({id: "1e4ba724", mode: "inline", inputs: ["hasHeaderMetrics","headerSupport","display"], body: async (hasHeaderMetrics,headerSupport,display) => {
+display(await(
+hasHeaderMetrics ? headerSupport.with_headers ?? 0 : "n/d"
+))
+}});
+
+define({id: "28d1c4ad", mode: "inline", inputs: ["hasHeaderMetrics","headerSupport","display"], body: async (hasHeaderMetrics,headerSupport,display) => {
+display(await(
+hasHeaderMetrics ? headerSupport.with_cookie ?? 0 : "n/d"
+))
+}});
+
+define({id: "cbb34ac3", mode: "inline", inputs: ["hasHeaderMetrics","headerSupport","display"], body: async (hasHeaderMetrics,headerSupport,display) => {
+display(await(
+hasHeaderMetrics ? headerSupport.headers_only ?? 0 : "n/d"
+))
+}});
+
+define({id: "538bc88a", mode: "inline", inputs: ["hasHeaderMetrics","headerSupport","display"], body: async (hasHeaderMetrics,headerSupport,display) => {
+display(await(
+hasHeaderMetrics ? headerSupport.cookie_only ?? 0 : "n/d"
+))
+}});
+
+define({id: "980ee40d", mode: "inline", inputs: ["hasHeaderMetrics","headerSupport","display"], body: async (hasHeaderMetrics,headerSupport,display) => {
+display(await(
+hasHeaderMetrics ? headerSupport.both ?? 0 : "n/d"
+))
+}});
+
+define({id: "3b751b4c", mode: "inline", inputs: ["hasHeaderMetrics","audit","display"], body: async (hasHeaderMetrics,audit,display) => {
+display(await(
+hasHeaderMetrics ? `${audit.coverage.header_evidence_pct_of_detections}%` : "n/d"
+))
+}});
+
+define({id: "e5482f04", mode: "inline", inputs: ["backendHintLead","display"], body: async (backendHintLead,display) => {
+display(await(
+backendHintLead ? `${backendHintLead.name} (${backendHintLead.count.toLocaleString("it-IT")} casi)` : "nessuno nel dataset corrente"
+))
+}});
+
+define({id: "37f53f33", mode: "inline", inputs: ["Inputs","headerMarkers","display"], body: async (Inputs,headerMarkers,display) => {
+display(await(
+Inputs.table(headerMarkers, {
+      rows: 12,
+      columns: ["name", "count"],
+      header: {
+        name: "Marker",
+        count: "Occorrenze"
+      },
+      format: {
+        count: (value) => value.toLocaleString("it-IT")
       }
     })
 ))
@@ -401,6 +531,81 @@ audit.coverage.content_evidence_pct_of_detections
 ))
 }});
 
+define({id: "bad483c3", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.coverage.meta_evidence_pct_of_detections
+))
+}});
+
+define({id: "4a192586", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.coverage.inline_script_evidence_pct_of_detections
+))
+}});
+
+define({id: "01c622db", mode: "inline", inputs: ["hasScoringMetrics","audit","display"], body: async (hasScoringMetrics,audit,display) => {
+display(await(
+hasScoringMetrics ? `${audit.coverage.weak_primary_pct_of_detections}% resta nel bucket dei primari deboli.` : "il bucket dei primari deboli sarà popolato dopo il rerun del detector con scoring."
+))
+}});
+
+define({id: "f7c65610", mode: "inline", inputs: ["hasScoringMetrics","display"], body: async (hasScoringMetrics,display) => {
+display(await(
+hasScoringMetrics ? "Detection con `framework_primario` ma senza evidenze forti e con score basso." : "Metrica disponibile solo dopo il rerun del detector con scoring."
+))
+}});
+
+define({id: "b26e78fe", mode: "inline", inputs: ["hasScoringMetrics","audit","display"], body: async (hasScoringMetrics,audit,display) => {
+display(await(
+hasScoringMetrics ? audit.counts.weak_primary_detections : "n/d"
+))
+}});
+
+define({id: "9166fd64", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
+display(await(
+audit.counts.ui_only_homepages
+))
+}});
+
+define({id: "72986502", mode: "inline", inputs: ["Inputs","hasScoringMetrics","audit","display"], body: async (Inputs,hasScoringMetrics,audit,display) => {
+display(await(
+Inputs.table(hasScoringMetrics ? audit.weak_primary_examples : [], {
+    rows: 8,
+    columns: ["tipologia", "framework", "score", "strong_evidence_count", "ui_frameworks", "secondary_frameworks"],
+    header: {
+      tipologia: "Tipologia",
+      framework: "Primario",
+      score: "Score",
+      strong_evidence_count: "Evidenze forti",
+      ui_frameworks: "UI",
+      secondary_frameworks: "Secondari"
+    },
+    format: {
+      ui_frameworks: (value) => Array.isArray(value) ? value.join(", ") : value,
+      secondary_frameworks: (value) => Array.isArray(value) ? value.join(", ") : value
+    }
+  })
+))
+}});
+
+define({id: "2060985a", mode: "inline", inputs: ["Inputs","audit","display"], body: async (Inputs,audit,display) => {
+display(await(
+Inputs.table(audit.ui_only_homepages, {
+    rows: 8,
+    columns: ["tipologia", "ui_frameworks", "secondary_frameworks"],
+    header: {
+      tipologia: "Tipologia",
+      ui_frameworks: "UI",
+      secondary_frameworks: "Secondari"
+    },
+    format: {
+      ui_frameworks: (value) => Array.isArray(value) ? value.join(", ") : value,
+      secondary_frameworks: (value) => Array.isArray(value) ? value.join(", ") : value
+    }
+  })
+))
+}});
+
 define({id: "3bb5f6c7", mode: "inline", inputs: ["resize","Plot","funnel","display"], body: async (resize,Plot,funnel,display) => {
 display(await(
 resize((width) => Plot.plot({
@@ -435,36 +640,6 @@ detectionGap.toLocaleString("it-IT")
 ))
 }});
 
-define({id: "ccafdbcd", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
-display(await(
-audit.exhaustiveness.statement
-))
-}});
-
-define({id: "b636350b", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
-display(await(
-audit.exhaustiveness.detector_type
-))
-}});
-
-define({id: "965515a5", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
-display(await(
-audit.exhaustiveness.supported_framework_catalog_size
-))
-}});
-
-define({id: "72c601a7", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
-display(await(
-audit.exhaustiveness.detected_framework_types
-))
-}});
-
-define({id: "b60689cf", mode: "inline", inputs: ["audit","display"], body: async (audit,display) => {
-display(await(
-audit.exhaustiveness.detected_supported_framework_share_pct
-))
-}});
-
 </script>
 </head>
 <body>
@@ -491,15 +666,17 @@ audit.exhaustiveness.detected_supported_framework_share_pct
 <li class="observablehq-secondary-link"><a href="#framework-rilevati">Framework Rilevati</a></li>
 <li class="observablehq-secondary-link"><a href="#cms-rilevati">CMS Rilevati</a></li>
 <li class="observablehq-secondary-link"><a href="#framework-secondari-rilevati">Framework Secondari Rilevati</a></li>
+<li class="observablehq-secondary-link"><a href="#ui-framework-rilevati">UI Framework Rilevati</a></li>
+<li class="observablehq-secondary-link"><a href="#header-http-e-cookie">Header HTTP E Cookie</a></li>
 <li class="observablehq-secondary-link"><a href="#heatmap-delle-co-occorrenze">Heatmap Delle Co-occorrenze</a></li>
 <li class="observablehq-secondary-link"><a href="#qualita-delle-detection">Qualità Delle Detection</a></li>
+<li class="observablehq-secondary-link"><a href="#casi-da-rivedere">Casi Da Rivedere</a></li>
 <li class="observablehq-secondary-link"><a href="#copertura-della-pipeline">Copertura Della Pipeline</a></li>
-<li class="observablehq-secondary-link"><a href="#verifica-di-esaustivita">Verifica Di Esaustività</a></li>
 </ol>
 </nav>
 </aside>
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:7633fdea:--></div>
+<div class="observablehq observablehq--block"><!--:768b1101:--></div>
 <div class="hero">
   <div class="eyebrow">Censimento tecnologie frontend</div>
   <h1>Framework per i siti della PA</h1>
@@ -526,9 +703,6 @@ audit.exhaustiveness.detected_supported_framework_share_pct
     Tutti i framework primari rilevati, ordinati dal più frequente al meno frequente.
   </p>
   <observablehq-loading></observablehq-loading><!--:eb7e6349:-->
-  <div class="table-actions">
-    <observablehq-loading></observablehq-loading><!--:d74a91dc:-->
-  </div>
   <div class="table-wrap">
     <observablehq-loading></observablehq-loading><!--:031ef786:-->
   </div>
@@ -539,9 +713,6 @@ audit.exhaustiveness.detected_supported_framework_share_pct
     Tutti i CMS primari rilevati, ordinati dal più frequente al meno frequente.
   </p>
   <observablehq-loading></observablehq-loading><!--:cef3e7eb:-->
-  <div class="table-actions">
-    <observablehq-loading></observablehq-loading><!--:d74a91dc-1:-->
-  </div>
   <div class="table-wrap">
     <observablehq-loading></observablehq-loading><!--:c8968d23:-->
   </div>
@@ -552,11 +723,68 @@ audit.exhaustiveness.detected_supported_framework_share_pct
     Quando su uno stesso ente emergono più tecnologie, qui vedi tutti i framework secondari conteggiati separatamente dal primario.
   </p>
   <observablehq-loading></observablehq-loading><!--:c793886e:-->
-  <div class="table-actions">
-    <observablehq-loading></observablehq-loading><!--:d74a91dc-2:-->
-  </div>
   <div class="table-wrap">
     <observablehq-loading></observablehq-loading><!--:12972cf1:-->
+  </div>
+</div>
+<h2 id="ui-framework-rilevati" tabindex="-1"><a class="observablehq-header-anchor" href="#ui-framework-rilevati">UI Framework Rilevati</a></h2>
+<div class="card">
+  <p class="section-intro">
+    Framework di interfaccia emersi dai CSS e da alcuni marker HTML o bundle, conteggiati separatamente dai framework applicativi.
+  </p>
+  <observablehq-loading></observablehq-loading><!--:04dc8ee0:-->
+  <div class="table-wrap">
+    <observablehq-loading></observablehq-loading><!--:760f013c:-->
+  </div>
+</div>
+<h2 id="header-http-e-cookie" tabindex="-1"><a class="observablehq-header-anchor" href="#header-http-e-cookie">Header HTTP E Cookie</a></h2>
+<div class="stack">
+  <div class="summary-card tone-${hasHeaderMetrics ? " good"="" :="" "warn"}"="">
+    <div>
+      <div class="summary-label">Detection supportate da header</div>
+      <div class="summary-note">
+        Detection primarie che includono almeno un’evidenza `headers:` o `cookie:`.
+      </div>
+    </div>
+    <div class="summary-value"><observablehq-loading></observablehq-loading><!--:8c309bca:--></div>
+  </div>
+  <div class="summary-card tone-${(headerSupport.with_headers ?? 0) > 0 ? " good"="" :="" "warn"}"="">
+    <div>
+      <div class="summary-label">Con header espliciti</div>
+      <div class="summary-note">
+        Casi in cui compare almeno un header HTTP selettivo raccolto durante il probing.
+      </div>
+    </div>
+    <div class="summary-value"><observablehq-loading></observablehq-loading><!--:1e4ba724:--></div>
+  </div>
+  <div class="summary-card tone-${(headerSupport.with_cookie ?? 0) > 0 ? " good"="" :="" "warn"}"="">
+    <div>
+      <div class="summary-label">Con cookie diagnostici</div>
+      <div class="summary-note">
+        Casi in cui il supporto arriva anche dai nomi dei cookie di risposta.
+      </div>
+    </div>
+    <div class="summary-value"><observablehq-loading></observablehq-loading><!--:28d1c4ad:--></div>
+  </div>
+</div>
+<div class="card">
+  <p class="section-intro">
+    Qui vedi quanto gli header HTTP aiutano davvero il detector: alcuni casi sono supportati da `x-powered-by` o `x-aspnet-version`, altri emergono solo dai cookie tecnici come `asp.net_sessionid` o `laravel_session`.
+  </p>
+  <ul class="gap-list">
+    <li><strong>Solo header:</strong> <observablehq-loading></observablehq-loading><!--:cbb34ac3:--></li>
+    <li><strong>Solo cookie:</strong> <observablehq-loading></observablehq-loading><!--:538bc88a:--></li>
+    <li><strong>Header + cookie:</strong> <observablehq-loading></observablehq-loading><!--:980ee40d:--></li>
+    <li><strong>Quota sul totale detection primarie:</strong> <observablehq-loading></observablehq-loading><!--:3b751b4c:--></li>
+    <li><strong>Hint backend più frequente:</strong> <observablehq-loading></observablehq-loading><!--:e5482f04:--></li>
+  </ul>
+</div>
+<div class="card">
+  <p class="section-intro">
+    Marker HTTP più frequenti tra le detection supportate da header o cookie.
+  </p>
+  <div class="table-wrap">
+    <observablehq-loading></observablehq-loading><!--:37f53f33:-->
   </div>
 </div>
 <h2 id="heatmap-delle-co-occorrenze" tabindex="-1"><a class="observablehq-header-anchor" href="#heatmap-delle-co-occorrenze">Heatmap Delle Co-occorrenze</a></h2>
@@ -588,6 +816,38 @@ audit.exhaustiveness.detected_supported_framework_share_pct
     <observablehq-loading></observablehq-loading><!--:0fb50a69:-->% delle detection primarie è sostenuto da evidenze `content:`.
     Questo è il segnale più forte che la classificazione arriva dai bundle scaricati e non solo da marker statici.
   </p>
+  <p class="callout tone-${weakSignalTone}">
+    <observablehq-loading></observablehq-loading><!--:bad483c3:-->% delle detection usa meta tag, <observablehq-loading></observablehq-loading><!--:4a192586:-->% usa script inline e <observablehq-loading></observablehq-loading><!--:01c622db:-->
+  </p>
+</div>
+<h2 id="casi-da-rivedere" tabindex="-1"><a class="observablehq-header-anchor" href="#casi-da-rivedere">Casi Da Rivedere</a></h2>
+<div class="stack">
+  <div class="summary-card tone-${weakSignalTone}">
+    <div>
+      <div class="summary-label">Primari deboli</div>
+      <div class="summary-note"><observablehq-loading></observablehq-loading><!--:f7c65610:--></div>
+    </div>
+    <div class="summary-value"><observablehq-loading></observablehq-loading><!--:b26e78fe:--></div>
+  </div>
+  <div class="summary-card tone-${audit.counts.ui_only_homepages > 0 ? " warn"="" :="" "good"}"="">
+    <div>
+      <div class="summary-label">Solo UI framework</div>
+      <div class="summary-note">Homepage con UI rilevata ma senza framework applicativo sufficientemente affidabile.</div>
+    </div>
+    <div class="summary-value"><observablehq-loading></observablehq-loading><!--:9166fd64:--></div>
+  </div>
+</div>
+<div class="card">
+  <p class="section-intro">
+    Esempi di detection da verificare manualmente perché hanno segnali ancora troppo deboli o solo parziali.
+  </p>
+  <observablehq-loading></observablehq-loading><!--:72986502:-->
+</div>
+<div class="card">
+  <p class="section-intro">
+    Homepage senza framework primario ma con segnali UI già emersi: sono buoni candidati per arricchire le fingerprint senza forzare classificazioni premature.
+  </p>
+  <observablehq-loading></observablehq-loading><!--:2060985a:-->
 </div>
 <h2 id="copertura-della-pipeline" tabindex="-1"><a class="observablehq-header-anchor" href="#copertura-della-pipeline">Copertura Della Pipeline</a></h2>
 <div class="card">
@@ -599,22 +859,6 @@ audit.exhaustiveness.detected_supported_framework_share_pct
     <li><strong>Homepage non raggiungibili:</strong> <observablehq-loading></observablehq-loading><!--:d677c8e8:--></li>
     <li><strong>Homepage OK senza JS catturato:</strong> <observablehq-loading></observablehq-loading><!--:58f48220:--></li>
     <li><strong>Enti senza framework primario:</strong> <observablehq-loading></observablehq-loading><!--:8052c1a0:--></li>
-  </ul>
-</div>
-<h2 id="verifica-di-esaustivita" tabindex="-1"><a class="observablehq-header-anchor" href="#verifica-di-esaustivita">Verifica Di Esaustività</a></h2>
-<div class="card">
-  <p class="section-intro">
-    Il detector lavora bene sul catalogo di firme che conosce, ma non va considerato esaustivo rispetto a tutte le tecnologie web possibili.
-  </p>
-  <p class="callout tone-${exhaustivenessTone}">
-    <observablehq-loading></observablehq-loading><!--:ccafdbcd:-->
-  </p>
-  <ul class="gap-list">
-    <li><strong>Tipo di detector:</strong> <observablehq-loading></observablehq-loading><!--:b636350b:--></li>
-    <li><strong>Framework con regole esplicite nel codice:</strong> <observablehq-loading></observablehq-loading><!--:965515a5:--></li>
-    <li><strong>Framework effettivamente emersi come primari:</strong> <observablehq-loading></observablehq-loading><!--:72c601a7:--></li>
-    <li><strong>Copertura del catalogo supportato:</strong> <observablehq-loading></observablehq-loading><!--:b60689cf:-->%</li>
-    <li><strong>Conclusione operativa:</strong> il report è ampio sul catalogo che supportiamo, ma non ancora esaustivo in senso assoluto.</li>
   </ul>
 </div>
 <style>
@@ -783,14 +1027,6 @@ audit.exhaustiveness.detected_supported_framework_share_pct
     border: 1px solid var(--line);
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.02);
-  }
-
-  .table-actions {
-    margin: 16px 0 12px;
-  }
-
-  .table-actions a {
-    color: var(--blue);
   }
 
   .table-wrap {

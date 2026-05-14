@@ -1,0 +1,2020 @@
+{
+  "generated_at": "2026-05-14T09:20:06+00:00",
+  "workspace_root": "/data/DTD/work/crawler/frameworks",
+  "counts": {
+    "raw_entities": 23686,
+    "valid_entities": 22839,
+    "unique_homepages": 22557,
+    "homepage_records": 22557,
+    "homepage_ok": 20057,
+    "homepage_error": 2500,
+    "detection_records": 22839,
+    "detections_with_primary": 13785,
+    "detections_with_secondary_frameworks": 14912,
+    "detections_with_cms": 10584,
+    "detections_with_content": 11096,
+    "detections_with_meta": 5987,
+    "detections_with_inline_script": 20,
+    "detections_with_headers": 2829,
+    "detections_html_only": 24,
+    "detections_with_scoring": 19703,
+    "detections_with_primary_and_scoring": 13785,
+    "weak_primary_detections": 2,
+    "ui_only_homepages": 5343,
+    "downloads_records": 270550
+  },
+  "status_counts": {
+    "homepage": {
+      "ok": 20057,
+      "error": 2500
+    },
+    "js": {
+      "ok": 284658,
+      "skipped": 2500,
+      "empty": 440,
+      "error": 10
+    },
+    "css": {
+      "ok": 188544,
+      "skipped": 2500,
+      "empty": 716,
+      "error": 10
+    },
+    "confidence": {
+      "low": 9056,
+      "high": 11321,
+      "medium": 2462
+    }
+  },
+  "coverage": {
+    "homepage_ok_pct": 88.92,
+    "js_capture_pct_of_ok_homepages": 97.76,
+    "css_capture_pct_of_ok_homepages": 96.38,
+    "detection_rate_pct_of_entities": 60.36,
+    "content_evidence_pct_of_detections": 80.49,
+    "meta_evidence_pct_of_detections": 43.43,
+    "inline_script_evidence_pct_of_detections": 0.15,
+    "header_evidence_pct_of_detections": 20.52,
+    "weak_primary_pct_of_detections": 0.01
+  },
+  "integrity": {
+    "detection_matches_valid_entities": true,
+    "homepages_match_unique_homepages": true,
+    "js_records_match_homepages": false,
+    "css_records_match_homepages": false,
+    "downloads_file_exists": true
+  },
+  "assets": {
+    "homepages_with_js_ok": 19607,
+    "homepages_with_css_ok": 19331,
+    "homepages_with_js_empty": 440,
+    "homepages_with_css_empty": 716,
+    "homepages_with_js_error": 10,
+    "homepages_with_css_error": 10
+  },
+  "all_frameworks": [
+    {
+      "name": "WordPress",
+      "count": 9157
+    },
+    {
+      "name": "ASP.NET",
+      "count": 1846
+    },
+    {
+      "name": "Laravel",
+      "count": 1002
+    },
+    {
+      "name": "Joomla",
+      "count": 819
+    },
+    {
+      "name": "Drupal",
+      "count": 507
+    },
+    {
+      "name": "Angular",
+      "count": 244
+    },
+    {
+      "name": "Liferay",
+      "count": 83
+    },
+    {
+      "name": "React",
+      "count": 46
+    },
+    {
+      "name": "Django",
+      "count": 35
+    },
+    {
+      "name": "Next.js",
+      "count": 22
+    },
+    {
+      "name": "Vue",
+      "count": 11
+    },
+    {
+      "name": "Nuxt",
+      "count": 7
+    },
+    {
+      "name": "Blazor",
+      "count": 5
+    },
+    {
+      "name": "Alpine.js",
+      "count": 1
+    }
+  ],
+  "all_secondary_frameworks": [
+    {
+      "name": "jQuery",
+      "count": 14260
+    },
+    {
+      "name": "React",
+      "count": 11458
+    },
+    {
+      "name": "Joomla",
+      "count": 947
+    },
+    {
+      "name": "Laravel",
+      "count": 854
+    },
+    {
+      "name": "WordPress",
+      "count": 805
+    },
+    {
+      "name": "Drupal",
+      "count": 345
+    },
+    {
+      "name": "ASP.NET",
+      "count": 125
+    },
+    {
+      "name": "Vue",
+      "count": 122
+    },
+    {
+      "name": "Alpine.js",
+      "count": 106
+    },
+    {
+      "name": "Angular",
+      "count": 20
+    },
+    {
+      "name": "Django",
+      "count": 15
+    },
+    {
+      "name": "Nuxt",
+      "count": 11
+    },
+    {
+      "name": "Next.js",
+      "count": 11
+    },
+    {
+      "name": "Stimulus",
+      "count": 7
+    },
+    {
+      "name": "Liferay",
+      "count": 6
+    }
+  ],
+  "all_cms": [
+    {
+      "name": "WordPress",
+      "count": 9174
+    },
+    {
+      "name": "Joomla",
+      "count": 820
+    },
+    {
+      "name": "Drupal",
+      "count": 507
+    },
+    {
+      "name": "Liferay",
+      "count": 83
+    }
+  ],
+  "backend_hint_counts": [
+    {
+      "name": "PHP",
+      "count": 3553
+    },
+    {
+      "name": "Java",
+      "count": 173
+    },
+    {
+      "name": "Python",
+      "count": 8
+    },
+    {
+      "name": "Node.js",
+      "count": 4
+    }
+  ],
+  "header_support": {
+    "with_headers": 1114,
+    "with_cookie": 2485,
+    "headers_only": 344,
+    "cookie_only": 1715,
+    "both": 770,
+    "top_markers": [
+      {
+        "name": "asp.net_sessionid",
+        "count": 1417
+      },
+      {
+        "name": "x-powered-by: asp.net",
+        "count": 1097
+      },
+      {
+        "name": "xsrf-token",
+        "count": 1027
+      },
+      {
+        "name": "laravel_session",
+        "count": 1005
+      },
+      {
+        "name": "x-aspnet-version",
+        "count": 772
+      },
+      {
+        "name": "__requestverificationtoken",
+        "count": 532
+      },
+      {
+        "name": "csrftoken",
+        "count": 32
+      },
+      {
+        "name": "x-aspnetmvc-version",
+        "count": 28
+      },
+      {
+        "name": "server: gunicorn",
+        "count": 2
+      }
+    ],
+    "examples": [
+      {
+        "tipologia": "Gestori di Pubblici Servizi",
+        "framework": "WordPress",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Pubbliche Amministrazioni",
+        "framework": "ASP.NET",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "asp.net_sessionid",
+          "x-aspnet-version",
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Pubbliche Amministrazioni",
+        "framework": "Laravel",
+        "confidence": "medium",
+        "backend_hints": [
+          "PHP"
+        ],
+        "markers": [
+          "laravel_session",
+          "xsrf-token"
+        ]
+      },
+      {
+        "tipologia": "Stazioni Appaltanti",
+        "framework": "ASP.NET",
+        "confidence": "medium",
+        "backend_hints": [],
+        "markers": [
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Stazioni Appaltanti",
+        "framework": "WordPress",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Gestori di Pubblici Servizi",
+        "framework": "ASP.NET",
+        "confidence": "medium",
+        "backend_hints": [],
+        "markers": [
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Pubbliche Amministrazioni",
+        "framework": "ASP.NET",
+        "confidence": "medium",
+        "backend_hints": [],
+        "markers": [
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Pubbliche Amministrazioni",
+        "framework": "ASP.NET",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "asp.net_sessionid",
+          "x-aspnet-version",
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Pubbliche Amministrazioni",
+        "framework": "Django",
+        "confidence": "medium",
+        "backend_hints": [],
+        "markers": [
+          "csrftoken"
+        ]
+      },
+      {
+        "tipologia": "Gestori di Pubblici Servizi",
+        "framework": "ASP.NET",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "asp.net_sessionid",
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Gestori di Pubblici Servizi",
+        "framework": "ASP.NET",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "asp.net_sessionid",
+          "x-aspnet-version",
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Stazioni Appaltanti",
+        "framework": "ASP.NET",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "asp.net_sessionid",
+          "x-aspnet-version",
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Stazioni Appaltanti",
+        "framework": "ASP.NET",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "asp.net_sessionid"
+        ]
+      },
+      {
+        "tipologia": "Gestori di Pubblici Servizi",
+        "framework": "ASP.NET",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "asp.net_sessionid",
+          "x-aspnet-version",
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Stazioni Appaltanti",
+        "framework": "WordPress",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Pubbliche Amministrazioni",
+        "framework": "ASP.NET",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "asp.net_sessionid",
+          "x-aspnet-version",
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Gestori di Pubblici Servizi",
+        "framework": "ASP.NET",
+        "confidence": "medium",
+        "backend_hints": [],
+        "markers": [
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Societa' in Conto Economico Consolidato",
+        "framework": "Joomla",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Pubbliche Amministrazioni",
+        "framework": "WordPress",
+        "confidence": "high",
+        "backend_hints": [],
+        "markers": [
+          "x-powered-by: asp.net"
+        ]
+      },
+      {
+        "tipologia": "Pubbliche Amministrazioni",
+        "framework": "Laravel",
+        "confidence": "medium",
+        "backend_hints": [
+          "PHP"
+        ],
+        "markers": [
+          "laravel_session",
+          "xsrf-token"
+        ]
+      }
+    ]
+  },
+  "framework_cooccurrence_heatmap": {
+    "labels": [
+      "jQuery",
+      "React",
+      "WordPress",
+      "ASP.NET",
+      "Laravel",
+      "Joomla",
+      "Drupal",
+      "Angular",
+      "Vue",
+      "Alpine.js",
+      "Liferay",
+      "Django",
+      "Next.js",
+      "Nuxt",
+      "Stimulus",
+      "Blazor"
+    ],
+    "cells": [
+      {
+        "row": "React",
+        "col": "React",
+        "count": 11504
+      },
+      {
+        "row": "React",
+        "col": "jQuery",
+        "count": 11335
+      },
+      {
+        "row": "jQuery",
+        "col": "React",
+        "count": 11335
+      },
+      {
+        "row": "jQuery",
+        "col": "jQuery",
+        "count": 14260
+      },
+      {
+        "row": "React",
+        "col": "WordPress",
+        "count": 6482
+      },
+      {
+        "row": "WordPress",
+        "col": "React",
+        "count": 6482
+      },
+      {
+        "row": "WordPress",
+        "col": "WordPress",
+        "count": 9962
+      },
+      {
+        "row": "WordPress",
+        "col": "jQuery",
+        "count": 7985
+      },
+      {
+        "row": "jQuery",
+        "col": "WordPress",
+        "count": 7985
+      },
+      {
+        "row": "ASP.NET",
+        "col": "ASP.NET",
+        "count": 1971
+      },
+      {
+        "row": "ASP.NET",
+        "col": "WordPress",
+        "count": 111
+      },
+      {
+        "row": "WordPress",
+        "col": "ASP.NET",
+        "count": 111
+      },
+      {
+        "row": "ASP.NET",
+        "col": "jQuery",
+        "count": 1266
+      },
+      {
+        "row": "jQuery",
+        "col": "ASP.NET",
+        "count": 1266
+      },
+      {
+        "row": "Laravel",
+        "col": "Laravel",
+        "count": 1856
+      },
+      {
+        "row": "Drupal",
+        "col": "Drupal",
+        "count": 852
+      },
+      {
+        "row": "Drupal",
+        "col": "React",
+        "count": 482
+      },
+      {
+        "row": "Drupal",
+        "col": "WordPress",
+        "count": 244
+      },
+      {
+        "row": "Drupal",
+        "col": "jQuery",
+        "count": 677
+      },
+      {
+        "row": "React",
+        "col": "Drupal",
+        "count": 482
+      },
+      {
+        "row": "WordPress",
+        "col": "Drupal",
+        "count": 244
+      },
+      {
+        "row": "jQuery",
+        "col": "Drupal",
+        "count": 677
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Alpine.js",
+        "count": 107
+      },
+      {
+        "row": "Alpine.js",
+        "col": "React",
+        "count": 98
+      },
+      {
+        "row": "Alpine.js",
+        "col": "jQuery",
+        "count": 103
+      },
+      {
+        "row": "React",
+        "col": "Alpine.js",
+        "count": 98
+      },
+      {
+        "row": "jQuery",
+        "col": "Alpine.js",
+        "count": 103
+      },
+      {
+        "row": "Laravel",
+        "col": "jQuery",
+        "count": 1308
+      },
+      {
+        "row": "jQuery",
+        "col": "Laravel",
+        "count": 1308
+      },
+      {
+        "row": "Laravel",
+        "col": "React",
+        "count": 1275
+      },
+      {
+        "row": "Laravel",
+        "col": "WordPress",
+        "count": 686
+      },
+      {
+        "row": "React",
+        "col": "Laravel",
+        "count": 1275
+      },
+      {
+        "row": "WordPress",
+        "col": "Laravel",
+        "count": 686
+      },
+      {
+        "row": "Joomla",
+        "col": "Joomla",
+        "count": 1766
+      },
+      {
+        "row": "Joomla",
+        "col": "React",
+        "count": 1202
+      },
+      {
+        "row": "Joomla",
+        "col": "jQuery",
+        "count": 1387
+      },
+      {
+        "row": "React",
+        "col": "Joomla",
+        "count": 1202
+      },
+      {
+        "row": "jQuery",
+        "col": "Joomla",
+        "count": 1387
+      },
+      {
+        "row": "ASP.NET",
+        "col": "React",
+        "count": 899
+      },
+      {
+        "row": "React",
+        "col": "ASP.NET",
+        "count": 899
+      },
+      {
+        "row": "Joomla",
+        "col": "WordPress",
+        "count": 972
+      },
+      {
+        "row": "WordPress",
+        "col": "Joomla",
+        "count": 972
+      },
+      {
+        "row": "React",
+        "col": "Vue",
+        "count": 116
+      },
+      {
+        "row": "Vue",
+        "col": "React",
+        "count": 116
+      },
+      {
+        "row": "Vue",
+        "col": "Vue",
+        "count": 133
+      },
+      {
+        "row": "Vue",
+        "col": "jQuery",
+        "count": 113
+      },
+      {
+        "row": "jQuery",
+        "col": "Vue",
+        "count": 113
+      },
+      {
+        "row": "Next.js",
+        "col": "Next.js",
+        "count": 33
+      },
+      {
+        "row": "Next.js",
+        "col": "Nuxt",
+        "count": 10
+      },
+      {
+        "row": "Next.js",
+        "col": "React",
+        "count": 27
+      },
+      {
+        "row": "Next.js",
+        "col": "Vue",
+        "count": 10
+      },
+      {
+        "row": "Next.js",
+        "col": "jQuery",
+        "count": 13
+      },
+      {
+        "row": "Nuxt",
+        "col": "Next.js",
+        "count": 10
+      },
+      {
+        "row": "Nuxt",
+        "col": "Nuxt",
+        "count": 18
+      },
+      {
+        "row": "Nuxt",
+        "col": "React",
+        "count": 16
+      },
+      {
+        "row": "Nuxt",
+        "col": "Vue",
+        "count": 17
+      },
+      {
+        "row": "Nuxt",
+        "col": "jQuery",
+        "count": 11
+      },
+      {
+        "row": "React",
+        "col": "Next.js",
+        "count": 27
+      },
+      {
+        "row": "React",
+        "col": "Nuxt",
+        "count": 16
+      },
+      {
+        "row": "Vue",
+        "col": "Next.js",
+        "count": 10
+      },
+      {
+        "row": "Vue",
+        "col": "Nuxt",
+        "count": 17
+      },
+      {
+        "row": "jQuery",
+        "col": "Next.js",
+        "count": 13
+      },
+      {
+        "row": "jQuery",
+        "col": "Nuxt",
+        "count": 11
+      },
+      {
+        "row": "Liferay",
+        "col": "Liferay",
+        "count": 89
+      },
+      {
+        "row": "Liferay",
+        "col": "React",
+        "count": 31
+      },
+      {
+        "row": "Liferay",
+        "col": "jQuery",
+        "count": 56
+      },
+      {
+        "row": "React",
+        "col": "Liferay",
+        "count": 31
+      },
+      {
+        "row": "jQuery",
+        "col": "Liferay",
+        "count": 56
+      },
+      {
+        "row": "Angular",
+        "col": "Angular",
+        "count": 264
+      },
+      {
+        "row": "Angular",
+        "col": "React",
+        "count": 241
+      },
+      {
+        "row": "Angular",
+        "col": "jQuery",
+        "count": 233
+      },
+      {
+        "row": "React",
+        "col": "Angular",
+        "count": 241
+      },
+      {
+        "row": "jQuery",
+        "col": "Angular",
+        "count": 233
+      },
+      {
+        "row": "Django",
+        "col": "Django",
+        "count": 50
+      },
+      {
+        "row": "Liferay",
+        "col": "Next.js",
+        "count": 3
+      },
+      {
+        "row": "Liferay",
+        "col": "Nuxt",
+        "count": 3
+      },
+      {
+        "row": "Liferay",
+        "col": "Vue",
+        "count": 3
+      },
+      {
+        "row": "Next.js",
+        "col": "Liferay",
+        "count": 3
+      },
+      {
+        "row": "Nuxt",
+        "col": "Liferay",
+        "count": 3
+      },
+      {
+        "row": "Vue",
+        "col": "Liferay",
+        "count": 3
+      },
+      {
+        "row": "Alpine.js",
+        "col": "WordPress",
+        "count": 48
+      },
+      {
+        "row": "WordPress",
+        "col": "Alpine.js",
+        "count": 48
+      },
+      {
+        "row": "Vue",
+        "col": "WordPress",
+        "count": 77
+      },
+      {
+        "row": "WordPress",
+        "col": "Vue",
+        "count": 77
+      },
+      {
+        "row": "Angular",
+        "col": "WordPress",
+        "count": 8
+      },
+      {
+        "row": "WordPress",
+        "col": "Angular",
+        "count": 8
+      },
+      {
+        "row": "ASP.NET",
+        "col": "Joomla",
+        "count": 9
+      },
+      {
+        "row": "Joomla",
+        "col": "ASP.NET",
+        "count": 9
+      },
+      {
+        "row": "ASP.NET",
+        "col": "Drupal",
+        "count": 10
+      },
+      {
+        "row": "Drupal",
+        "col": "ASP.NET",
+        "count": 10
+      },
+      {
+        "row": "Blazor",
+        "col": "Blazor",
+        "count": 5
+      },
+      {
+        "row": "Blazor",
+        "col": "React",
+        "count": 5
+      },
+      {
+        "row": "Blazor",
+        "col": "jQuery",
+        "count": 3
+      },
+      {
+        "row": "React",
+        "col": "Blazor",
+        "count": 5
+      },
+      {
+        "row": "jQuery",
+        "col": "Blazor",
+        "count": 3
+      },
+      {
+        "row": "ASP.NET",
+        "col": "Laravel",
+        "count": 31
+      },
+      {
+        "row": "Laravel",
+        "col": "ASP.NET",
+        "count": 31
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Drupal",
+        "count": 37
+      },
+      {
+        "row": "Drupal",
+        "col": "Alpine.js",
+        "count": 37
+      },
+      {
+        "row": "Next.js",
+        "col": "WordPress",
+        "count": 6
+      },
+      {
+        "row": "Nuxt",
+        "col": "WordPress",
+        "count": 5
+      },
+      {
+        "row": "WordPress",
+        "col": "Next.js",
+        "count": 6
+      },
+      {
+        "row": "WordPress",
+        "col": "Nuxt",
+        "count": 5
+      },
+      {
+        "row": "Liferay",
+        "col": "WordPress",
+        "count": 6
+      },
+      {
+        "row": "WordPress",
+        "col": "Liferay",
+        "count": 6
+      },
+      {
+        "row": "Angular",
+        "col": "Drupal",
+        "count": 10
+      },
+      {
+        "row": "Drupal",
+        "col": "Angular",
+        "count": 10
+      },
+      {
+        "row": "Drupal",
+        "col": "Liferay",
+        "count": 1
+      },
+      {
+        "row": "Liferay",
+        "col": "Drupal",
+        "count": 1
+      },
+      {
+        "row": "Drupal",
+        "col": "Laravel",
+        "count": 4
+      },
+      {
+        "row": "Laravel",
+        "col": "Drupal",
+        "count": 4
+      },
+      {
+        "row": "Django",
+        "col": "React",
+        "count": 21
+      },
+      {
+        "row": "Django",
+        "col": "jQuery",
+        "count": 24
+      },
+      {
+        "row": "React",
+        "col": "Django",
+        "count": 21
+      },
+      {
+        "row": "jQuery",
+        "col": "Django",
+        "count": 24
+      },
+      {
+        "row": "ASP.NET",
+        "col": "Vue",
+        "count": 4
+      },
+      {
+        "row": "Vue",
+        "col": "ASP.NET",
+        "count": 4
+      },
+      {
+        "row": "ASP.NET",
+        "col": "Blazor",
+        "count": 3
+      },
+      {
+        "row": "Blazor",
+        "col": "ASP.NET",
+        "count": 3
+      },
+      {
+        "row": "Blazor",
+        "col": "Laravel",
+        "count": 2
+      },
+      {
+        "row": "Laravel",
+        "col": "Blazor",
+        "count": 2
+      },
+      {
+        "row": "Drupal",
+        "col": "Vue",
+        "count": 10
+      },
+      {
+        "row": "Vue",
+        "col": "Drupal",
+        "count": 10
+      },
+      {
+        "row": "Joomla",
+        "col": "Vue",
+        "count": 2
+      },
+      {
+        "row": "Vue",
+        "col": "Joomla",
+        "count": 2
+      },
+      {
+        "row": "ASP.NET",
+        "col": "Alpine.js",
+        "count": 1
+      },
+      {
+        "row": "Alpine.js",
+        "col": "ASP.NET",
+        "count": 1
+      },
+      {
+        "row": "Drupal",
+        "col": "Joomla",
+        "count": 6
+      },
+      {
+        "row": "Joomla",
+        "col": "Drupal",
+        "count": 6
+      },
+      {
+        "row": "React",
+        "col": "Stimulus",
+        "count": 7
+      },
+      {
+        "row": "Stimulus",
+        "col": "React",
+        "count": 7
+      },
+      {
+        "row": "Stimulus",
+        "col": "Stimulus",
+        "count": 7
+      },
+      {
+        "row": "Stimulus",
+        "col": "WordPress",
+        "count": 5
+      },
+      {
+        "row": "Stimulus",
+        "col": "jQuery",
+        "count": 5
+      },
+      {
+        "row": "WordPress",
+        "col": "Stimulus",
+        "count": 5
+      },
+      {
+        "row": "jQuery",
+        "col": "Stimulus",
+        "count": 5
+      },
+      {
+        "row": "Laravel",
+        "col": "Vue",
+        "count": 4
+      },
+      {
+        "row": "Vue",
+        "col": "Laravel",
+        "count": 4
+      },
+      {
+        "row": "Drupal",
+        "col": "Stimulus",
+        "count": 2
+      },
+      {
+        "row": "Stimulus",
+        "col": "Drupal",
+        "count": 2
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Vue",
+        "count": 2
+      },
+      {
+        "row": "Vue",
+        "col": "Alpine.js",
+        "count": 2
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Laravel",
+        "count": 3
+      },
+      {
+        "row": "Laravel",
+        "col": "Alpine.js",
+        "count": 3
+      },
+      {
+        "row": "ASP.NET",
+        "col": "Next.js",
+        "count": 1
+      },
+      {
+        "row": "ASP.NET",
+        "col": "Nuxt",
+        "count": 1
+      },
+      {
+        "row": "Next.js",
+        "col": "ASP.NET",
+        "count": 1
+      },
+      {
+        "row": "Nuxt",
+        "col": "ASP.NET",
+        "count": 1
+      },
+      {
+        "row": "Stimulus",
+        "col": "Vue",
+        "count": 1
+      },
+      {
+        "row": "Vue",
+        "col": "Stimulus",
+        "count": 1
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Joomla",
+        "count": 1
+      },
+      {
+        "row": "Joomla",
+        "col": "Alpine.js",
+        "count": 1
+      },
+      {
+        "row": "Django",
+        "col": "WordPress",
+        "count": 2
+      },
+      {
+        "row": "WordPress",
+        "col": "Django",
+        "count": 2
+      },
+      {
+        "row": "Angular",
+        "col": "Stimulus",
+        "count": 2
+      },
+      {
+        "row": "Stimulus",
+        "col": "Angular",
+        "count": 2
+      },
+      {
+        "row": "ASP.NET",
+        "col": "Angular",
+        "count": 3
+      },
+      {
+        "row": "Angular",
+        "col": "ASP.NET",
+        "count": 3
+      },
+      {
+        "row": "Alpine.js",
+        "col": "Next.js",
+        "count": 1
+      },
+      {
+        "row": "Drupal",
+        "col": "Next.js",
+        "count": 1
+      },
+      {
+        "row": "Next.js",
+        "col": "Alpine.js",
+        "count": 1
+      },
+      {
+        "row": "Next.js",
+        "col": "Drupal",
+        "count": 1
+      }
+    ],
+    "max_count": 14260
+  },
+  "evidence_sources": {
+    "content": 266813,
+    "css-url": 26788,
+    "html": 44850,
+    "url": 17929,
+    "meta": 5987,
+    "headers": 1899,
+    "cookie": 4856,
+    "inline-script": 23
+  },
+  "verdicts": [
+    {
+      "area": "Input coverage",
+      "status": "ok",
+      "detail": "22839 enti validi su 23686 righe raw; 22557 homepage uniche dopo deduplica."
+    },
+    {
+      "area": "Homepage probing",
+      "status": "warning",
+      "detail": "20057 homepage OK su 22557 (88.92%)."
+    },
+    {
+      "area": "JS/CSS inventory",
+      "status": "warning",
+      "detail": "JS catturati su 19607/20057 homepage OK; CSS catturati su 19331/20057."
+    },
+    {
+      "area": "Downloaded scripts",
+      "status": "warning",
+      "detail": "270550 record di download disponibili."
+    },
+    {
+      "area": "Detection evidence",
+      "status": "warning",
+      "detail": "11096 detection con evidenza da contenuto JS su 13785 detection primarie."
+    },
+    {
+      "area": "HTTP headers",
+      "status": "warning",
+      "detail": "2829 detection primarie usano anche header o cookie HTTP come evidenza di supporto."
+    },
+    {
+      "area": "Weak primaries",
+      "status": "warning",
+      "detail": "2 detection primarie hanno score < 4 e nessuna evidenza forte."
+    }
+  ],
+  "top_homepage_errors": [
+    {
+      "message": "Error: Timed out navigating to http://comune.sangiorgioacremano.na.it after 20s",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to http://direzionedidatticagiovannililliu.edu.it: Network error: Network error: http://direzionedidatticagiovann…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to http://gorizia.aterfvg.it/index.php?id=36841&no_cache=1: Network error: Network error: https://gorizia.aterfvg…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to http://iccasalbore.edu.it: Network error: Network error: http://iccasalbore.edu.it/: error sending request for…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to http://trasparenza.unioneterradeigonzaga.it: Network error: Network error: http://trasparenza.unioneterradeigo…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to http://wp.cogeaps.it: Network error: Network error: http://wp.cogeaps.it/: error sending request for url (http…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to http://www.agrotecnicimantova.jimdo.com: Network error: Network error: https://www.agrotecnicimantova.jimdo.co…",
+      "count": 1
+    },
+    {
+      "message": "Error: Timed out navigating to http://www.asifrosinone.com after 20s",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to http://www.atome3.it: Network error: Network error: http://www.atome3.it/: error sending request for url (http…",
+      "count": 1
+    },
+    {
+      "message": "Error: Timed out navigating to http://www.ats-montagna.it after 20s",
+      "count": 1
+    }
+  ],
+  "top_js_errors": [
+    {
+      "message": "Error: Failed to navigate to https://comune.cerroalvolturno.is.it/i: Network error: Network error: https://comune.cerroalvolturno.is.it/i: …",
+      "count": 1
+    },
+    {
+      "message": "Error: Timed out navigating to http://pti.regione.sicilia.it/portal/page/portal/pir_portale/pir after 30s",
+      "count": 1
+    },
+    {
+      "message": "Error: Timed out navigating to https://pti.regione.sicilia.it/ after 30s",
+      "count": 1
+    },
+    {
+      "message": "subprocess timeout after 42s",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.comune.salento.sa.it/: Network error: Network error: https://www.comune.salento.sa.it/: error send…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.isissteodosiorossi.it/: Network error: Network error: https://reasonable-source.com/bj3EVB0.Pr3Vp-…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to https://itisgalvani.it/: Network error: Network error: http://www.itsgalvani.it/: error sending request for ur…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to http://ww1.scuolapirotta.it/: Network error: Network error: Access to localhost domain 'localhost' is not allo…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.veterinari.udine.it/: Network error: Network error: https://www.veterinari.udine.it/: error sendin…",
+      "count": 1
+    },
+    {
+      "message": "Error: Timed out navigating to https://www.perindbo.org/ after 30s",
+      "count": 1
+    }
+  ],
+  "top_css_errors": [
+    {
+      "message": "Error: Failed to navigate to https://comune.cerroalvolturno.is.it/i: Network error: Network error: https://comune.cerroalvolturno.is.it/i: …",
+      "count": 1
+    },
+    {
+      "message": "Error: Timed out navigating to http://pti.regione.sicilia.it/portal/page/portal/pir_portale/pir after 30s",
+      "count": 1
+    },
+    {
+      "message": "Error: Timed out navigating to https://pti.regione.sicilia.it/ after 30s",
+      "count": 1
+    },
+    {
+      "message": "subprocess timeout after 42s",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.comune.salento.sa.it/: Network error: Network error: https://www.comune.salento.sa.it/: error send…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.isissteodosiorossi.it/: Network error: Network error: https://reasonable-source.com/bj3EVB0.Pr3Vp-…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to https://itisgalvani.it/: Network error: Network error: http://www.itsgalvani.it/: error sending request for ur…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to http://ww1.scuolapirotta.it/: Network error: Network error: Access to localhost domain 'localhost' is not allo…",
+      "count": 1
+    },
+    {
+      "message": "Error: Failed to navigate to https://www.veterinari.udine.it/: Network error: Network error: https://www.veterinari.udine.it/: error sendin…",
+      "count": 1
+    },
+    {
+      "message": "Error: Timed out navigating to https://www.perindbo.org/ after 30s",
+      "count": 1
+    }
+  ],
+  "suspicious_detections": [
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "score": 17.5,
+      "strong_evidence_count": 3,
+      "evidence_preview": "css-url:www.istitutocomprensivodeliceto.edu.it:wp-content, html:www-istitutocomprensivodeliceto-edu-it-42b4bb5645d8.html:wp-content, html:www-istitutocomprensivodeliceto-edu-it-42b4bb5645d8.html:wp-includes"
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "framework": "ASP.NET",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "score": 6.0,
+      "strong_evidence_count": 1,
+      "evidence_preview": "headers:www.sstchioggia.it:x-powered-by: asp.net"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "ASP.NET",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "score": 6.0,
+      "strong_evidence_count": 1,
+      "evidence_preview": "headers:www.aransicilia.it:x-powered-by: asp.net"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "ASP.NET",
+      "confidence": "high",
+      "evidence_count": 3,
+      "score": 16.0,
+      "strong_evidence_count": 2,
+      "evidence_preview": "cookie:www.lavoroimpresa.fvg.it:asp.net_sessionid, headers:www.lavoroimpresa.fvg.it:x-powered-by: asp.net, html:www-lavoroimpresa-fvg-it-cfb3902b8c9e.html:__viewstate"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "ASP.NET",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "score": 6.0,
+      "strong_evidence_count": 1,
+      "evidence_preview": "headers:www.asl.bari.it:x-powered-by: asp.net"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "ASP.NET",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "score": 6.0,
+      "strong_evidence_count": 1,
+      "evidence_preview": "headers:www.asl.bari.it:x-powered-by: asp.net"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 5,
+      "score": 24.5,
+      "strong_evidence_count": 4,
+      "evidence_preview": "css-url:www.comune.capurso.bari.it:wp-content, html:www-comune-capurso-bari-it-9ab5f32ad909.html:wp-content, html:www-comune-capurso-bari-it-9ab5f32ad909.html:wp-includes"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "score": 22.0,
+      "strong_evidence_count": 4,
+      "evidence_preview": "html:www-municipiodicarinola-it-a2f0acfde97b.html:wp-content, html:www-municipiodicarinola-it-a2f0acfde97b.html:wp-includes, html:www-municipiodicarinola-it-a2f0acfde97b.html:wp-json"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 5,
+      "score": 17.5,
+      "strong_evidence_count": 3,
+      "evidence_preview": "css-url:comune.graffignano.vt.it:wp-content, html:www-comune-graffignano-vt-it-dea4805d95bd.html:wp-content, html:www-comune-graffignano-vt-it-dea4805d95bd.html:wp-includes"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 5,
+      "score": 19.5,
+      "strong_evidence_count": 3,
+      "evidence_preview": "css-url:www.comune.massafra.ta.it:wp-content, html:www-comune-massafra-ta-it-c072bdc7590f.html:wp-content, html:www-comune-massafra-ta-it-c072bdc7590f.html:wp-json"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "ASP.NET",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "score": 6.0,
+      "strong_evidence_count": 1,
+      "evidence_preview": "headers:www.montefalconedivalfortore.campania.it:x-powered-by: asp.net"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "ASP.NET",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "score": 6.0,
+      "strong_evidence_count": 1,
+      "evidence_preview": "headers:www.comune.orte.vt.it:x-powered-by: asp.net"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "ASP.NET",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "score": 6.0,
+      "strong_evidence_count": 1,
+      "evidence_preview": "headers:www.comunedisalcito.it:x-powered-by: asp.net"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "score": 19.5,
+      "strong_evidence_count": 3,
+      "evidence_preview": "css-url:comunesangiovanniincarico.fr.it:wp-content, html:www-comunesangiovanniincarico-fr-it-7ed21e0dae08.html:wp-content, html:www-comunesangiovanniincarico-fr-it-7ed21e0dae08.html:wp-json"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "medium",
+      "evidence_count": 2,
+      "score": 7.5,
+      "strong_evidence_count": 1,
+      "evidence_preview": "css-url:www.comune.triggiano.ba.it:wp-content, html:www-comune-triggiano-ba-it-b4c7f2b51cac.html:wp-content"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "score": 15.0,
+      "strong_evidence_count": 3,
+      "evidence_preview": "html:www-comune-ziano-pc-it-a90f367e657c.html:wp-content, html:www-comune-ziano-pc-it-a90f367e657c.html:wp-includes, html:www-comune-ziano-pc-it-a90f367e657c.html:wp-json"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 4,
+      "score": 19.5,
+      "strong_evidence_count": 3,
+      "evidence_preview": "css-url:www.comune.loiriportosanpaolo.ss.it:wp-content, html:www-comune-loiriportosanpaolo-ss-it-b32a27ac3bdc.html:wp-content, html:www-comune-loiriportosanpaolo-ss-it-b32a27ac3bdc.html:wp-json"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "WordPress",
+      "confidence": "high",
+      "evidence_count": 5,
+      "score": 19.5,
+      "strong_evidence_count": 3,
+      "evidence_preview": "css-url:www.comune.massafra.ta.it:wp-content, html:www-comunedimassafra-it-d6ac455be83b.html:wp-content, html:www-comunedimassafra-it-d6ac455be83b.html:wp-json"
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "framework": "ASP.NET",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "score": 6.0,
+      "strong_evidence_count": 1,
+      "evidence_preview": "headers:www.consorziovalledelliri.it:x-powered-by: asp.net"
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "ASP.NET",
+      "confidence": "medium",
+      "evidence_count": 1,
+      "score": 6.0,
+      "strong_evidence_count": 1,
+      "evidence_preview": "headers:www.agrotecniciforli.it:x-powered-by: asp.net"
+    }
+  ],
+  "undetected_ok_homepages": [
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": []
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": []
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    },
+    {
+      "tipologia": "Stazioni Appaltanti",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "status": "ok",
+      "ui_frameworks": []
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "status": "ok",
+      "ui_frameworks": []
+    },
+    {
+      "tipologia": "Stazioni Appaltanti",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "tipologia": "Stazioni Appaltanti",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": []
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "status": "ok",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ]
+    }
+  ],
+  "weak_primary_examples": [
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "Django",
+      "score": 3.0,
+      "strong_evidence_count": 0,
+      "secondary_frameworks": [],
+      "ui_frameworks": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "framework": "Django",
+      "score": 3.0,
+      "strong_evidence_count": 0,
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ],
+      "ui_frameworks": [
+        "Bootstrap"
+      ]
+    }
+  ],
+  "ui_only_homepages": [
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": [
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": []
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Stazioni Appaltanti",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": []
+    },
+    {
+      "tipologia": "Stazioni Appaltanti",
+      "ui_frameworks": [
+        "Bootstrap"
+      ],
+      "secondary_frameworks": [
+        "jQuery",
+        "React",
+        "WordPress"
+      ]
+    },
+    {
+      "tipologia": "Stazioni Appaltanti",
+      "ui_frameworks": [
+        "Bootstrap"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "Alpine.js",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": [
+        "Laravel",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "ui_frameworks": [
+        "Bootstrap"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "ui_frameworks": [
+        "Bootstrap"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "ui_frameworks": [
+        "Bootstrap"
+      ],
+      "secondary_frameworks": [
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": []
+    },
+    {
+      "tipologia": "Stazioni Appaltanti",
+      "ui_frameworks": [
+        "Bootstrap"
+      ],
+      "secondary_frameworks": [
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "ui_frameworks": [
+        "Bootstrap"
+      ],
+      "secondary_frameworks": []
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Gestori di Pubblici Servizi",
+      "ui_frameworks": [
+        "Bootstrap"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "tipologia": "Pubbliche Amministrazioni",
+      "ui_frameworks": [
+        "Bootstrap Italia"
+      ],
+      "secondary_frameworks": [
+        "React",
+        "jQuery"
+      ]
+    }
+  ],
+  "exhaustiveness": {
+    "detector_type": "rule-based",
+    "supported_framework_catalog_size": 19,
+    "supported_ui_catalog_size": 8,
+    "detected_framework_types": 14,
+    "detected_cms_types": 4,
+    "detected_supported_framework_share_pct": 73.68,
+    "statement": "Il detector copre in modo strutturato solo il catalogo di firme note definite nel codice; non e` esaustivo rispetto a tutte le tecnologie web possibili."
+  }
+}

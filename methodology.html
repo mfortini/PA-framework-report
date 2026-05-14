@@ -61,6 +61,27 @@ Esempi:</p>
 <li><code>drupalSettings</code> per Drupal</li>
 <li><code>wp-content</code>, <code>wp-json</code> o <code>wordpress</code> per WordPress</li>
 <li><code>themeDisplay</code>, <code>Liferay.ThemeDisplay</code> o <code>Liferay.Loader</code> per Liferay</li>
+<li><code>csrfmiddlewaretoken</code> o <code>__admin_media_prefix__</code> per Django</li>
+<li><code>__VIEWSTATE</code> o <code>__EVENTVALIDATION</code> per ASP.NET</li>
+</ul>
+</li>
+<li>
+<p><strong>Meta tag e script inline</strong>
+Quando disponibili, vengono letti anche segnali già presenti nella homepage senza bisogno di eseguire altro codice:</p>
+<ul>
+<li>meta <code>generator</code> o tag simili per CMS come WordPress, Drupal e Joomla</li>
+<li>variabili globali o bootstrap inline come <code>__NEXT_DATA__</code>, <code>self.__next_f</code>, <code>window.__NUXT__</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Header HTTP e cookie applicativi</strong>
+Per le homepage raggiungibili vengono raccolti anche alcuni header selettivi e i nomi dei cookie di risposta.
+Questi segnali non bastano da soli a spiegare tutta la tecnologia del sito, ma aiutano molto sui framework
+server-side e sugli stack backend. Esempi:</p>
+<ul>
+<li><code>X-AspNet-Version</code>, <code>X-AspNetMvc-Version</code>, <code>ASP.NET_SessionId</code> per ASP.NET</li>
+<li><code>laravel_session</code> per Laravel</li>
+<li><code>csrftoken</code>, <code>django_language</code>, <code>server: gunicorn</code> o <code>server: uwsgi</code> per Django</li>
 </ul>
 </li>
 <li>
@@ -72,6 +93,9 @@ con percorsi standardizzati. Esempi:</p>
 <li><code>/_next/</code> per Next.js</li>
 <li><code>/_nuxt/</code> per Nuxt</li>
 <li><code>/o/</code>, <code>__liferay__</code> o <code>Liferay.Loader</code> per Liferay</li>
+<li><code>/static/admin/</code> o <code>/admin/js/</code> per Django</li>
+<li><code>WebResource.axd</code>, <code>ScriptResource.axd</code> o <code>/aspnet_client/</code> per ASP.NET</li>
+<li><code>/livewire/livewire.js</code> o <code>/_ignition/</code> per Laravel</li>
 </ul>
 </li>
 <li>
@@ -85,6 +109,9 @@ Quando i bundle vengono scaricati, il detector cerca simboli e stringhe tipiche 
 <li><code>bootstrap</code>, <code>data-bs-toggle</code></li>
 <li><code>bootstrap-italia</code>, <code>--bootstrap-italia-version</code></li>
 <li><code>Liferay.Loader</code>, <code>Liferay.ThemeDisplay</code>, <code>Liferay.Portlet</code>, <code>@liferay/</code></li>
+<li><code>django.jQuery</code>, <code>csrfmiddlewaretoken</code></li>
+<li><code>__doPostBack</code>, <code>Sys.WebForms.PageRequestManager</code></li>
+<li><code>livewire</code>, <code>laravel</code></li>
 </ul>
 </li>
 <li>
@@ -103,8 +130,23 @@ I CSS vengono usati soprattutto per intercettare framework di presentazione o bu
 <h2 id="come-viene-assegnato-il-risultato" tabindex="-1"><a class="observablehq-header-anchor" href="#come-viene-assegnato-il-risultato">Come Viene Assegnato Il Risultato</a></h2>
 <ol>
 <li>
+<p><strong>Catalogo di fingerprint</strong>
+Le firme sono organizzate per tecnologia, famiglia (<code>cms</code>, <code>framework</code>, <code>ui</code>, <code>library</code>), fonte, peso e intensità del
+segnale. In questo modo un marker strutturale come <code>__NEXT_DATA__</code> vale più di un indicatore generico come <code>createElement</code>.</p>
+</li>
+<li>
+<p><strong>Scoring pesato</strong>
+Le evidenze non vengono più conteggiate in modo piatto: sono deduplicate per sorgente e marker, poi pesate in base alla
+loro affidabilità. Questo riduce il rumore dei bundle terzi e delle librerie trasversali come jQuery.</p>
+</li>
+<li>
 <p><strong>Framework primario</strong>
-Viene scelto il framework con più evidenze aggregate tra HTML, URL e contenuto dei bundle.</p>
+Viene scelto il candidato con lo score più affidabile, applicando tie-break semantici:</p>
+<ul>
+<li>un CMS strutturale prevale su una libreria generica con segnali deboli</li>
+<li><code>Bootstrap Italia</code> prevale su <code>Bootstrap</code></li>
+<li>i soli UI framework non forzano automaticamente un framework applicativo primario</li>
+</ul>
 </li>
 <li>
 <p><strong>Framework secondari</strong>
@@ -118,11 +160,17 @@ ricadere automaticamente nel bucket generico <code>Bootstrap</code>.</p>
 Viene assegnato separatamente quando esistono marker forti di piattaforma editoriale.</p>
 </li>
 <li>
+<p><strong>Indizi backend</strong>
+In parallelo al framework primario, il detector produce anche <code>backend_hints</code>: indizi non invasivi su linguaggi o
+runtime osservabili pubblicamente, come <code>PHP</code>, <code>Python</code>, <code>Node.js</code> o <code>Java</code>. Sono classificati come hint e non
+come verita<code> assolute, perche</code> molti siti nascondono o riscrivono i propri header dietro proxy e CDN.</p>
+</li>
+<li>
 <p><strong>Confidenza</strong></p>
 <ul>
-<li><code>high</code> quando il framework principale ha almeno tre evidenze</li>
-<li><code>medium</code> quando ha almeno una evidenza</li>
-<li><code>low</code> quando non ci sono segnali robusti o il risultato è debole</li>
+<li><code>high</code> quando il primario ha score alto o più evidenze forti</li>
+<li><code>medium</code> quando esiste un candidato credibile ma con segnali meno strutturali</li>
+<li><code>low</code> quando non ci sono segnali robusti o il risultato resta debole</li>
 </ul>
 </li>
 </ol>
