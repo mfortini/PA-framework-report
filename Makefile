@@ -2,7 +2,7 @@ UV_CACHE_DIR ?= $(CURDIR)/.uv-cache
 OBSCURA_BIN ?= $(CURDIR)/obscura
 UV_RUN = UV_CACHE_DIR=$(UV_CACHE_DIR) OBSCURA_BIN=$(OBSCURA_BIN) uv run
 
-.PHONY: help setup setup-obscura run prepare-input probe-homepages collect-js download-js detect-frameworks build-reports web-report clean
+.PHONY: help setup setup-obscura run prepare-input probe-homepages enrich-headers collect-js download-js detect-frameworks build-reports web-report clean
 
 help:
 	@printf '%s\n' \
@@ -11,6 +11,7 @@ help:
 		'make run                - esegue la pipeline completa' \
 		'make prepare-input      - normalizza enti.csv' \
 		'make probe-homepages    - visita le homepage' \
+		'make enrich-headers     - arricchisce homepages.jsonl con header HTTP e cookie' \
 		'make collect-js         - raccoglie i JS esterni' \
 		'make download-js        - scarica i JS rilevati' \
 		'make detect-frameworks  - inferisce i framework' \
@@ -33,6 +34,9 @@ prepare-input:
 
 probe-homepages:
 	$(UV_RUN) python scripts/02_probe_homepages.py
+
+enrich-headers:
+	$(UV_RUN) python scripts/02_probe_homepages.py --headers-only --output results/homepages.jsonl
 
 collect-js:
 	$(UV_RUN) python scripts/03_collect_js_inventory.py

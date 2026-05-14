@@ -6,3 +6,5 @@ results/js_files/
 results/homepages_html/
 logs/*.tmp
 dist
+gh-pages
+obscura*

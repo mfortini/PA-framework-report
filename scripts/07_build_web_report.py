@@ -43,6 +43,35 @@ def build_summary(records: list[dict[str, object]]) -> dict[str, object]:
     }
 
 
+def sanitize_records(records: list[dict[str, object]]) -> list[dict[str, object]]:
+    def sanitize_evidence_entry(value: object) -> str:
+        text = str(value or "")
+        parts = text.split(":")
+        if len(parts) >= 3:
+            return f"{parts[0]}:{parts[-1]}"
+        return text
+
+    sanitized = []
+    for record in records:
+        sanitized.append(
+            {
+                "_id": record.get("_id", ""),
+                "Codice_IPA": record.get("Codice_IPA", ""),
+                "Tipologia": record.get("Tipologia", ""),
+                "framework_primario": record.get("framework_primario", ""),
+                "framework_secondari": list(record.get("framework_secondari", [])),
+                "cms_primario": record.get("cms_primario", ""),
+                "ui_frameworks": list(record.get("ui_frameworks", [])),
+                "confidence": record.get("confidence", ""),
+                "js_count": record.get("js_count", 0),
+                "css_count": record.get("css_count", 0),
+                "homepage_status": record.get("homepage_status", ""),
+                "evidenze": [sanitize_evidence_entry(value) for value in record.get("evidenze", [])],
+            }
+        )
+    return sanitized
+
+
 def render_html(title: str, records: list[dict[str, object]], summary: dict[str, object]) -> str:
     payload = {"title": title, "records": records, "summary": summary}
     payload_json = json.dumps(payload, ensure_ascii=True)
@@ -262,7 +291,7 @@ def render_html(title: str, records: list[dict[str, object]], summary: dict[str,
   <div class="wrap">
     <section class="hero">
       <h1>{title}</h1>
-      <p>Esplorazione interattiva dei risultati della pipeline: framework primario, CMS, librerie UI, confidenza e numero di asset rilevati per ogni ente.</p>
+      <p>Esplorazione interattiva dei risultati della pipeline: framework primario, CMS, librerie UI, confidenza e numero di asset rilevati per tipologia.</p>
     </section>
 
     <section class="stats" id="stats"></section>
@@ -270,11 +299,11 @@ def render_html(title: str, records: list[dict[str, object]], summary: dict[str,
     <section class="grid">
       <div class="card">
         <div class="panel-title">
-          <h2>Enti</h2>
+          <h2>Record</h2>
           <div class="small" id="visible-count"></div>
         </div>
         <div class="filters">
-          <input id="search" type="search" placeholder="Cerca ente, dominio, framework...">
+          <input id="search" type="search" placeholder="Cerca framework, CMS, UI o tipologia...">
           <select id="framework-filter"><option value="">Tutti i framework</option></select>
           <select id="cms-filter"><option value="">Tutti i CMS</option></select>
           <select id="confidence-filter">
@@ -289,7 +318,7 @@ def render_html(title: str, records: list[dict[str, object]], summary: dict[str,
           <table>
             <thead>
               <tr>
-                <th>Ente</th>
+                <th>Tipologia</th>
                 <th>Framework</th>
                 <th>CMS</th>
                 <th>UI</th>
@@ -353,7 +382,7 @@ def render_html(title: str, records: list[dict[str, object]], summary: dict[str,
       const jsTotal = items.reduce((acc, r) => acc + Number(r.js_count || 0), 0);
       const cssTotal = items.reduce((acc, r) => acc + Number(r.css_count || 0), 0);
       const cards = [
-        ['Enti visibili', total],
+        ['Record visibili', total],
         ['Con framework', detected],
         ['Confidenza alta', high],
         ['JS rilevati', jsTotal],
@@ -411,8 +440,6 @@ def render_html(title: str, records: list[dict[str, object]], summary: dict[str,
       els.body.innerHTML = items.map((record) => `
         <tr>
           <td>
-            <strong>${{record.Denominazione_ente || ''}}</strong><br>
-            <span class="small">${{record.homepage_url || ''}}</span><br>
             <span class="small">${{record.Tipologia || ''}}</span>
           </td>
           <td>
@@ -429,7 +456,7 @@ def render_html(title: str, records: list[dict[str, object]], summary: dict[str,
           <td>${{evidencePreview(record.evidenze || [])}}</td>
         </tr>
       `).join('');
-      els.visibleCount.textContent = `${{items.length.toLocaleString('it-IT')}} enti visibili`;
+      els.visibleCount.textContent = `${{items.length.toLocaleString('it-IT')}} record visibili`;
     }}
 
     function filterRecords() {{
@@ -441,8 +468,6 @@ def render_html(title: str, records: list[dict[str, object]], summary: dict[str,
 
       const filtered = records.filter((record) => {{
         const haystack = [
-          record.Denominazione_ente,
-          record.homepage_url,
           record.framework_primario,
           ...(record.framework_secondari || []),
           record.cms_primario,
@@ -480,7 +505,7 @@ def main() -> int:
     records = list(iter_jsonl(args.input))
     log_step(f"Building web report from {len(records)} records in {args.input}")
     summary = build_summary(records)
-    html = render_html(args.title, records, summary)
+    html = render_html(args.title, sanitize_records(records), summary)
     args.output.write_text(html, encoding="utf-8")
     size_kb = len(html.encode("utf-8")) / 1024
     detected = sum(1 for r in records if r.get("framework_primario") or r.get("cms_primario"))
