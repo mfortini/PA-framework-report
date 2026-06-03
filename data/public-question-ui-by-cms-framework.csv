@@ -1,0 +1,50 @@
+ui_framework,cms_or_primary_framework,count
+Bootstrap Italia,WordPress,6396
+Bootstrap Italia,Nessun primario,4595
+Nessun UI,Nessun primario,3711
+Nessun UI,WordPress,1739
+Bootstrap Italia,ASP.NET,1156
+Bootstrap Italia,Laravel,941
+Bootstrap,Nessun primario,738
+Elementor,WordPress,704
+Bootstrap,WordPress,559
+Bootstrap,Joomla,484
+Bootstrap,ASP.NET,440
+Nessun UI,Joomla,240
+Nessun UI,ASP.NET,234
+Bootstrap Italia,Drupal,205
+Bootstrap Italia,Angular,203
+Nessun UI,Drupal,195
+Bootstrap,Drupal,107
+Bootstrap Italia,Joomla,91
+Nessun UI,Liferay,50
+Nessun UI,React,42
+Foundation,WordPress,40
+Tailwind CSS,WordPress,34
+Nessun UI,Angular,31
+Nessun UI,Laravel,31
+Bootstrap,Laravel,30
+UIkit,Joomla,30
+Bootstrap Italia,Django,26
+Bootstrap Italia,Liferay,20
+Nessun UI,Next.js,20
+UIkit,WordPress,18
+Bootstrap,Liferay,13
+Bootstrap,Angular,10
+Foundation,Nessun primario,8
+Nessun UI,Django,5
+Nessun UI,Vue,5
+Nessun UI,Nuxt,4
+Bootstrap,Django,3
+Bootstrap,React,3
+Bootstrap,Vue,3
+Bootstrap Italia,Blazor,3
+Bootstrap Italia,Vue,3
+Bootstrap,Blazor,2
+Bootstrap Italia,Nuxt,2
+Tailwind CSS,Nessun primario,2
+UIkit,Nessun primario,2
+Bootstrap,Next.js,1
+Bootstrap,Nuxt,1
+Bootstrap Italia,React,1
+Nessun UI,Alpine.js,1

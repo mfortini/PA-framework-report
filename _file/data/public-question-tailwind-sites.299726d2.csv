@@ -1,0 +1,37 @@
+Codice_IPA,Denominazione_ente,Tipologia,framework_primario,framework_secondari,cms_primario,ui_frameworks,confidence,js_count,css_count,evidenze_count
+B9HITVMV,azienda territoriale per l'edilizia residenziale,Stazioni Appaltanti,WordPress,,WordPress,"Bootstrap Italia,Elementor,Tailwind CSS",high,31,45,13
+JU96IVO2,SOCIETà AEROPORTUALE CALABRESE,Stazioni Appaltanti,WordPress,"React,jQuery",WordPress,Tailwind CSS,high,15,3,34
+NN1ZB3X7,Yes I Code,Gestori di Pubblici Servizi,WordPress,"React,jQuery",WordPress,"Tailwind CSS,Bootstrap",high,14,9,26
+acat,Asp Civica Assistenza Tolentino,Pubbliche Amministrazioni,WordPress,jQuery,WordPress,"Bootstrap Italia,Tailwind CSS",high,42,18,15
+anla_080,Agenzia Nazionale per L'Amministrazione e La Destinazione Dei Beni Sequestrati e Confiscati alla Criminalita' Organizzata,Pubbliche Amministrazioni,WordPress,,WordPress,"Bootstrap Italia,Tailwind CSS",high,5,10,9
+c_b371,Comune di Caivano,Pubbliche Amministrazioni,WordPress,,WordPress,"Bootstrap Italia,Tailwind CSS",high,42,18,10
+c_b678,Comune di Cappella Maggiore,Pubbliche Amministrazioni,WordPress,,WordPress,"Bootstrap Italia,Tailwind CSS",high,40,16,10
+c_c102,Comune di Castel Focognano,Pubbliche Amministrazioni,WordPress,jQuery,WordPress,"Bootstrap Italia,Tailwind CSS",high,34,14,11
+c_c648,Comune di Chitignano,Pubbliche Amministrazioni,WordPress,jQuery,WordPress,"Bootstrap Italia,Tailwind CSS",high,32,13,11
+c_c816,Comune di Codogno,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,45,18,55
+c_d231,Comune di Cusano Milanino,Pubbliche Amministrazioni,WordPress,,WordPress,"Tailwind CSS,Bootstrap",high,1,24,8
+c_e100,Comune di Gorlago,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,37,14,48
+c_e414,Comune di Laigueglia,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,31,12,42
+c_f565,Comune di Montemignaio,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,33,13,41
+c_fiv,Comune di Figline e Incisa Valdarno,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,40,18,53
+c_g786,Comune di Policoro,Pubbliche Amministrazioni,WordPress,"jQuery,React",WordPress,"Bootstrap Italia,Elementor,Tailwind CSS",high,37,32,59
+c_g879,Comune di Poppi,Pubbliche Amministrazioni,WordPress,jQuery,WordPress,"Bootstrap Italia,Tailwind CSS",high,32,13,11
+c_g961,Comune di Pozzolo Formigaro,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,31,13,42
+c_h269,Comune di Ribera,Pubbliche Amministrazioni,WordPress,jQuery,WordPress,"Bootstrap Italia,Tailwind CSS",high,37,20,13
+c_i162,Comune di San Siro,Pubbliche Amministrazioni,WordPress,"jQuery,React",WordPress,"Bootstrap Italia,Tailwind CSS",high,43,19,54
+c_l038,Comune di Talla,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,32,13,40
+c_l126,Comune di Terranova di Pollino,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,41,12,46
+c_l296,Comune di Torricella del Pizzo,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,37,15,49
+cpimc_0,Ordine delle Professioni Infermieristiche di Massa Carrara,Pubbliche Amministrazioni,,jQuery,,Tailwind CSS,low,3,2,4
+fpm,Fondazione di Partecipazione Matera Basilicata 2019,Pubbliche Amministrazioni,WordPress,jQuery,WordPress,Tailwind CSS,high,8,10,11
+ftdt,Fondazione Teatro della Toscana,Pubbliche Amministrazioni,,jQuery,,Tailwind CSS,low,2,2,3
+istsc_aris00400c,ISTRUZIONE SECONDARIA SUPERIORE - GIOVANNI DA CASTIGLIONE,Pubbliche Amministrazioni,WordPress,"Drupal,React,jQuery",WordPress,"Elementor,Tailwind CSS,Bootstrap",high,63,59,93
+istsc_ceps02000t,LICEO SCIENTIFICO - LS ENRICO FERMI AVERSA,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Tailwind CSS,Bootstrap",high,41,50,57
+istsc_krpc02000l,LICEO CLASSICO - PITAGORA,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,41,26,59
+istsc_pvps05000q,LICEO SCIENTIFICO - NICOLO' COPERNICO - PAVIA,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,28,15,43
+istsc_vips05000n,LICEO SCIENTIFICO - LS 'G.B.QUADRI',Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Elementor,Tailwind CSS",high,28,41,51
+odg_umb,Ordine dei Giornalisti della Regione Umbria,Pubbliche Amministrazioni,WordPress,"React,Alpine.js,jQuery",WordPress,Tailwind CSS,high,5,3,15
+opdc_001,Ordine dei Medici Chirurghi e degli Odontoiatri della Provincia  di Torino,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Tailwind CSS,Bootstrap",high,26,20,35
+oprm,Ordine degli Psicologi della Regione Marche,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,15,10,27
+oring_tv,Ordine degli Ingegneri della Provincia di Treviso,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Tailwind CSS,Bootstrap",high,23,22,39
+udcmc_,Unione Dei Comuni Montani del Casentino,Pubbliche Amministrazioni,WordPress,"React,jQuery",WordPress,"Bootstrap Italia,Tailwind CSS",high,31,11,39

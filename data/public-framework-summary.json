@@ -1,0 +1,51 @@
+{
+  "cms_counts": {
+    "Drupal": 507,
+    "Joomla": 820,
+    "Liferay": 83,
+    "WordPress": 9174
+  },
+  "entities_total": 22839,
+  "framework_counts": {
+    "ASP.NET": 1846,
+    "Alpine.js": 1,
+    "Angular": 244,
+    "Blazor": 5,
+    "Django": 35,
+    "Drupal": 507,
+    "Joomla": 819,
+    "Laravel": 1002,
+    "Liferay": 83,
+    "Next.js": 22,
+    "Nuxt": 7,
+    "React": 46,
+    "Vue": 11,
+    "WordPress": 9157
+  },
+  "secondary_framework_counts": {
+    "ASP.NET": 125,
+    "Alpine.js": 106,
+    "Angular": 20,
+    "Django": 15,
+    "Drupal": 345,
+    "Joomla": 947,
+    "Laravel": 854,
+    "Liferay": 6,
+    "Next.js": 11,
+    "Nuxt": 11,
+    "React": 11458,
+    "Stimulus": 7,
+    "Vue": 122,
+    "WordPress": 805,
+    "jQuery": 14260
+  },
+  "ui_framework_counts": {
+    "Bootstrap": 2394,
+    "Bootstrap Italia": 13642,
+    "Elementor": 704,
+    "Foundation": 48,
+    "Tailwind CSS": 36,
+    "UIkit": 50
+  }
+}
+

@@ -1,0 +1,242 @@
+Codice_IPA,Denominazione_ente,Tipologia,framework_primario,framework_secondari,cms_primario,ui_frameworks,confidence,js_count,css_count,evidenze_count
+2FE009RQ,AZIENDA TERRITORIALE PER L'EDILIZIA RESIDENZIALE DI TRIESTE,Gestori di Pubblici Servizi,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+5GOPE0AP,Consiglio di Amministrazione del Consorzio per la Valorizzazione del Porto Vecchio URSUS,Gestori di Pubblici Servizi,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+7JD299SA,Diocesi San Marco Argentano-Scalea,Stazioni Appaltanti,WordPress,"Angular,React,jQuery",WordPress,Bootstrap,high,24,28,43
+CCDFRIU,Comunita' Collinare Del Friuli,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+CMF64,Unione Montana Feltrina,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+CML67,Comunita' Montana della Lessinia,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+C_H038,Comune di Preone,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+C_L402,Comune di Trevignano,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+Cocopibl,Consorzio dei Comuni del Bacino Imbrifero Montano del Piave  appartenenti  alla Provincia di Belluno,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+KH5RHFCV,MINISTERO DELL'UNIVERSITA' E DELLA RICERCA,Pubbliche Amministrazioni,Drupal,"Angular,React,jQuery",Drupal,Bootstrap,high,25,68,62
+QSIYMTJK,POLESINE TLC SRL,Gestori di Pubblici Servizi,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+SPABDOMM,"Magnifica Comunità di Montagna Dolomiti Friulane, Cavallo e Cansiglio",Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+UCRLHKVQ,GESTIONE AMBIENTE SPA,Gestori di Pubblici Servizi,Angular,React,,,medium,7,4,13
+ZS1M7716,GESTORE DEI MERCATI ENERGETICI SPA,Stazioni Appaltanti,ASP.NET,"Angular,React,jQuery",,Bootstrap,high,20,18,35
+acr_rm,Automobile Club Roma,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap,medium,26,8,18
+acto,Automobile Club Torino,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap,medium,27,7,18
+aous_063,Azienda Ospedaliera Universitaria - Universita'  degli Studi della Campania Luigi Vanvitelli,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,4,3,7
+apsp_gc,Azienda Pubblica di Servizi alla Persona Giovanni Chiaba' di San Giorgio di Nogaro,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+apspd_,Azienda Pubblica di Servizi alla Persona Daniele Moro,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+apspfm,Azienda Pubblica di Servizi alla Persona Fondazione E. Muner De Giudici,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+apspu,AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA UMBERTO I,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+arid_027,Azienda Regionale per Il Diritto allo Studio Universitario di Venezia,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+aru2019,AGENZIA REGIONALE UNIVERSIADI PER LO SPORT,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,9,1,11
+avpisp,Agenzia Veneta per L'Innovazione nel Settore Primario - Avisp,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+c_a346,Comune di Aquileia,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_b962,Comune di Scandicci,Pubbliche Amministrazioni,Drupal,"Angular,React,jQuery",Drupal,Bootstrap Italia,high,4,3,12
+c_c342,Comune di Enna,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,high,4,1,8
+c_d299,Comune di Dicomano,Pubbliche Amministrazioni,Drupal,"Angular,React,jQuery",Drupal,Bootstrap Italia,high,3,4,11
+c_d300,Comune di Dignano,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d316,Comune di Dogna,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d324,Comune di San Dorligo della Valle - Dolina,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d325,Comune di Dolo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_d366,Comune di Drenchia,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d383,Comune di Duino-Aurisina/Devin Nabrezina,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d408,Comune di Enemonzo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d426,Comune di Erto e Casso,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d442,Comune di Este,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_d455,Comune di Faedis,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d461,Comune di Fagagna,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d487,Comune di Fanna,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d575,Comune di Fiesole,Pubbliche Amministrazioni,Drupal,"Angular,React,jQuery",Drupal,Bootstrap Italia,high,3,3,11
+c_d621,Comune di Fiume Veneto,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d700,Comune di Forgaria nel Friuli,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d718,Comune di Forni Avoltri,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d719,Comune di Forni di Sopra,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d720,Comune di Forni di Sotto,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d804,Comune di Frisanco,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_d897,Comune di Gambellara,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_d942,Comune di Gavello,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+c_d962,Comune di Gemona del Friuli,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e083,Comune di Gonars,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e098,Comune di Gorizia,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e113,Comune di Gosaldo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_e125,Comune di Grado,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e184,Comune di Grisignano di Zocco,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_e473,Comune di Latisana,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e489,Comune di Lavagno,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_e522,Comune di Lendinara,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_e553,Comune di Lestizza,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e684,Comune di Loreggia,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_e709,Comune di Lozzo Atestino,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_e833,Comune di Majano,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e847,Comune di Malborghetto Valbruna,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e864,Comune di Malo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_e889,Comune di Maniago,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e910,Comune di Marano Lagunare,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e952,Comune di Mariano del Friuli,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_e982,Comune di Martignacco,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f012,Comune di Maserada sul Piave,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_f081,Comune di Medea,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f089,Comune di Meduno,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f144,Comune di Mereto di Tomba,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f266,Comune di Moggio Udinese,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f269,Comune di Mogliano Veneto,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_f275,Comune di Moimacco,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f356,Comune di Monfalcone,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f486,Comune di Monte di Malo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_f508,Comune di Monteforte D'Alpone,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_f574,Comune di Montenars,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f675,Comune di Monticello Conte Otto,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_f710,Comune di Moraro,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f750,Comune di Morsano al Tagliamento,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f767,Comune di Mossa,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f770,Comune di Motta di Livenza,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+c_f795,Comune di Muggia,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f832,Comune di Muzzana del Turgnano,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_f999,Comune di Oderzo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_g163,Comune di Osoppo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g198,Comune di Ovaro,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g224,Comune di Padova,Pubbliche Amministrazioni,Angular,"Drupal,React,jQuery",,Bootstrap Italia,medium,4,1,10
+c_g229,Comune di Paese,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_g268,Comune di Palazzolo dello Stella,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g284,Comune di Palmanova,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g352,Comune di Pasian di Prato,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g353,Comune di Pasiano di Pordenone,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g381,Comune di Paularo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g389,Comune di Pavia di Udine,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g420,Comune di Pelago,Pubbliche Amministrazioni,Drupal,"Angular,React,jQuery",Drupal,Bootstrap Italia,high,3,3,11
+c_g642,Comune di Pieve di Cadore,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+c_g680,Comune di Pinzano al Tagliamento,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g743,Comune di Pocenia,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g831,Comune di Pontebba,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g846,Comune di Ponte di Piave,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_g886,Comune di Porcia,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g966,Comune di Pozzuolo del Friuli,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g969,Comune di Pradamano,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_g994,Comune di Prata di Pordenone,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h002,Comune di Prato Carnico,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h010,Comune di Pravisdomini,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h014,Comune di Precenicco,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h040,Comune di Prepotto,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h196,Comune di Ravascletto,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h200,Comune di Raveo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h222,Comune di Reggello,Pubbliche Amministrazioni,Drupal,"Angular,React,jQuery",Drupal,Bootstrap Italia,high,3,4,11
+c_h242,Comune di Resia,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h244,Comune di Resiutta,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h327,Comune di Rivamonte Agordino,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_h512,Comune di Romano D'Ezzelino,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_h514,Comune di Romans d'Isonzo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h531,Comune di Ronchi dei Legionari,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h533,Comune di Ronchis,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h573,Comune di Rosolina,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_h620,Comune di Rovigo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_h629,Comune di Ruda,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h657,Comune di Sacile,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h665,Comune di Sagrado,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h787,Comune di San Canzian d'Isonzo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h791,Comune di San Casciano in Val di Pesa,Pubbliche Amministrazioni,Drupal,"Angular,React,jQuery",Drupal,Bootstrap Italia,high,3,3,11
+c_h823,Comune di San Dona' di Piave,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_h845,Comune di San Floriano del Collio,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h906,Comune di San Giovanni Al Natisone,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_h964,Comune di San Lorenzo Isontino,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i040,Comune di San Michele Al Tagliamento,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_i082,Comune di San Pier d'Isonzo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i092,Comune di San Pietro Al Natisone,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i117,Comune di San Pietro Mussolino,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_i248,Comune di Santa Maria La Longa,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i403,Comune di San Vito Al Tagliamento,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i404,Comune di San Vito Al Torre,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i421,Comune di Sappada,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i464,Comune di Sauris,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i478,Comune di Savogna,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i562,Comune di Sedegliano,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i594,Comune di Selva di Progno,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_i621,Comune di Sequals,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i684,Comune di Sesto Fiorentino,Pubbliche Amministrazioni,Drupal,"Angular,React,jQuery",Drupal,Bootstrap Italia,high,3,3,11
+c_i715,Comune di Sgonico,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i777,Comune di Socchieve,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i904,Comune di Spilimbergo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_i927,Comune di Spresiano,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_i939,Comune di Staranzano,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l014,Comune di Susegana,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l018,Comune di Sutrio,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l040,Comune di Tambre,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+c_l057,Comune di Tarvisio,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l082,Comune di Savogna d'Isonzo Sovodnje ob Soci,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l144,Comune di Terzo di Aquileia,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l157,Comune di Thiene,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l199,Comune di Tombolo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l309,Comune di Torviscosa,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l324,Comune di Tramonti di Sopra,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l325,Comune di Tramonti di Sotto,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l335,Comune di Trasaghis,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l347,Comune di Travesio,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l349,Comune di Trebaseleghe,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l382,Comune di Treppo Grande,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l407,Comune di Treviso,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l424,Comune di Trieste,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l438,Comune di Trivignano Udinese,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l474,Comune di Turriaco,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_l590,Comune di Valle di Cadore,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l700,Comune di Vazzola,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l838,Comune di Vicchio,Pubbliche Amministrazioni,Drupal,"Angular,React,jQuery",Drupal,Bootstrap Italia,high,3,3,11
+c_l899,Comune di Vigonovo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l939,Comune di Villadose,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l952,Comune di Villaga,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_l985,Comune di Villanova del Ghebbo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_m043,Comune di Villesse,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_m048,Comune di Villorba,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_m085,Comune di Vito D'Asio,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_m096,Comune di Vivaro,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_m124,Comune di Voltago Agordino,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_m189,Comune di Zoppe' di Cadore,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+c_m265,Comune di Vajont,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_m317,Comune di Rivignano Teor,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_m346,Comune di Valvasone Arzene,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+c_m399,Comune di Treppo Ligosullo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+cbcar,Consorzio Boschi Carnici,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+cbimd,Consorzio dei Comuni del Bacino Imbrifero Montano della Drava,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+cbr,Consiglio di Bacino Rovigo,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+cbvi,Consiglio di Bacino Vicenza,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+cdcbimo,Consorzio Dei Comuni del Bacino Imbrifero Montano dell'Isonzo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+cm_alpa,Unione Montana Alpago,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+cm_vabo,Unione Montana della Valle del Boite,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+cm_valbe,Unione Montana Val Belluna,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+coselag,Consorzio di Sviluppo Economico Locale dell'Area Giuliana,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+csaapfs,Commissario Straordinario Attuazione Accordo di Programma 21-11-2014 Ferriera di Servola,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+edrg,Ente di Decentramento Regionale di Gorizia,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+edrp,Ente di Decentramento Regionale di Pordenone,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+edrts,Ente di Decentramento Regionale di Trieste,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+edru,Ente di Decentramento Regionale di Udine,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+eripcfvg,Ente Regionale per Il Patrimonio Culturale della Regione Autonoma Friuli Venezia Giulia - Erpac,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+etpfvg,Ente tutela patrimonio ittico (ETPI),Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+f_756,Comune di Mortegliano,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+fdmda_,Fondazione Don Mozzatti D'Aprili,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+fesc,Fondazione Enzo e Silvio Chiari,Pubbliche Amministrazioni,Angular,React,,,medium,3,1,4
+icbtc,Istituto Comprensivo Belluno 3,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+icmo_027,Istituto Comprensivo Statale Adele Zara,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+iiisd,Insiel - Informatica per Il Sistema Degli Enti Locali S.P.A.,Societa' in Conto Economico Consolidato,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+ipism_,Istituto Provinciale per Infanzia Santa Maria della Pieta,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+irric,Istituto Regionale Rittmeyer per I Ciechi,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+issmgp,Conservatorio Statale di Musica Giacomo Puccini di Gallarate,Pubbliche Amministrazioni,WordPress,"React,Angular,jQuery",WordPress,Elementor,high,55,37,84
+istsc_agic83000q,ISTITUTO COMPRENSIVO - IC G.VERGA,Pubbliche Amministrazioni,WordPress,"React,Angular,jQuery",WordPress,Bootstrap Italia,high,70,12,78
+istsc_clic815002,ISTITUTO COMPRENSIVO - ' NINO DI MARIA ' SOMMATINO,Pubbliche Amministrazioni,WordPress,"React,Angular,jQuery",WordPress,Bootstrap Italia,high,68,13,77
+istsc_pdic85000p,ISTITUTO COMPRENSIVO - ISTIT. COMPRENSIVO ABANO TERME,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+istsc_pdic86800x,ISTITUTO COMPRENSIVO - DI TEOLO,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+istsc_viic88200g,ISTITUTO COMPRENSIVO - IC 2 BASSANO DEL GRAPPA,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+istsc_vips010007,LICEO SCIENTIFICO - LS JACOPO DA PONTE,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+istsc_vitd09000x,ISTITUTO TECNICO COMMERCIALE - ITC 'G. PIOVENE',Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+istsc_vric844005,ISTITUTO COMPRENSIVO - IC MONTEFORTE D'ALPONE,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+itldm,Istituto Tecnico Luigi Di Maggio,Pubbliche Amministrazioni,WordPress,"Angular,React,jQuery",WordPress,Bootstrap,high,61,34,75
+l_686,Comune di Varmo,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+ldibc,Laboratorio di Diagnostica per I Beni Culturali,Pubbliche Amministrazioni,Angular,"React,Stimulus",,,medium,26,9,22
+lqaps_,La Quiete Azienda Pubblica di Servizi alla Persona,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+obpfic,Organismo Bilaterale per La Formazione in Campania,Gestori di Pubblici Servizi,WordPress,"Angular,React,jQuery",WordPress,,high,26,20,38
+odal_01,Ordine Degli Avvocati di Lecce,Pubbliche Amministrazioni,ASP.NET,"Angular,React,jQuery",,Bootstrap,high,13,7,20
+odmvpbl,Ordine Dei Medici Veterinari della Provincia di Belluno,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+p_RO,Provincia di Rovigo,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+p_bl,Provincia di Belluno,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+rnsiv,Riserva Naturale Statale Isola di Vivara,Pubbliche Amministrazioni,Angular,"React,Stimulus",,,medium,26,10,20
+sstaa,Sta - Strutture Trasporto Alto Adige Spa,Societa' in Conto Economico Consolidato,Angular,"React,jQuery",,,medium,13,9,16
+uc_adgua,Unione dei Comuni Adige Gua',Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+uc_bvvi,Unione Comuni del Basso Vicentino,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+udcdbR,Unione Dei Comuni della Brenta,Pubbliche Amministrazioni,Angular,"React,jQuery",,Bootstrap Italia,medium,10,0,11
+uirbf,Comunita' Riviera Friulana,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+uma,Unione Montana Astico,Pubbliche Amministrazioni,Angular,React,,,medium,15,9,12
+uticana,Comunita' di montagna Canal del Ferro e Val Canale,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+utidt,Comunita' di Montagna del Natisone e Torre,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+utigemo,Comunita'  di Montagna del Gemonese,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+utinat,COMUNITA' DEL FRIULI ORIENTALE,Pubbliche Amministrazioni,Angular,"jQuery,React",,Bootstrap Italia,medium,9,2,17
+vsspa,Veneto Strade Spa,Societa' in Conto Economico Consolidato,Angular,React,,,medium,15,9,12

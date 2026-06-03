@@ -13,10 +13,77 @@
 <link rel="modulepreload" href="./_observablehq/client.86d48a53.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
 <link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
 <script type="module">
 
-import "./_observablehq/client.86d48a53.js";
+import {define} from "./_observablehq/client.86d48a53.js";
+import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
+
+registerFile("./data/public-framework-detection.jsonl", {"name":"./data/public-framework-detection.jsonl","path":"./_file/data/public-framework-detection.fab01c64.jsonl","lastModified":1780500611895,"size":25744168});
+registerFile("./data/public-framework-summary.json", {"name":"./data/public-framework-summary.json","mimeType":"application/json","path":"./_file/data/public-framework-summary.72057573.json","lastModified":1780500611964,"size":920});
+registerFile("./data/public-question-angular-react-sites.csv", {"name":"./data/public-question-angular-react-sites.csv","mimeType":"text/csv","path":"./_file/data/public-question-angular-react-sites.952db4b1.csv","lastModified":1780500612062,"size":28402});
+registerFile("./data/public-question-tailwind-sites.csv", {"name":"./data/public-question-tailwind-sites.csv","mimeType":"text/csv","path":"./_file/data/public-question-tailwind-sites.299726d2.csv","lastModified":1780500612024,"size":5333});
+registerFile("./data/public-question-ui-by-cms-framework.csv", {"name":"./data/public-question-ui-by-cms-framework.csv","mimeType":"text/csv","path":"./_file/data/public-question-ui-by-cms-framework.4632c18f.csv","lastModified":1780500611992,"size":1240});
+registerFile("./data/public-summary.csv", {"name":"./data/public-summary.csv","mimeType":"text/csv","path":"./_file/data/public-summary.4316c6ff.csv","lastModified":1780500611328,"size":2940586});
+
+define({id: "63c95194", inputs: ["FileAttachment","html"], outputs: ["mainFiles","questionFiles","downloadList"], body: async (FileAttachment,html) => {
+const mainFiles = [
+  {
+    name: "public-summary.csv",
+    href: await FileAttachment("./data/public-summary.csv").url(),
+    description: "CSV sintetico, una riga per ente/homepage. E' il file piu' comodo per filtri, pivot e controlli rapidi."
+  },
+  {
+    name: "public-framework-detection.jsonl",
+    href: await FileAttachment("./data/public-framework-detection.jsonl").url(),
+    description: "Output completo della detection in forma pubblicabile, una riga JSON per record. Include evidenze sanitizzate, score per tecnologia, framework primario, framework secondari, CMS, UI framework, conteggi JS/CSS e confidenza."
+  },
+  {
+    name: "public-framework-summary.json",
+    href: await FileAttachment("./data/public-framework-summary.json").url(),
+    description: "Aggregato compatto con conteggi per framework primario, framework secondari, CMS e UI framework."
+  }
+];
+
+const questionFiles = [
+  {
+    name: "public-question-ui-by-cms-framework.csv",
+    href: await FileAttachment("./data/public-question-ui-by-cms-framework.csv").url(),
+    description: "Incrocio tra ui_frameworks e piattaforma primaria. Usa cms_primario quando presente, altrimenti framework_primario, altrimenti il bucket Nessun primario."
+  },
+  {
+    name: "public-question-tailwind-sites.csv",
+    href: await FileAttachment("./data/public-question-tailwind-sites.csv").url(),
+    description: "Elenco dei record in cui ui_frameworks contiene Tailwind CSS, senza URL della homepage."
+  },
+  {
+    name: "public-question-angular-react-sites.csv",
+    href: await FileAttachment("./data/public-question-angular-react-sites.csv").url(),
+    description: "Elenco dei record in cui Angular e React compaiono insieme tra framework_primario e framework_secondari, senza URL della homepage."
+  }
+];
+
+const downloadList = (items) => html`<ul class="download-list">
+  ${items.map((item) => html`<li>
+    <a href=${item.href} download>${item.name}</a><br>
+    <span>${item.description}</span>
+  </li>`)}
+</ul>`;
+return {mainFiles,questionFiles,downloadList};
+}});
+
+define({id: "5ae69dcc", inputs: ["downloadList","mainFiles","display"], body: async (downloadList,mainFiles,display) => {
+display(await(
+downloadList(mainFiles)
+))
+}});
+
+define({id: "c7c4ffe4", inputs: ["downloadList","questionFiles","display"], body: async (downloadList,questionFiles,display) => {
+display(await(
+downloadList(questionFiles)
+))
+}});
 
 </script>
 </head>
@@ -42,85 +109,50 @@ import "./_observablehq/client.86d48a53.js";
 <ol>
 <li class="observablehq-secondary-link"><a href="#file-principali">File Principali</a></li>
 <li class="observablehq-secondary-link"><a href="#estratti-per-le-domande-ricorrenti">Estratti Per Le Domande Ricorrenti</a></li>
+<li class="observablehq-secondary-link"><a href="#cosa-viene-anonimizzato">Cosa Viene Anonimizzato</a></li>
 <li class="observablehq-secondary-link"><a href="#come-scegliere-il-file">Come Scegliere Il File</a></li>
 <li class="observablehq-secondary-link"><a href="#percorsi-locali">Percorsi Locali</a></li>
 </ol>
 </nav>
 </aside>
 <main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:63c95194:--></div>
 <h1 id="dati-raw" tabindex="-1"><a class="observablehq-header-anchor" href="#dati-raw">Dati Raw</a></h1>
-<p>Questa pagina raccoglie i link ai file prodotti dalla pipeline. Il report interattivo mostra aggregazioni e grafici; per
-replicare un conteggio, controllare una singola homepage o costruire incroci diversi conviene partire dai file raw.</p>
+<p>Questa pagina raccoglie i file pubblicabili prodotti dalla pipeline. Le versioni scaricabili da qui sono anonimizzate:
+non espongono le URL delle homepage e, nelle evidenze, non espongono host o path degli asset dei siti.</p>
 <h2 id="file-principali" tabindex="-1"><a class="observablehq-header-anchor" href="#file-principali">File Principali</a></h2>
-<ul>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/summary.csv" target="_blank" rel="noopener noreferrer">summary.csv</a><br>
-CSV sintetico, una riga per ente/homepage. E<code> il file piu</code> comodo per filtri, pivot e controlli rapidi.</p>
-</li>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/framework_detection.jsonl" target="_blank" rel="noopener noreferrer">framework_detection.jsonl</a><br>
-Output completo della detection, una riga JSON per record. Include evidenze, score per tecnologia, framework primario,
-framework secondari, CMS, UI framework, conteggi JS/CSS e confidenza.</p>
-</li>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/framework_summary.json" target="_blank" rel="noopener noreferrer">framework_summary.json</a><br>
-Aggregato compatto con conteggi per framework primario, framework secondari, CMS e UI framework.</p>
-</li>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/homepages.jsonl" target="_blank" rel="noopener noreferrer">homepages.jsonl</a><br>
-Esito del probing delle homepage: URL normalizzate, stato della risposta e metadati raccolti prima della detection.</p>
-</li>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/js_inventory.jsonl" target="_blank" rel="noopener noreferrer">js_inventory.jsonl</a><br>
-Inventario degli script osservati per homepage.</p>
-</li>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/css_inventory.jsonl" target="_blank" rel="noopener noreferrer">css_inventory.jsonl</a><br>
-Inventario dei fogli di stile osservati per homepage. E` utile per verificare i UI framework, inclusi Bootstrap Italia,
-Bootstrap, Elementor, Tailwind CSS, Foundation e UIkit.</p>
-</li>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/js_downloads.jsonl" target="_blank" rel="noopener noreferrer">js_downloads.jsonl</a><br>
-Esito del download dei bundle JavaScript deduplicati. Alimenta le evidenze <code>content:</code> usate dal detector.</p>
-</li>
-</ul>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:5ae69dcc:--></div>
 <h2 id="estratti-per-le-domande-ricorrenti" tabindex="-1"><a class="observablehq-header-anchor" href="#estratti-per-le-domande-ricorrenti">Estratti Per Le Domande Ricorrenti</a></h2>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:c7c4ffe4:--></div>
+<h2 id="cosa-viene-anonimizzato" tabindex="-1"><a class="observablehq-header-anchor" href="#cosa-viene-anonimizzato">Cosa Viene Anonimizzato</a></h2>
+<p>Nei file pubblici:</p>
 <ul>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/question_ui_by_cms_framework.csv" target="_blank" rel="noopener noreferrer">question_ui_by_cms_framework.csv</a><br>
-Incrocio tra <code>ui_frameworks</code> e piattaforma primaria. Usa <code>cms_primario</code> quando presente, altrimenti
-<code>framework_primario</code>, altrimenti il bucket <code>Nessun primario</code>.</p>
-</li>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/question_tailwind_sites.csv" target="_blank" rel="noopener noreferrer">question_tailwind_sites.csv</a><br>
-Elenco dei record in cui <code>ui_frameworks</code> contiene <code>Tailwind CSS</code>.</p>
-</li>
-<li>
-<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/question_angular_react_sites.csv" target="_blank" rel="noopener noreferrer">question_angular_react_sites.csv</a><br>
-Elenco dei record in cui Angular e React compaiono insieme tra <code>framework_primario</code> e <code>framework_secondari</code>.</p>
-</li>
+<li><code>homepage_url</code> viene rimossa.</li>
+<li>Gli URL degli asset non vengono esposti.</li>
+<li>Le evidenze vengono ridotte alla forma <code>fonte:marker</code>, per esempio <code>content:react</code> o <code>css-url:bootstrap-italia</code>.</li>
+<li>Restano disponibili ente, tipologia, tecnologie rilevate, conteggi, score e livello di confidenza.</li>
 </ul>
+<p>Questa scelta permette di verificare la logica di detection senza pubblicare una lista direttamente navigabile dei siti e
+dei loro asset.</p>
 <h2 id="come-scegliere-il-file" tabindex="-1"><a class="observablehq-header-anchor" href="#come-scegliere-il-file">Come Scegliere Il File</a></h2>
-<p>Per un controllo veloce usa <code>summary.csv</code>: e` leggibile con fogli di calcolo, DuckDB, pandas o qualsiasi strumento CSV.</p>
-<p>Per capire perche<code> una tecnologia e</code> stata assegnata usa <code>framework_detection.jsonl</code>: il campo <code>evidenze</code> mostra quali
-marker sono stati trovati, mentre <code>technology_scores</code> conserva i punteggi intermedi usati dal detector.</p>
-<p>Per ricostruire un grafico aggregato usa <code>framework_summary.json</code> o rigenera l'aggregazione da
-<code>framework_detection.jsonl</code>.</p>
-<p>Per verificare un UI framework parti da <code>css_inventory.jsonl</code> e poi confronta il record corrispondente in
-<code>framework_detection.jsonl</code>.</p>
+<p>Per un controllo veloce usa <code>public-summary.csv</code>: e' leggibile con fogli di calcolo, DuckDB, pandas o qualsiasi strumento
+CSV.</p>
+<p>Per capire perche' una tecnologia e' stata assegnata usa <code>public-framework-detection.jsonl</code>: il campo <code>evidenze</code> mostra
+quali marker sono stati trovati, mentre <code>technology_scores</code> conserva i punteggi intermedi usati dal detector.</p>
+<p>Per ricostruire un grafico aggregato usa <code>public-framework-summary.json</code> o rigenera l'aggregazione da
+<code>public-framework-detection.jsonl</code>.</p>
 <h2 id="percorsi-locali" tabindex="-1"><a class="observablehq-header-anchor" href="#percorsi-locali">Percorsi Locali</a></h2>
-<p>Nel workspace della pipeline gli stessi file si trovano in:</p>
-<pre data-language="text"><code class="language-text">results/summary.csv
-results/framework_detection.jsonl
-results/framework_summary.json
-results/homepages.jsonl
-results/js_inventory.jsonl
-results/css_inventory.jsonl
-results/js_downloads.jsonl
-results/question_ui_by_cms_framework.csv
-results/question_tailwind_sites.csv
-results/question_angular_react_sites.csv
-</code></pre>
+<p>Nel workspace della pipeline i file completi non anonimizzati restano in <code>results/</code>. Non vengono linkati da questa pagina
+per evitare di esporre le URL dei siti nel report pubblico.</p>
+<style>
+  .download-list li {
+    margin-bottom: 0.9rem;
+  }
+
+  .download-list span {
+    color: var(--theme-foreground-muted);
+  }
+</style>
 </main>
 <footer id="observablehq-footer">
 <nav><a rel="prev" href="./methodology"><span>Metodologia</span></a></nav>
