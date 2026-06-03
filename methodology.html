@@ -31,6 +31,7 @@ import "./_observablehq/client.86d48a53.js";
   <ol>
     <li class="observablehq-link"><a href="./">Risultati</a></li>
     <li class="observablehq-link observablehq-link-active"><a href="./methodology">Metodologia</a></li>
+    <li class="observablehq-link"><a href="./raw-data">Dati raw</a></li>
   </ol>
 </nav>
 <script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
@@ -41,6 +42,9 @@ import "./_observablehq/client.86d48a53.js";
 <ol>
 <li class="observablehq-secondary-link"><a href="#criteri-di-detection">Criteri Di Detection</a></li>
 <li class="observablehq-secondary-link"><a href="#come-viene-assegnato-il-risultato">Come Viene Assegnato Il Risultato</a></li>
+<li class="observablehq-secondary-link"><a href="#come-leggere-gli-incroci">Come Leggere Gli Incroci</a></li>
+<li class="observablehq-secondary-link"><a href="#perche-tailwind-compare-poco">Perche&#x60; Tailwind Compare Poco</a></li>
+<li class="observablehq-secondary-link"><a href="#perche-angular-e-react-possono-comparire-insieme">Perche&#x60; Angular E React Possono Comparire Insieme</a></li>
 </ol>
 </nav>
 </aside>
@@ -174,9 +178,68 @@ come verita<code> assolute, perche</code> molti siti nascondono o riscrivono i p
 </ul>
 </li>
 </ol>
+<h2 id="come-leggere-gli-incroci" tabindex="-1"><a class="observablehq-header-anchor" href="#come-leggere-gli-incroci">Come Leggere Gli Incroci</a></h2>
+<p>Il report distingue volutamente tre piani diversi:</p>
+<ul>
+<li><strong>CMS primario</strong>, per piattaforme editoriali come WordPress, Drupal, Joomla o Liferay.</li>
+<li><strong>Framework applicativo primario e secondario</strong>, per tecnologie che emergono da markup, header, URL o bundle JS.</li>
+<li><strong>UI framework</strong>, per librerie di presentazione rilevate soprattutto da CSS, URL dei CSS e alcuni marker di contenuto.</li>
+</ul>
+<p>Questa separazione evita di far competere concetti diversi. Un sito puo<code> essere WordPress come CMS, caricare componenti React in un plugin, usare jQuery per funzionalita</code> storiche e avere Bootstrap Italia o Tailwind CSS come layer di
+presentazione. In quel caso il CMS descrive la piattaforma editoriale, React o jQuery descrivono librerie applicative
+osservate, mentre Bootstrap Italia o Tailwind CSS descrivono il sistema di interfaccia.</p>
+<p>Per questo l'incrocio tra UI framework e CMS/framework va letto come <strong>co-occorrenza osservata sulla stessa homepage</strong>,
+non come rapporto di dipendenza tecnica. La domanda a cui risponde e<code>: "quando vediamo un certo UI framework, quale piattaforma o framework primario vediamo nello stesso record?". Non risponde invece a: "quel CMS e</code> stato sviluppato con
+quel UI framework?" oppure "tutto il sito usa solo quella tecnologia?".</p>
+<p>Nei dati di dettaglio i campi utili sono:</p>
+<ul>
+<li><code>cms_primario</code>, quando il detector trova una piattaforma editoriale forte.</li>
+<li><code>framework_primario</code>, quando il detector trova un framework applicativo prevalente.</li>
+<li><code>framework_secondari</code>, quando altri framework o librerie hanno marker presenti ma non prevalenti.</li>
+<li><code>ui_frameworks</code>, che puo<code> contenere zero, uno o piu</code> framework di interfaccia.</li>
+</ul>
+<p>Quando si costruisce una tabella UI x CMS/framework conviene usare <code>cms_primario</code> come prima scelta e, se manca, usare
+<code>framework_primario</code>. Se mancano entrambi, il record resta in un bucket "nessun primario": non significa che il sito non
+usi tecnologie, ma che i marker raccolti non sono sufficienti per assegnare una piattaforma primaria affidabile.</p>
+<h2 id="perche-tailwind-compare-poco" tabindex="-1"><a class="observablehq-header-anchor" href="#perche-tailwind-compare-poco">Perche` Tailwind Compare Poco</a></h2>
+<p>Tailwind CSS viene rilevato come UI framework, non come framework applicativo. Nel detector attuale il marker forte per
+Tailwind e<code>prudente: viene cercata la stringa</code>tailwind` negli URL dei CSS. Questa scelta riduce i falsi positivi, ma
+non prova a riconoscere Tailwind da ogni possibile classe utility nel markup.</p>
+<p>Il motivo e<code>metodologico. Classi come</code>flex<code>, </code>grid<code>, </code>hidden<code>, </code>container<code>, </code>text-<em><code>o</code>mt-</em><code> possono comparire anche in codice custom, in altri framework CSS o in CSS compilati e rinominati. Cercarle in modo aggressivo aumenterebbe il numero di occorrenze, ma renderebbe meno affidabile il risultato. Il report preferisce quindi contare Tailwind solo quando c'e</code> un indizio abbastanza esplicito, per esempio un asset CSS che mantiene il nome <code>tailwind</code>.</p>
+<p>Questo significa che le occorrenze Tailwind sono da leggere come <strong>casi ad alta evidenza nominale</strong>, non come stima
+esaustiva di tutti i siti che potrebbero avere CSS generato con Tailwind. In particolare, un sito che compila Tailwind in
+un file generico come <code>style.css</code>, senza lasciare marker nel nome dell'asset, puo` non essere classificato come Tailwind.</p>
+<p>Il fatto che Tailwind appaia spesso insieme a WordPress e ad altri UI framework non e<code> contraddittorio: WordPress puo</code>
+usare temi o plugin che includono un CSS Tailwind, e la stessa homepage puo<code>caricare anche Bootstrap Italia, Elementor o Bootstrap. Il campo</code>ui_frameworks<code> e</code> quindi multi-valore proprio per rappresentare questi casi.</p>
+<h2 id="perche-angular-e-react-possono-comparire-insieme" tabindex="-1"><a class="observablehq-header-anchor" href="#perche-angular-e-react-possono-comparire-insieme">Perche` Angular E React Possono Comparire Insieme</a></h2>
+<p>La co-occorrenza Angular + React puo<code> sembrare strana se la si legge come "il sito e</code> stato scritto sia in Angular sia in
+React". Nel report, pero`, la heatmap non dice questo. Dice solo che nello stesso record sono stati normalizzati marker
+di Angular e marker di React, indipendentemente da quale sia primario e quale secondario.</p>
+<p>Ci sono varie ragioni plausibili:</p>
+<ul>
+<li>Un'applicazione principale Angular puo` caricare widget, librerie o componenti embedded che includono React.</li>
+<li>Un CMS o un portale puo` esporre pagine, plugin o bundle diversi nella stessa homepage.</li>
+<li>Alcuni servizi terzi incorporati nella pagina possono portare con se` bundle React.</li>
+<li>Nei bundle minificati possono rimanere marker React generici, come <code>react</code>, <code>react-dom</code> o <code>createElement</code>.</li>
+<li>La homepage puo` essere un contenitore ibrido, con parti legacy e parti moderne caricate insieme.</li>
+</ul>
+<p>Per ridurre il rumore, React non diventa automaticamente primario quando compare un marker generico. Marker come
+<code>createElement</code> hanno peso basso; segnali piu<code>specifici come</code>react-dom<code>, </code>react.production<code>o</code>__react<code> pesano di piu</code>.
+Angular, invece, diventa piu<code> facilmente primario quando emergono marker piu</code> caratteristici come <code>ng-version</code>,
+<code>@angular</code> o <code>zone.js</code>.</p>
+<p>Quindi una riga Angular + React va interpretata cosi<code>: **Angular e</code> spesso il candidato applicativo prevalente; React e<code> spesso un segnale secondario osservato nei bundle o in componenti caricati dalla pagina**. E</code> un ottimo elenco per una
+verifica manuale o per capire quali siti hanno front-end ibridi, ma non va trasformato automaticamente in una conclusione
+architetturale forte.</p>
+<p>La differenza tra conteggi simili ma non identici puo` dipendere anche dal livello a cui si conta:</p>
+<ul>
+<li>la heatmap usa framework primari e secondari gia` normalizzati;</li>
+<li><code>technology_scores</code> contiene anche segnali grezzi sotto soglia;</li>
+<li>i dati pubblicati possono cambiare se si rilancia il detector o si modifica la soglia di scoring.</li>
+</ul>
+<p>Per confronti ripetibili e<code>quindi meglio dichiarare sempre quale campo si sta usando:</code>framework_primario<code>+</code>framework_secondari<code>per le co-occorrenze normalizzate,</code>technology_scores` per audit e debug dei marker.</p>
 </main>
 <footer id="observablehq-footer">
-<nav><a rel="prev" href="./"><span>Report Framework Detection</span></a></nav>
+<nav><a rel="prev" href="./"><span>Report Framework Detection</span></a><a rel="next" href="./raw-data"><span>Dati raw</span></a></nav>
 <div>Report Framework Detection generato dagli output della pipeline.</div>
 </footer>
 </div>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Dati raw | Report Framework Detection</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-slate.55e203da.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-slate.55e203da.css">
+<link rel="modulepreload" href="./_observablehq/client.86d48a53.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import "./_observablehq/client.86d48a53.js";
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Report Framework Detection</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./">Risultati</a></li>
+    <li class="observablehq-link"><a href="./methodology">Metodologia</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./raw-data">Dati raw</a></li>
+  </ol>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#file-principali">File Principali</a></li>
+<li class="observablehq-secondary-link"><a href="#estratti-per-le-domande-ricorrenti">Estratti Per Le Domande Ricorrenti</a></li>
+<li class="observablehq-secondary-link"><a href="#come-scegliere-il-file">Come Scegliere Il File</a></li>
+<li class="observablehq-secondary-link"><a href="#percorsi-locali">Percorsi Locali</a></li>
+</ol>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<h1 id="dati-raw" tabindex="-1"><a class="observablehq-header-anchor" href="#dati-raw">Dati Raw</a></h1>
+<p>Questa pagina raccoglie i link ai file prodotti dalla pipeline. Il report interattivo mostra aggregazioni e grafici; per
+replicare un conteggio, controllare una singola homepage o costruire incroci diversi conviene partire dai file raw.</p>
+<h2 id="file-principali" tabindex="-1"><a class="observablehq-header-anchor" href="#file-principali">File Principali</a></h2>
+<ul>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/summary.csv" target="_blank" rel="noopener noreferrer">summary.csv</a><br>
+CSV sintetico, una riga per ente/homepage. E<code> il file piu</code> comodo per filtri, pivot e controlli rapidi.</p>
+</li>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/framework_detection.jsonl" target="_blank" rel="noopener noreferrer">framework_detection.jsonl</a><br>
+Output completo della detection, una riga JSON per record. Include evidenze, score per tecnologia, framework primario,
+framework secondari, CMS, UI framework, conteggi JS/CSS e confidenza.</p>
+</li>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/framework_summary.json" target="_blank" rel="noopener noreferrer">framework_summary.json</a><br>
+Aggregato compatto con conteggi per framework primario, framework secondari, CMS e UI framework.</p>
+</li>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/homepages.jsonl" target="_blank" rel="noopener noreferrer">homepages.jsonl</a><br>
+Esito del probing delle homepage: URL normalizzate, stato della risposta e metadati raccolti prima della detection.</p>
+</li>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/js_inventory.jsonl" target="_blank" rel="noopener noreferrer">js_inventory.jsonl</a><br>
+Inventario degli script osservati per homepage.</p>
+</li>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/css_inventory.jsonl" target="_blank" rel="noopener noreferrer">css_inventory.jsonl</a><br>
+Inventario dei fogli di stile osservati per homepage. E` utile per verificare i UI framework, inclusi Bootstrap Italia,
+Bootstrap, Elementor, Tailwind CSS, Foundation e UIkit.</p>
+</li>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/js_downloads.jsonl" target="_blank" rel="noopener noreferrer">js_downloads.jsonl</a><br>
+Esito del download dei bundle JavaScript deduplicati. Alimenta le evidenze <code>content:</code> usate dal detector.</p>
+</li>
+</ul>
+<h2 id="estratti-per-le-domande-ricorrenti" tabindex="-1"><a class="observablehq-header-anchor" href="#estratti-per-le-domande-ricorrenti">Estratti Per Le Domande Ricorrenti</a></h2>
+<ul>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/question_ui_by_cms_framework.csv" target="_blank" rel="noopener noreferrer">question_ui_by_cms_framework.csv</a><br>
+Incrocio tra <code>ui_frameworks</code> e piattaforma primaria. Usa <code>cms_primario</code> quando presente, altrimenti
+<code>framework_primario</code>, altrimenti il bucket <code>Nessun primario</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/question_tailwind_sites.csv" target="_blank" rel="noopener noreferrer">question_tailwind_sites.csv</a><br>
+Elenco dei record in cui <code>ui_frameworks</code> contiene <code>Tailwind CSS</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/mfortini/PA-framework-report/blob/main/results/question_angular_react_sites.csv" target="_blank" rel="noopener noreferrer">question_angular_react_sites.csv</a><br>
+Elenco dei record in cui Angular e React compaiono insieme tra <code>framework_primario</code> e <code>framework_secondari</code>.</p>
+</li>
+</ul>
+<h2 id="come-scegliere-il-file" tabindex="-1"><a class="observablehq-header-anchor" href="#come-scegliere-il-file">Come Scegliere Il File</a></h2>
+<p>Per un controllo veloce usa <code>summary.csv</code>: e` leggibile con fogli di calcolo, DuckDB, pandas o qualsiasi strumento CSV.</p>
+<p>Per capire perche<code> una tecnologia e</code> stata assegnata usa <code>framework_detection.jsonl</code>: il campo <code>evidenze</code> mostra quali
+marker sono stati trovati, mentre <code>technology_scores</code> conserva i punteggi intermedi usati dal detector.</p>
+<p>Per ricostruire un grafico aggregato usa <code>framework_summary.json</code> o rigenera l'aggregazione da
+<code>framework_detection.jsonl</code>.</p>
+<p>Per verificare un UI framework parti da <code>css_inventory.jsonl</code> e poi confronta il record corrispondente in
+<code>framework_detection.jsonl</code>.</p>
+<h2 id="percorsi-locali" tabindex="-1"><a class="observablehq-header-anchor" href="#percorsi-locali">Percorsi Locali</a></h2>
+<p>Nel workspace della pipeline gli stessi file si trovano in:</p>
+<pre data-language="text"><code class="language-text">results/summary.csv
+results/framework_detection.jsonl
+results/framework_summary.json
+results/homepages.jsonl
+results/js_inventory.jsonl
+results/css_inventory.jsonl
+results/js_downloads.jsonl
+results/question_ui_by_cms_framework.csv
+results/question_tailwind_sites.csv
+results/question_angular_react_sites.csv
+</code></pre>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./methodology"><span>Metodologia</span></a></nav>
+<div>Report Framework Detection generato dagli output della pipeline.</div>
+</footer>
+</div>
+</body>
+</html>
